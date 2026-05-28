@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Materials — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Section 3.1 — Engineering Materials</span></div>
+      <div class="topbar-progress">
+        <span class="topbar-progress-label">Progress</span>
+        <div class="topbar-progress-bar"><div class="topbar-progress-fill" style="width:16%"></div></div>
+      </div>
+    </div>
+
+    <div class="content-inner">
+
+      <!-- HERO -->
+      <div class="lesson-hero">
+        <div class="lesson-hero-tag">Section 3.1</div>
+        <h1>Engineering <span>Materials</span></h1>
+        <p class="lesson-hero-desc">Understanding material properties, classification, and selection is the foundation of all engineering. This lesson covers everything from the six key mechanical properties to metals, polymers, composites, and how material choice affects design.</p>
+        <div class="lesson-hero-objectives">
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Identify and describe the six key mechanical properties</li>
+            <li>Classify metals as ferrous or non-ferrous and know their uses</li>
+            <li>Distinguish between thermoplastics and thermosetting polymers</li>
+            <li>Explain how composites work and give examples</li>
+            <li>Understand how material properties can be changed</li>
+            <li>Consider costs, availability and sustainability in material choice</li>
+          </ul>
+        </div>
+        <div class="lesson-hero-stats">
+          <div class="lesson-stat"><div class="lesson-stat-num">3.1</div><div class="lesson-stat-label">Spec Section</div></div>
+          <div class="lesson-stat"><div class="lesson-stat-num">~20%</div><div class="lesson-stat-label">Of Paper</div></div>
+          <div class="lesson-stat"><div class="lesson-stat-num">5</div><div class="lesson-stat-label">Activities</div></div>
+        </div>
+      </div>
+
+      <!-- SECTION 1: MATERIAL PROPERTIES -->
+      <div class="lesson-section" id="properties">
+        <div class="lesson-section-header">
+          <div class="section-number">1</div>
+          <div class="section-title-block">
+            <h2>The Six Key Mechanical Properties</h2>
+            <small>3.1.1 — You MUST know all six and be able to give examples</small>
+          </div>
+        </div>
+
+        <p>When engineers select a material for a product, they must consider how that material will behave under different types of force. The AQA specification requires you to know and apply the following six mechanical properties.</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">💪 Toughness</div>
+            <p><strong>Definition:</strong> The ability of a material to absorb energy and resist fracturing when subjected to impact or sudden shock loads without breaking.</p>
+            <p><strong>Examples:</strong> Mild steel, rubber, carbon fibre reinforced polymer (CFRP).</p>
+            <p><strong>Opposite:</strong> <span data-tooltip="A brittle material shatters suddenly with little deformation — like glass or cast iron.">Brittleness</span> — shatters without deforming.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">🪗 Ductility</div>
+            <p><strong>Definition:</strong> The ability to be drawn out (stretched) into a wire or thin rod without breaking. Ductile materials deform plastically under tensile stress.</p>
+            <p><strong>Examples:</strong> Copper, aluminium, gold.</p>
+            <p><strong>Test:</strong> Tensile test — pull a sample until it fractures. Ductile materials show significant elongation before fracture.</p>
+          </div>
+          <div class="card red">
+            <div class="card-title">🔨 Malleability</div>
+            <p><strong>Definition:</strong> The ability to be hammered, rolled, or pressed into thin sheets without cracking. The deforming force is compressive (squashing) rather than tensile (pulling).</p>
+            <p><strong>Examples:</strong> Lead, gold, copper, aluminium.</p>
+            <p><strong>Key distinction:</strong> Ductility = pulled into wire. Malleability = hammered into sheet.</p>
+          </div>
+          <div class="card purple">
+            <div class="card-title">💎 Hardness</div>
+            <p><strong>Definition:</strong> The resistance of a material to surface indentation, scratching, or wear. A hard material is difficult to scratch or dent.</p>
+            <p><strong>Examples:</strong> High carbon steel, diamond, tungsten carbide.</p>
+            <p><strong>Tests:</strong> Vickers hardness test (diamond pyramid indenter), Brinell hardness test (steel ball indenter).</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">⚡ Strength</div>
+            <p><strong>Definition:</strong> The ability to withstand an applied force without permanent deformation or fracture. Several types exist:</p>
+            <ul>
+              <li><strong>Tensile strength</strong> — resist being pulled apart</li>
+              <li><strong>Compressive strength</strong> — resist being crushed</li>
+              <li><strong>Torsional strength</strong> — resist twisting forces</li>
+              <li><strong>Bending strength</strong> — resist bending/flexing</li>
+            </ul>
+          </div>
+          <div class="card orange">
+            <div class="card-title">📏 Stiffness</div>
+            <p><strong>Definition:</strong> The resistance of a material to elastic deformation (bending or stretching) under load. A stiff material returns to its original shape when the load is removed.</p>
+            <p><strong>Measured by:</strong> Young's Modulus (E) — the ratio of stress to strain in the elastic region.</p>
+            <p><strong>Examples:</strong> Steel and concrete are very stiff. Rubber is flexible (low stiffness).</p>
+          </div>
+        </div>
+
+        <div class="highlight-box yellow">
+          <div class="highlight-title">⚠️ Common Exam Mistake</div>
+          <p>Students often confuse <strong>toughness</strong> and <strong>hardness</strong>. Remember: a <strong>hard</strong> material resists scratching (surface property), while a <strong>tough</strong> material resists breaking from impact (energy absorption). Cast iron is hard but brittle (not tough). Rubber is tough but soft (not hard).</p>
+        </div>
+
+        <!-- FILL IN THE GAPS 1 -->
+        <div class="fitg-container" id="fitg-properties">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — Material Properties</div>
+              <div class="fitg-subtitle">Complete the paragraph using the word bank below</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="ductility">ductility</span>
+            <span class="word-chip" data-word="hardness">hardness</span>
+            <span class="word-chip" data-word="toughness">toughness</span>
+            <span class="word-chip" data-word="malleability">malleability</span>
+            <span class="word-chip" data-word="stiffness">stiffness</span>
+            <span class="word-chip" data-word="tensile">tensile</span>
+            <span class="word-chip" data-word="brittle">brittle</span>
+            <span class="word-chip" data-word="compressive">compressive</span>
+          </div>
+          <div class="fitg-text">
+            <p>The property that describes a material's ability to absorb energy and resist fracture from impact is called <input class="fitg-input" data-answer="toughness" style="width:100px"> . The opposite of this is a <input class="fitg-input" data-answer="brittle" style="width:80px"> material, which shatters suddenly without deforming.</p>
+            <p>When copper is drawn into electrical wiring, we are making use of its <input class="fitg-input" data-answer="ductility" style="width:90px"> . When gold is beaten into thin sheets, we are making use of its <input class="fitg-input" data-answer="malleability" style="width:110px"> .</p>
+            <p>A material's resistance to surface scratching or indentation is its <input class="fitg-input" data-answer="hardness" style="width:90px"> . This is measured using the Vickers or Brinell test. The resistance to elastic deformation under load is called <input class="fitg-input" data-answer="stiffness" style="width:90px"> .</p>
+            <p>Strength can be measured in different ways. The ability to resist being pulled apart is called <input class="fitg-input" data-answer="tensile" style="width:80px"> strength, while the ability to resist being crushed is called <input class="fitg-input" data-answer="compressive" style="width:110px"> strength.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: METALS -->
+      <div class="lesson-section" id="metals">
+        <div class="lesson-section-header">
+          <div class="section-number">2</div>
+          <div class="section-title-block">
+            <h2>Metals & Alloys</h2>
+            <small>3.1.1.1 — Ferrous, non-ferrous, and alloys</small>
+          </div>
+        </div>
+
+        <p>Metals are divided into two main groups: <strong>ferrous metals</strong> (containing iron) and <strong>non-ferrous metals</strong> (no iron). Alloys are mixtures of two or more metals (or a metal with a non-metal) to improve properties.</p>
+
+        <!-- Metal Classification Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Metal Classification Tree</span>
+          <svg width="100%" height="420" viewBox="0 0 820 420" style="font-family:'Space Mono',monospace;font-size:11px;">
+            <!-- Root -->
+            <rect x="330" y="10" width="160" height="38" rx="4" fill="#1f2430" stroke="#f0a500" stroke-width="1.5"/>
+            <text x="410" y="34" text-anchor="middle" fill="#f0a500" font-weight="bold" font-size="12">METALS</text>
+            <!-- Lines from root -->
+            <line x1="380" y1="48" x2="210" y2="85" stroke="#4a5068" stroke-width="1.5"/>
+            <line x1="440" y1="48" x2="610" y2="85" stroke="#4a5068" stroke-width="1.5"/>
+            <!-- Ferrous -->
+            <rect x="100" y="85" width="220" height="38" rx="4" fill="#1f2430" stroke="#00d4aa" stroke-width="1.5"/>
+            <text x="210" y="109" text-anchor="middle" fill="#00d4aa" font-weight="bold" font-size="11">FERROUS (Contains Iron)</text>
+            <!-- Non-ferrous -->
+            <rect x="500" y="85" width="220" height="38" rx="4" fill="#1f2430" stroke="#7c6fff" stroke-width="1.5"/>
+            <text x="610" y="109" text-anchor="middle" fill="#7c6fff" font-weight="bold" font-size="11">NON-FERROUS (No Iron)</text>
+            <!-- Ferrous children lines -->
+            <line x1="160" y1="123" x2="90" y2="165" stroke="#4a5068" stroke-width="1"/>
+            <line x1="210" y1="123" x2="260" y2="165" stroke="#4a5068" stroke-width="1"/>
+            <line x1="260" y1="123" x2="430" y2="165" stroke="#4a5068" stroke-width="1"/>
+            <!-- Cast Iron -->
+            <rect x="10" y="165" width="160" height="60" rx="3" fill="#111318" stroke="#252a35"/>
+            <text x="90" y="185" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Cast Iron</text>
+            <text x="90" y="200" text-anchor="middle" fill="#7a8099" font-size="9">~3.5% Carbon</text>
+            <text x="90" y="213" text-anchor="middle" fill="#7a8099" font-size="9">Hard, brittle, cheap</text>
+            <text x="90" y="226" text-anchor="middle" fill="#f0a500" font-size="9">→ Manhole covers</text>
+            <!-- Carbon Steel -->
+            <rect x="180" y="165" width="160" height="60" rx="3" fill="#111318" stroke="#252a35"/>
+            <text x="260" y="185" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Carbon Steel</text>
+            <text x="260" y="200" text-anchor="middle" fill="#7a8099" font-size="9">Low: &lt;0.3% C (mild)</text>
+            <text x="260" y="213" text-anchor="middle" fill="#7a8099" font-size="9">High: ~1% C (hard)</text>
+            <text x="260" y="226" text-anchor="middle" fill="#f0a500" font-size="9">→ Car bodies / tools</text>
+            <!-- Stainless Steel -->
+            <rect x="350" y="165" width="160" height="60" rx="3" fill="#111318" stroke="#252a35"/>
+            <text x="430" y="185" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Stainless Steel</text>
+            <text x="430" y="200" text-anchor="middle" fill="#7a8099" font-size="9">Fe + Cr + Ni</text>
+            <text x="430" y="213" text-anchor="middle" fill="#7a8099" font-size="9">Corrosion resistant</text>
+            <text x="430" y="226" text-anchor="middle" fill="#f0a500" font-size="9">→ Cutlery, sinks</text>
+            <!-- Non-ferrous children lines -->
+            <line x1="570" y1="123" x2="540" y2="165" stroke="#4a5068" stroke-width="1"/>
+            <line x1="610" y1="123" x2="640" y2="165" stroke="#4a5068" stroke-width="1"/>
+            <line x1="650" y1="123" x2="730" y2="165" stroke="#4a5068" stroke-width="1"/>
+            <!-- Aluminium -->
+            <rect x="490" y="165" width="130" height="60" rx="3" fill="#111318" stroke="#252a35"/>
+            <text x="555" y="185" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Aluminium</text>
+            <text x="555" y="200" text-anchor="middle" fill="#7a8099" font-size="9">Light, corrosion resist</text>
+            <text x="555" y="213" text-anchor="middle" fill="#7a8099" font-size="9">Good conductor</text>
+            <text x="555" y="226" text-anchor="middle" fill="#7c6fff" font-size="9">→ Aircraft, cans</text>
+            <!-- Copper -->
+            <rect x="630" y="165" width="130" height="60" rx="3" fill="#111318" stroke="#252a35"/>
+            <text x="695" y="185" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Copper</text>
+            <text x="695" y="200" text-anchor="middle" fill="#7a8099" font-size="9">Ductile, excellent</text>
+            <text x="695" y="213" text-anchor="middle" fill="#7a8099" font-size="9">electrical conductor</text>
+            <text x="695" y="226" text-anchor="middle" fill="#7c6fff" font-size="9">→ Wires, pipes</text>
+            <!-- Alloys section -->
+            <text x="410" y="270" text-anchor="middle" fill="#f0a500" font-size="10" font-style="italic">— ALLOYS (Mixtures) —</text>
+            <line x1="260" y1="225" x2="200" y2="295" stroke="#f0a500" stroke-width="1" stroke-dasharray="4"/>
+            <line x1="260" y1="225" x2="380" y2="295" stroke="#f0a500" stroke-width="1" stroke-dasharray="4"/>
+            <line x1="555" y1="225" x2="555" y2="295" stroke="#f0a500" stroke-width="1" stroke-dasharray="4"/>
+            <!-- Brass -->
+            <rect x="110" y="295" width="160" height="60" rx="3" fill="#111318" stroke="#f0a500" stroke-dasharray="3"/>
+            <text x="190" y="315" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Brass</text>
+            <text x="190" y="330" text-anchor="middle" fill="#7a8099" font-size="9">Copper + Zinc</text>
+            <text x="190" y="343" text-anchor="middle" fill="#7a8099" font-size="9">Good for casting</text>
+            <text x="190" y="356" text-anchor="middle" fill="#f0a500" font-size="9">→ Instruments, taps</text>
+            <!-- Bronze -->
+            <rect x="290" y="295" width="160" height="60" rx="3" fill="#111318" stroke="#f0a500" stroke-dasharray="3"/>
+            <text x="370" y="315" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Bronze</text>
+            <text x="370" y="330" text-anchor="middle" fill="#7a8099" font-size="9">Copper + Tin</text>
+            <text x="370" y="343" text-anchor="middle" fill="#7a8099" font-size="9">Corrosion resistant</text>
+            <text x="370" y="356" text-anchor="middle" fill="#f0a500" font-size="9">→ Bearings, statues</text>
+            <!-- Duralumin -->
+            <rect x="470" y="295" width="170" height="60" rx="3" fill="#111318" stroke="#f0a500" stroke-dasharray="3"/>
+            <text x="555" y="315" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">Duralumin</text>
+            <text x="555" y="330" text-anchor="middle" fill="#7a8099" font-size="9">Al + Cu + Mg</text>
+            <text x="555" y="343" text-anchor="middle" fill="#7a8099" font-size="9">Strong, lightweight</text>
+            <text x="555" y="356" text-anchor="middle" fill="#f0a500" font-size="9">→ Aircraft structures</text>
+          </svg>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Metal</th><th>Type</th><th>Key Properties</th><th>Common Uses</th><th>Exam Note</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cast Iron</strong></td><td><span class="badge badge-g">Ferrous</span></td><td>Hard, brittle, good in compression, cheap</td><td>Manhole covers, engine blocks, vices</td><td>Brittle = shatters under tension</td></tr>
+              <tr><td><strong>Low Carbon Steel (Mild Steel)</strong></td><td><span class="badge badge-g">Ferrous</span></td><td>Tough, ductile, malleable, easy to weld, rusts</td><td>Car bodies, nuts/bolts, structural beams</td><td>Most common engineering metal</td></tr>
+              <tr><td><strong>High Carbon Steel</strong></td><td><span class="badge badge-g">Ferrous</span></td><td>Very hard, less ductile, can be heat treated</td><td>Cutting tools, springs, drill bits, files</td><td>More carbon = harder but more brittle</td></tr>
+              <tr><td><strong>Stainless Steel</strong></td><td><span class="badge badge-g">Ferrous Alloy</span></td><td>Corrosion resistant, strong, hygienic</td><td>Cutlery, surgical tools, kitchen sinks</td><td>Contains chromium (18%) and nickel (8%)</td></tr>
+              <tr><td><strong>Aluminium</strong></td><td><span class="badge badge-p">Non-Ferrous</span></td><td>Lightweight, corrosion resistant, good conductor</td><td>Aircraft, drink cans, window frames</td><td>Density ~1/3 of steel</td></tr>
+              <tr><td><strong>Copper</strong></td><td><span class="badge badge-p">Non-Ferrous</span></td><td>Excellent electrical/thermal conductor, ductile, malleable</td><td>Electrical wiring, water pipes, PCBs</td><td>Best common conductor after silver</td></tr>
+              <tr><td><strong>Zinc</strong></td><td><span class="badge badge-p">Non-Ferrous</span></td><td>Low melting point, corrosion resistant</td><td>Galvanising steel, die casting, batteries</td><td>Galvanising = coating steel with zinc</td></tr>
+              <tr><td><strong>Lead</strong></td><td><span class="badge badge-p">Non-Ferrous</span></td><td>Dense, very malleable, low melting point, toxic</td><td>Roofing, radiation shielding, solder (with tin)</td><td>Being phased out due to toxicity</td></tr>
+              <tr><td><strong>Brass</strong></td><td><span class="badge badge-y">Alloy</span></td><td>Corrosion resistant, good for casting, attractive</td><td>Musical instruments, taps, door fittings</td><td>Copper + Zinc</td></tr>
+              <tr><td><strong>Bronze</strong></td><td><span class="badge badge-y">Alloy</span></td><td>Harder than copper, corrosion resistant, low friction</td><td>Bearings, statues, marine hardware</td><td>Copper + Tin</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Changing Metal Properties</h3>
+        <p>Engineers can alter the properties of metals through several processes. Understanding these is essential for exam questions about why a specific treatment is used.</p>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">🔥 Heat Treatment</div>
+            <ul>
+              <li><strong>Hardening & Quenching:</strong> Heat steel to ~800°C (austenite range), then cool rapidly in water or oil. Result: very hard but brittle martensite structure.</li>
+              <li><strong>Tempering:</strong> After hardening, reheat to 150–650°C and cool slowly. Reduces brittleness while retaining hardness.</li>
+              <li><strong>Annealing:</strong> Heat to high temperature, then cool very slowly. Makes metal soft, ductile, and relieves internal stresses.</li>
+              <li><strong>Normalising:</strong> Heat above critical temperature, cool in still air. Refines grain structure, improves toughness.</li>
+            </ul>
+          </div>
+          <div class="card green">
+            <div class="card-title">⚒️ Cold Working & Alloying</div>
+            <ul>
+              <li><strong>Cold Working:</strong> Deforming metal below its recrystallisation temperature (e.g., rolling, drawing). Increases strength and hardness (work hardening) but reduces ductility.</li>
+              <li><strong>Alloying:</strong> Adding elements to change properties. E.g., adding chromium to steel creates stainless steel (corrosion resistance). Adding carbon to iron creates steel (increased strength).</li>
+              <li><strong>Grain Size:</strong> Smaller grains = stronger, tougher metal. Heating allows grains to grow (annealing). Rapid cooling or cold working produces smaller grains.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight-box green">
+          <div class="highlight-title">📌 Key Exam Point — Corrosion</div>
+          <p>Ferrous metals (containing iron) will <strong>rust</strong> when exposed to oxygen and water. Non-ferrous metals are generally corrosion resistant. Methods to prevent corrosion include: <strong>painting</strong>, <strong>galvanising</strong> (zinc coating), <strong>electroplating</strong>, <strong>dip coating</strong>, and <strong>using stainless steel</strong>.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 3: POLYMERS -->
+      <div class="lesson-section" id="polymers">
+        <div class="lesson-section-header">
+          <div class="section-number">3</div>
+          <div class="section-title-block">
+            <h2>Polymers (Plastics)</h2>
+            <small>3.1.1.2 — Thermoplastics vs. Thermosetting Polymers</small>
+          </div>
+        </div>
+
+        <p>Polymers are long-chain molecules made from repeating units (monomers). In engineering, we divide them into two critical groups based on how they respond to heat.</p>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">🌡️ Thermoplastics</div>
+            <p><strong>Key property:</strong> Soften when heated, harden when cooled. This process is <strong>reversible</strong> — they can be reheated and reshaped many times.</p>
+            <p><strong>Analogy:</strong> Like chocolate — melt it, mould it, let it set, melt it again.</p>
+            <p><strong>Structure:</strong> Long polymer chains with weak intermolecular bonds (van der Waals forces) between them. Heat breaks these bonds.</p>
+            <p><strong>Recyclable:</strong> Yes — can be melted down and reused.</p>
+          </div>
+          <div class="card red">
+            <div class="card-title">🔒 Thermosetting Polymers</div>
+            <p><strong>Key property:</strong> Once set (cured), they cannot be remelted. The process is <strong>irreversible</strong>. If reheated, they char or burn.</p>
+            <p><strong>Analogy:</strong> Like a fried egg — once cooked, you can't uncook it.</p>
+            <p><strong>Structure:</strong> Cross-linked polymer chains with strong covalent bonds between them. These bonds cannot be broken by heat.</p>
+            <p><strong>Recyclable:</strong> No — cannot be remoulded after setting.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Polymer</th><th>Type</th><th>Properties</th><th>Uses</th></tr></thead>
+            <tbody>
+              <tr><td><strong>ABS</strong> (Acrylonitrile Butadiene Styrene)</td><td><span class="badge badge-g">Thermoplastic</span></td><td>Tough, rigid, impact resistant, good surface finish</td><td>LEGO bricks, car dashboards, 3D printing filament, helmets</td></tr>
+              <tr><td><strong>Acrylic</strong> (PMMA)</td><td><span class="badge badge-g">Thermoplastic</span></td><td>Stiff, transparent, shiny, brittle, scratch resistant</td><td>Signs, display cases, bath panels, aircraft windows</td></tr>
+              <tr><td><strong>Nylon</strong> (Polyamide)</td><td><span class="badge badge-g">Thermoplastic</span></td><td>Very tough, wear resistant, low friction, self-lubricating</td><td>Gears, bearings, toothbrush bristles, clothing</td></tr>
+              <tr><td><strong>Polycarbonate</strong> (PC)</td><td><span class="badge badge-g">Thermoplastic</span></td><td>Extremely tough, transparent, high impact resistance</td><td>Safety glasses, riot shields, CDs, phone cases</td></tr>
+              <tr><td><strong>Polystyrene</strong> (PS)</td><td><span class="badge badge-g">Thermoplastic</span></td><td>Lightweight, cheap, rigid (or expanded for foam)</td><td>Packaging, disposable cups, model kits</td></tr>
+              <tr><td><strong>Epoxy Resin</strong></td><td><span class="badge badge-r">Thermosetting</span></td><td>Strong adhesive, chemical resistant, hard</td><td>Adhesives, composite matrix (CFRP/GRP), circuit boards</td></tr>
+              <tr><td><strong>Polyester Resin</strong></td><td><span class="badge badge-r">Thermosetting</span></td><td>Rigid, brittle, cheap, used with glass fibre</td><td>GRP boat hulls, car body repairs</td></tr>
+              <tr><td><strong>Melamine</strong></td><td><span class="badge badge-r">Thermosetting</span></td><td>Hard, heat resistant, scratch resistant</td><td>Kitchen worktops, crockery, laminates</td></tr>
+              <tr><td><strong>Polyurethane</strong></td><td><span class="badge badge-r">Thermosetting</span></td><td>Flexible or rigid foam, tough coating</td><td>Foam insulation, varnish, shoe soles, mattresses</td></tr>
+              <tr><td><strong>Vulcanised Rubber</strong></td><td><span class="badge badge-r">Thermosetting</span></td><td>Elastic, tough, wear resistant, waterproof</td><td>Car tyres, seals, gaskets, conveyor belts</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Fill in the Gaps 2 - Polymers -->
+        <div class="fitg-container" id="fitg-polymers">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — Polymers</div>
+              <div class="fitg-subtitle">Complete the sentences about polymer types</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="thermoplastic">thermoplastic</span>
+            <span class="word-chip" data-word="thermosetting">thermosetting</span>
+            <span class="word-chip" data-word="reversible">reversible</span>
+            <span class="word-chip" data-word="irreversible">irreversible</span>
+            <span class="word-chip" data-word="cross-linked">cross-linked</span>
+            <span class="word-chip" data-word="recycled">recycled</span>
+            <span class="word-chip" data-word="ABS">ABS</span>
+            <span class="word-chip" data-word="nylon">nylon</span>
+            <span class="word-chip" data-word="epoxy">epoxy</span>
+          </div>
+          <div class="fitg-text">
+            <p>A polymer that can be repeatedly softened by heating and hardened by cooling is called a <input class="fitg-input" data-answer="thermoplastic" style="width:130px"> . This process is <input class="fitg-input" data-answer="reversible" style="width:100px"> , meaning the material can be <input class="fitg-input" data-answer="recycled" style="width:90px"> .</p>
+            <p>A polymer that permanently sets during manufacture and cannot be remelted is called a <input class="fitg-input" data-answer="thermosetting" style="width:130px"> polymer. This process is <input class="fitg-input" data-answer="irreversible" style="width:110px"> because the polymer chains become <input class="fitg-input" data-answer="cross-linked" style="width:110px"> by strong covalent bonds.</p>
+            <p>LEGO bricks are made from <input class="fitg-input" data-answer="ABS" style="width:50px"> , a tough thermoplastic. Gears in machines are often made from <input class="fitg-input" data-answer="nylon" style="width:70px"> due to its wear resistance. The matrix in carbon fibre composites is often <input class="fitg-input" data-answer="epoxy" style="width:70px"> resin, a thermosetting polymer.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: COMPOSITES -->
+      <div class="lesson-section" id="composites">
+        <div class="lesson-section-header">
+          <div class="section-number">4</div>
+          <div class="section-title-block">
+            <h2>Composites & Other Materials</h2>
+            <small>3.1.1.3 & 3.1.1.4 — FRP, plywood, MDF, ceramics, timber</small>
+          </div>
+        </div>
+
+        <p>A <strong>composite material</strong> is made by combining two or more materials to produce a material with superior properties to either component alone. They typically consist of a <strong>reinforcement</strong> (provides strength) embedded in a <strong>matrix</strong> (holds it together and transfers loads).</p>
+
+        <!-- Composite Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Composite Structure (Fibre Reinforced Polymer)</span>
+          <svg width="100%" height="180" viewBox="0 0 700 180" style="font-family:'Barlow',sans-serif;font-size:12px;">
+            <!-- Matrix -->
+            <rect x="50" y="40" width="600" height="100" rx="6" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <text x="350" y="155" text-anchor="middle" fill="#00d4aa" font-size="11">MATRIX (e.g., Epoxy Resin) — holds fibres together, transfers load</text>
+            <!-- Fibres -->
+            <line x1="80" y1="40" x2="80" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="130" y1="40" x2="130" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="180" y1="40" x2="180" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="230" y1="40" x2="230" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="280" y1="40" x2="280" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="330" y1="40" x2="330" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="380" y1="40" x2="380" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="430" y1="40" x2="430" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="480" y1="40" x2="480" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="530" y1="40" x2="530" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="580" y1="40" x2="580" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <line x1="630" y1="40" x2="630" y2="140" stroke="#f0a500" stroke-width="4"/>
+            <text x="350" y="25" text-anchor="middle" fill="#f0a500" font-size="11">REINFORCEMENT (e.g., Carbon Fibres) — provides tensile strength</text>
+          </svg>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">🏎️ Carbon Fibre (CFRP)</div>
+            <p><strong>Reinforcement:</strong> Carbon fibres. <strong>Matrix:</strong> Epoxy resin.</p>
+            <p><strong>Properties:</strong> Extremely high strength-to-weight ratio, stiff, fatigue resistant, expensive to produce.</p>
+            <p><strong>Uses:</strong> Formula 1 chassis, aircraft components, sports equipment (tennis rackets, bicycle frames), wind turbine blades.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">⛵ GRP (Glass Reinforced Plastic)</div>
+            <p><strong>Reinforcement:</strong> Glass fibres. <strong>Matrix:</strong> Polyester or epoxy resin.</p>
+            <p><strong>Properties:</strong> Strong, lightweight, corrosion resistant, cheaper than CFRP, good surface finish.</p>
+            <p><strong>Uses:</strong> Boat hulls, car body panels, swimming pools, storage tanks, wind turbine blades.</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">🪵 Plywood</div>
+            <p><strong>Structure:</strong> Thin wood veneers (plies) glued together with alternating grain directions (90° to each other).</p>
+            <p><strong>Properties:</strong> Strong in all directions (unlike solid wood), resists warping and splitting, available in large sheets.</p>
+            <p><strong>Uses:</strong> Furniture, flooring, formwork for concrete, boat building.</p>
+          </div>
+          <div class="card purple">
+            <div class="card-title">🏗️ Structural Concrete</div>
+            <p><strong>Structure:</strong> Concrete (cement + aggregate) reinforced with steel bars (rebar).</p>
+            <p><strong>Properties:</strong> Concrete is strong in compression but weak in tension. Steel rebar provides tensile strength. Together = strong in both.</p>
+            <p><strong>Uses:</strong> Bridges, buildings, foundations, dams.</p>
+          </div>
+          <div class="card">
+            <div class="card-title">📋 MDF & OSB</div>
+            <p><strong>MDF</strong> (Medium Density Fibreboard): Wood fibres bonded with resin under heat and pressure. Smooth surface, easy to cut and paint. Used for furniture, shelving.</p>
+            <p><strong>OSB</strong> (Oriented Strand Board): Wood strands bonded with resin. Stronger than MDF. Used for structural panels, flooring, roofing.</p>
+          </div>
+          <div class="card red">
+            <div class="card-title">🏺 Ceramics</div>
+            <p><strong>Properties:</strong> Very hard, very stiff, excellent heat resistance, chemically inert, but <strong>brittle</strong> — shatters under impact.</p>
+            <p><strong>Examples:</strong> Glass, bricks, porcelain, alumina, silicon carbide.</p>
+            <p><strong>Uses:</strong> Cutting tool tips, spark plug insulators, tiles (Space Shuttle), electrical insulators, pottery.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box blue">
+          <div class="highlight-title">📌 Key Exam Point — Composite Properties</div>
+          <p>The properties of a composite depend on: (1) the <strong>direction/alignment of reinforcement</strong> — fibres aligned in one direction are strongest in that direction; (2) the <strong>matrix material</strong> — determines chemical resistance and how load is transferred; (3) the <strong>amount of reinforcement</strong> — more fibres = stronger; (4) the <strong>size and shape of reinforcement</strong> — longer fibres provide better strength than short fibres or particles.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 5: MATERIAL COSTS & SUPPLY -->
+      <div class="lesson-section" id="costs">
+        <div class="lesson-section-header">
+          <div class="section-number">5</div>
+          <div class="section-title-block">
+            <h2>Material Costs, Supply & Design Factors</h2>
+            <small>3.1.2 & 3.1.3 — Economics, sustainability, and design decisions</small>
+          </div>
+        </div>
+
+        <p>Selecting a material is never just about properties — engineers must also consider <strong>cost</strong>, <strong>availability</strong>, <strong>environmental impact</strong>, and <strong>end-of-life disposal</strong>.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Factor</th><th>Explanation</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Cost</strong></td><td>Material cost per kg or per unit. Cheaper materials reduce manufacturing costs.</td><td>Steel is much cheaper than titanium for the same strength-to-weight ratio.</td></tr>
+              <tr><td><strong>Availability</strong></td><td>How easily the material can be sourced. Rare materials have supply chain risks.</td><td>Cobalt (used in batteries) has limited global supply concentrated in the DRC.</td></tr>
+              <tr><td><strong>Stock sizes</strong></td><td>Materials come in standard sizes (sheets, bars, tubes). Using standard sizes reduces cost.</td><td>Ordering non-standard bar sizes increases cost significantly.</td></tr>
+              <tr><td><strong>Economies of scale</strong></td><td>Buying in larger quantities reduces cost per unit (price breaks).</td><td>Buying 10,000 bolts is cheaper per bolt than buying 10.</td></tr>
+              <tr><td><strong>Waste</strong></td><td>Processes that produce more waste increase cost. Additive manufacturing produces near-zero waste.</td><td>CNC machining removes material (subtractive) — waste must be recycled or disposed of.</td></tr>
+              <tr><td><strong>Recyclability</strong></td><td>Materials that can be recycled have lower end-of-life costs and environmental impact.</td><td>Aluminium can be recycled using only 5% of the energy needed to produce it from ore.</td></tr>
+              <tr><td><strong>Machinability</strong></td><td>How easily a material can be cut, drilled, or turned. Affects manufacturing cost.</td><td>Free-cutting steel contains sulfur/lead to improve machinability.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Energy Sources & Environmental Impact</h3>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">☀️ Renewable Energy</div>
+            <ul>
+              <li><strong>Solar:</strong> Photovoltaic panels. No emissions but intermittent.</li>
+              <li><strong>Wind:</strong> Turbines. Clean but visual/noise impact.</li>
+              <li><strong>Tidal/Wave:</strong> Predictable, low emissions, limited locations.</li>
+              <li><strong>Biomass:</strong> Burns organic material. Carbon neutral if managed.</li>
+            </ul>
+          </div>
+          <div class="card red">
+            <div class="card-title">⚡ Non-Renewable Energy</div>
+            <ul>
+              <li><strong>Fossil Fuels:</strong> Coal, oil, gas. High energy density but CO₂ emissions.</li>
+              <li><strong>Nuclear:</strong> Very high energy density, low CO₂ during operation, but radioactive waste management required.</li>
+            </ul>
+          </div>
+          <div class="card green">
+            <div class="card-title">♻️ Planned Obsolescence & EOL</div>
+            <ul>
+              <li><strong>Planned obsolescence:</strong> Products designed to fail or become outdated after a set period to drive new sales.</li>
+              <li><strong>Sealed parts:</strong> Products designed so components cannot be repaired, only replaced.</li>
+              <li><strong>End of Life (EOL):</strong> What happens when a product is no longer useful — recycle, reuse, landfill, or incinerate.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM PRACTICE SECTION -->
+      <div class="lesson-section" id="exam-practice">
+        <div class="lesson-section-header">
+          <div class="section-number">📝</div>
+          <div class="section-title-block">
+            <h2>Exam Practice Questions</h2>
+            <small>Based on real AQA past paper questions (2020–2024)</small>
+          </div>
+        </div>
+
+        <!-- MCQ Quiz -->
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-icon">🎯</div>
+            <div>
+              <div class="quiz-title">Multiple Choice — Engineering Materials</div>
+              <div class="quiz-meta">10 questions · Select the best answer · Click Submit when done</div>
+            </div>
+          </div>
+
+          <!-- Q1 -->
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 1 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which of the following best describes the property of <strong>ductility</strong>?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> The ability to resist surface scratching</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> The ability to be drawn into a wire without breaking</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> The ability to be hammered into thin sheets</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> The ability to absorb energy before fracturing</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Ductility is the ability to be drawn into a wire. Option C describes malleability, and option D describes toughness.</div>
+              <div class="examiner-tip">💡 Examiner tip: Remember — <em>Ductile = drawn into wire (tensile)</em>. Malleable = hammered into sheets (compressive).</div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 2 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A manufacturer needs a material for electrical wiring. Which property is most important?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> High hardness</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> High compressive strength</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> High electrical conductivity and ductility</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> High melting point</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Copper is used for wiring because it has excellent electrical conductivity AND is ductile (can be drawn into thin wire).</div>
+              <div class="examiner-tip">💡 Examiner tip: Always justify material choice with TWO relevant properties for full marks.</div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 3 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which of the following is a <strong>thermosetting polymer</strong>?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> ABS (Acrylonitrile Butadiene Styrene)</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Acrylic (PMMA)</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Nylon (Polyamide)</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">D</span> Epoxy resin</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Epoxy resin is a thermosetting polymer. ABS, Acrylic, and Nylon are all thermoplastics.</div>
+              <div class="examiner-tip">💡 Examiner tip: Thermosetting polymers include epoxy, polyester resin, melamine, polyurethane, and vulcanised rubber. All others in the spec are thermoplastics.</div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 4 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Carbon Fibre Reinforced Polymer (CFRP) is used in Formula 1 car chassis. Which combination of properties makes it suitable?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> High density and high ductility</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> High strength-to-weight ratio and stiffness</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Low cost and high malleability</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> High electrical conductivity and toughness</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! CFRP has an exceptional strength-to-weight ratio (strong but very light) and is extremely stiff — critical for racing car performance and safety.</div>
+              <div class="examiner-tip">💡 Examiner tip: CFRP is expensive to manufacture — always mention cost as a disadvantage when comparing to steel or aluminium.</div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 5 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A steel component is heated to 800°C and then rapidly cooled in water. What is this process called?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Annealing</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Normalising</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Hardening and quenching</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Tempering</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Hardening and quenching involves heating steel to the austenite range (~800°C) then rapidly cooling (quenching) in water or oil to produce a very hard but brittle structure.</div>
+              <div class="examiner-tip">💡 Examiner tip: Annealing = slow cooling (softens). Normalising = air cooling (refines grain). Tempering = reheating after hardening (reduces brittleness).</div>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary quiz-submit-btn">Submit Answers</button>
+            <button class="btn btn-secondary quiz-reset-btn">↺ Reset Quiz</button>
+          </div>
+          <div class="quiz-score-display">
+            <div class="quiz-score-num">0/5</div>
+            <div class="quiz-score-label">Complete the quiz to see your score</div>
+          </div>
+        </div>
+
+        <!-- Past Paper Style Questions -->
+        <h3>Past Paper Style Questions</h3>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty easy">★ Easy</span>
+            <span class="ppq-source">Style: AQA 8852 Short Answer</span>
+            <span class="ppq-marks">2 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">State <strong>two</strong> differences between a thermoplastic and a thermosetting polymer.</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer (2 marks)</div>
+              <div class="ppq-model-answer-text">
+                <strong>Award 1 mark each for any two of:</strong><br>
+                • Thermoplastics can be reheated and reshaped / thermosetting polymers cannot be reheated (1)<br>
+                • Thermoplastics are recyclable / thermosetting polymers cannot be recycled (1)<br>
+                • Thermoplastics have weak intermolecular bonds between chains / thermosetting polymers have strong cross-linked covalent bonds (1)<br>
+                • Thermoplastics soften on heating / thermosetting polymers char or burn if reheated (1)
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: For "state two differences" questions, ensure each point is clearly contrasting the two types. Do not just describe one type — you must compare both.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty medium">★★ Medium</span>
+            <span class="ppq-source">Style: AQA 8852 Extended Answer</span>
+            <span class="ppq-marks">4 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">A manufacturer is designing a new bicycle frame. They are considering using either <strong>aluminium alloy</strong> or <strong>carbon fibre reinforced polymer (CFRP)</strong>.<br><br>Evaluate the suitability of each material for this application, considering properties and cost.</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer (4 marks)</div>
+              <div class="ppq-model-answer-text">
+                <strong>Aluminium alloy:</strong><br>
+                + Lightweight (low density ~2.7 g/cm³) — good for cycling performance (1)<br>
+                + Corrosion resistant — suitable for outdoor use (1)<br>
+                + Relatively cheap and widely available (1)<br>
+                − Lower strength-to-weight ratio than CFRP (1)<br><br>
+                <strong>CFRP:</strong><br>
+                + Exceptional strength-to-weight ratio — very light and very strong (1)<br>
+                + Very stiff — good for power transfer when pedalling (1)<br>
+                − Very expensive to manufacture — not suitable for budget bikes (1)<br>
+                − Brittle — can fail catastrophically in a crash (1)<br><br>
+                <strong>Conclusion:</strong> CFRP is superior in performance but aluminium alloy is more cost-effective for most consumers. (1)
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: For "evaluate" questions, you must discuss BOTH advantages and disadvantages of each option. A conclusion that compares the two earns the top marks. Always link properties to the specific application context.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty hard">★★★ Hard</span>
+            <span class="ppq-source">Style: AQA 8852 Extended Response</span>
+            <span class="ppq-marks">6 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">A company manufactures kitchen utensils. They currently use stainless steel but are considering switching to a thermoplastic polymer for some products.<br><br>Discuss the factors the company should consider when making this material change, including properties, manufacturing, cost, and environmental impact.</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer — Level Marked (6 marks)</div>
+              <div class="ppq-model-answer-text">
+                <strong>Level 3 (5–6 marks):</strong> Detailed, well-structured discussion covering multiple factors with specific examples and a justified conclusion.<br><br>
+                <strong>Key points to include:</strong><br>
+                <em>Properties:</em> Stainless steel is stronger, harder, and more heat resistant than most thermoplastics. Thermoplastics like polypropylene are food-safe, lightweight, and can be moulded into complex shapes. However, they may deform at high temperatures (e.g., near a hob).<br><br>
+                <em>Manufacturing:</em> Stainless steel requires machining/forming — higher tooling costs. Thermoplastics can be injection moulded — high initial tooling cost but very low cost per unit at high volumes.<br><br>
+                <em>Cost:</em> Thermoplastics are generally cheaper per kg. Injection moulding is highly automated, reducing labour costs. Stainless steel has higher material and machining costs.<br><br>
+                <em>Environmental:</em> Thermoplastics are recyclable (thermoplastics can be remelted). Stainless steel is also highly recyclable. However, thermoplastics are derived from fossil fuels. Stainless steel has a long service life, reducing replacement frequency.<br><br>
+                <em>Conclusion:</em> The best choice depends on the specific utensil. For spatulas and spoons, thermoplastics offer cost and weight advantages. For knives and high-heat items, stainless steel remains superior.
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: Extended response questions are marked by "level" — to reach Level 3, you must discuss multiple factors, use technical vocabulary correctly, and reach a justified conclusion. Aim for 5-6 distinct points.</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /exam-practice -->
+
+      <!-- Lesson Navigation -->
+      <div class="lesson-nav">
+        <a href="../index.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div>
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Dashboard</span>
+          </div>
+        </a>
+        <a href="2-manufacturing.html" class="lesson-nav-btn">
+          <div style="text-align:right">
+            <span class="nav-label">Next Lesson</span>
+            <span class="nav-title">Manufacturing Processes</span>
+          </div>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div><!-- /content-inner -->
+
+    <footer>
+      <strong>AQA GCSE Engineering 8852</strong> · Section 3.1 Engineering Materials · Revision Site
+    </footer>
+  </div><!-- /main-content -->
+</div><!-- /page-wrapper -->
+
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

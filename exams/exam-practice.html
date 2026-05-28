@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Practice — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.exam-paper-header {
+  background: linear-gradient(135deg, #111318 0%, #1a1f2e 100%);
+  border: 2px solid #f0a500;
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.exam-paper-header .exam-board {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #f0a500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.exam-paper-header h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #e8eaf0;
+  margin: 0 0 8px 0;
+}
+.exam-paper-header .exam-meta {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.exam-meta-item {
+  text-align: center;
+}
+.exam-meta-item .label {
+  font-size: 10px;
+  color: #7a8099;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.exam-meta-item .value {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #f0a500;
+  font-weight: 700;
+}
+.exam-instructions {
+  background: #111318;
+  border-left: 4px solid #00d4aa;
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  border-radius: 0 6px 6px 0;
+}
+.exam-instructions h3 {
+  color: #00d4aa;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin: 0 0 12px 0;
+}
+.exam-instructions ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #c8cad8;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.exam-section-header {
+  background: #1a1f2e;
+  border: 1px solid #2a3040;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 32px 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.exam-section-num {
+  background: #f0a500;
+  color: #0a0c10;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.exam-section-info h3 {
+  margin: 0;
+  color: #e8eaf0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.exam-section-info small {
+  color: #7a8099;
+  font-size: 0.8rem;
+}
+.exam-q {
+  background: #111318;
+  border: 1px solid #2a3040;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.exam-q-header {
+  background: #1a1f2e;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a3040;
+}
+.exam-q-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f0a500;
+}
+.exam-q-marks-badge {
+  background: #f0a500;
+  color: #0a0c10;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+.exam-q-body {
+  padding: 20px;
+}
+.exam-q-text {
+  color: #c8cad8;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+.exam-q-text strong {
+  color: #e8eaf0;
+}
+.exam-answer-lines {
+  margin-top: 12px;
+}
+.exam-answer-line {
+  border-bottom: 1px solid #2a3040;
+  height: 32px;
+  margin-bottom: 4px;
+}
+.exam-answer-box {
+  border: 1px solid #2a3040;
+  border-radius: 4px;
+  min-height: 80px;
+  margin-top: 12px;
+  padding: 8px;
+  background: #0d1018;
+}
+.exam-answer-box textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #c8cad8;
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 80px;
+  outline: none;
+}
+.exam-reveal-btn {
+  background: transparent;
+  border: 1px solid #f0a500;
+  color: #f0a500;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.2s;
+}
+.exam-reveal-btn:hover {
+  background: #f0a500;
+  color: #0a0c10;
+}
+.exam-model-answer {
+  display: none;
+  margin-top: 16px;
+  background: #0d1018;
+  border: 1px solid #00d4aa;
+  border-radius: 6px;
+  padding: 16px;
+}
+.exam-model-answer.visible {
+  display: block;
+}
+.exam-model-answer-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #00d4aa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.exam-model-answer-text {
+  color: #c8cad8;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+.exam-tip {
+  background: #1a1f2e;
+  border-left: 3px solid #7c6fff;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #9a9cb8;
+  border-radius: 0 4px 4px 0;
+}
+.marks-total-bar {
+  background: linear-gradient(135deg, #1a1f2e, #111318);
+  border: 2px solid #00d4aa;
+  border-radius: 8px;
+  padding: 24px 32px;
+  margin: 32px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.marks-total-bar .total-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #7a8099;
+  letter-spacing: 2px;
+}
+.marks-total-bar .total-value {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #00d4aa;
+}
+.marks-breakdown {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.marks-breakdown-item {
+  text-align: center;
+}
+.marks-breakdown-item .mb-val {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  color: #f0a500;
+  font-weight: 700;
+}
+.marks-breakdown-item .mb-label {
+  font-size: 0.75rem;
+  color: #7a8099;
+}
+.diagram-label-q {
+  background: #1a1f2e;
+  border: 1px dashed #f0a500;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 16px 0;
+}
+.diagram-label-q .label-instruction {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #f0a500;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.label-input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.label-input-group label {
+  color: #7a8099;
+  font-size: 0.85rem;
+  min-width: 60px;
+}
+.label-input-group input {
+  background: #0d1018;
+  border: 1px solid #2a3040;
+  border-radius: 4px;
+  color: #e8eaf0;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  padding: 6px 10px;
+  width: 200px;
+}
+.label-input-group input.correct { border-color: #00d4aa; background: rgba(0,212,170,0.05); }
+.label-input-group input.wrong { border-color: #ff4d6d; background: rgba(255,77,109,0.05); }
+</style>
+</head>
+<body>
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Full Exam Practice Paper</span></div>
+    </div>
+    <div class="content-inner">
+
+      <div class="exam-paper-header">
+        <div class="exam-board">AQA · GCSE · Engineering · 8852</div>
+        <h1>Full Mock Examination Paper</h1>
+        <p style="color:#7a8099;margin:0 0 8px 0;">Based on real AQA past paper questions and mark scheme style</p>
+        <div class="exam-meta">
+          <div class="exam-meta-item"><div class="label">Total Marks</div><div class="value">80</div></div>
+          <div class="exam-meta-item"><div class="label">Time Allowed</div><div class="value">2 Hours</div></div>
+          <div class="exam-meta-item"><div class="label">Sections</div><div class="value">4</div></div>
+          <div class="exam-meta-item"><div class="label">Paper</div><div class="value">Written (8852/W)</div></div>
+        </div>
+      </div>
+
+      <div class="exam-instructions">
+        <h3>Instructions to Candidates</h3>
+        <ul>
+          <li>Answer <strong>all</strong> questions in all sections.</li>
+          <li>Write your answers in the spaces provided. Use a black pen.</li>
+          <li>Show all your working for calculation questions — method marks are available.</li>
+          <li>The number of marks available for each question is shown in brackets.</li>
+          <li>A calculator may be used. Use π = 3.142 unless stated otherwise.</li>
+          <li>Click <strong>"Reveal Model Answer"</strong> after attempting each question to check your response.</li>
+        </ul>
+      </div>
+
+      <!-- SECTION A -->
+      <div class="exam-section-header">
+        <div class="exam-section-num">A</div>
+        <div class="exam-section-info">
+          <h3>Section A — Multiple Choice &amp; Short Answer</h3>
+          <small>Questions 1–10 · 20 marks total · Approximately 30 minutes</small>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q1</span>
+          <span class="exam-q-marks-badge">1 mark</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">Which of the following is a <strong>thermosetting</strong> polymer?<br><br>
+            A — Polypropylene (PP)&nbsp;&nbsp;&nbsp; B — Polyethylene (HDPE)&nbsp;&nbsp;&nbsp; C — Epoxy resin&nbsp;&nbsp;&nbsp; D — Acrylic (PMMA)
+          </div>
+          <div class="exam-answer-lines"><div class="exam-answer-line"></div></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 1 mark</div>
+            <div class="exam-model-answer-text"><strong>C — Epoxy resin</strong><br>Epoxy resin is a thermosetting polymer — it undergoes an irreversible chemical change when cured and cannot be re-melted. Polypropylene, HDPE, and acrylic are all thermoplastics.</div>
+            <div class="exam-tip">💡 Thermosetting = irreversible cure (epoxy, polyester resin, phenol formaldehyde/Bakelite, melamine formaldehyde, urea formaldehyde). Thermoplastic = can be re-melted.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q2</span>
+          <span class="exam-q-marks-badge">1 mark</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A component is described as <strong>malleable</strong>. What does this mean?<br><br>
+            A — It can be stretched into a wire&nbsp;&nbsp;&nbsp; B — It can be hammered into shape without cracking&nbsp;&nbsp;&nbsp; C — It returns to its original shape after deformation&nbsp;&nbsp;&nbsp; D — It is resistant to scratching
+          </div>
+          <div class="exam-answer-lines"><div class="exam-answer-line"></div></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 1 mark</div>
+            <div class="exam-model-answer-text"><strong>B — It can be hammered into shape without cracking</strong><br>Malleable = can be permanently deformed by compressive forces (hammering, rolling) without fracturing. Ductile = can be drawn into wire. Elastic = returns to original shape. Hard = resistant to indentation/scratching.</div>
+            <div class="exam-tip">💡 Malleable ≠ Ductile. Malleable = compressive deformation (hammering). Ductile = tensile deformation (wire drawing). Gold is both highly malleable and ductile.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q3</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">State <strong>two</strong> reasons why aluminium alloys are used for aircraft fuselages rather than mild steel.</div>
+          <div class="exam-answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks (1 each)</div>
+            <div class="exam-model-answer-text">
+              Any two of:<br>
+              • <strong>Lower density</strong> — aluminium is approximately 3× less dense than steel, reducing aircraft weight and improving fuel efficiency (1)<br>
+              • <strong>Good strength-to-weight ratio</strong> — aluminium alloys are strong relative to their weight (1)<br>
+              • <strong>Corrosion resistance</strong> — aluminium forms a natural oxide layer that protects against corrosion (1)<br>
+              • <strong>Good machinability and formability</strong> — can be formed into complex fuselage shapes (1)
+            </div>
+            <div class="exam-tip">💡 For "state two reasons" questions, give two distinct points. Don't repeat the same idea in different words. Each point must be clearly different to earn separate marks.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q4</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">Explain the difference between a <strong>first class lever</strong> and a <strong>second class lever</strong>. Give one example of each.</div>
+          <div class="exam-answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks</div>
+            <div class="exam-model-answer-text">
+              <strong>First class lever:</strong> The fulcrum is between the effort and the load (1). Example: scissors, crowbar, seesaw, pliers.<br><br>
+              <strong>Second class lever:</strong> The load is between the fulcrum and the effort (1). Example: wheelbarrow, nutcracker, bottle opener.
+            </div>
+            <div class="exam-tip">💡 Remember: 1st class = fulcrum in middle (F-L-E or E-F-L). 2nd class = load in middle (F-L-E). 3rd class = effort in middle (F-E-L) — e.g., tweezers, fishing rod.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q5</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A gear train has a driver gear with 15 teeth rotating at 600 rpm. The driven gear has 45 teeth.<br><br>
+            (a) Calculate the gear ratio. [1 mark]<br>
+            (b) Calculate the output speed of the driven gear. [1 mark]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show all working..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks</div>
+            <div class="exam-model-answer-text">
+              (a) GR = T_driven ÷ T_driver = 45 ÷ 15 = <strong>3 : 1</strong> (1)<br><br>
+              (b) Output speed = Input speed ÷ GR = 600 ÷ 3 = <strong>200 rpm</strong> (1)
+            </div>
+            <div class="exam-tip">💡 GR > 1 = speed reduction, torque increase. GR < 1 = speed increase, torque reduction. Always write the formula first.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q6</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">Name the process shown in the diagram below and describe what happens to the material during this process.<br><br>
+            <em>[Diagram shows a metal billet being forced through a shaped die opening]</em>
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Name the process and describe what happens..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks</div>
+            <div class="exam-model-answer-text">
+              <strong>Extrusion</strong> (1)<br><br>
+              A heated metal billet (or polymer) is forced under high pressure through a shaped die opening. The material takes the cross-sectional shape of the die and emerges as a continuous length with a constant cross-section (1).
+            </div>
+            <div class="exam-tip">💡 Extrusion = forcing material through a die (like squeezing toothpaste). Used for aluminium window frames, copper pipes, plastic profiles. The die determines the cross-section shape.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q7</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A circuit contains a 9V battery and three resistors in series: 10Ω, 20Ω, and 15Ω.<br><br>
+            (a) Calculate the total resistance. [1 mark]<br>
+            (b) Calculate the current flowing through the circuit. [1 mark]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show all working..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks</div>
+            <div class="exam-model-answer-text">
+              (a) R_total = R₁ + R₂ + R₃ = 10 + 20 + 15 = <strong>45 Ω</strong> (1)<br><br>
+              (b) I = V ÷ R = 9 ÷ 45 = <strong>0.2 A</strong> (1)
+            </div>
+            <div class="exam-tip">💡 Series: R_total = sum of all resistors. Same current through all. Voltage splits across resistors. V = I × R for each resistor.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q8</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">Describe the difference between <strong>Quality Control (QC)</strong> and <strong>Quality Assurance (QA)</strong>.</div>
+          <div class="exam-answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks</div>
+            <div class="exam-model-answer-text">
+              <strong>Quality Control (QC)</strong> involves inspecting and testing finished products to identify defects — it is <em>reactive</em>, finding problems after they have occurred (1).<br><br>
+              <strong>Quality Assurance (QA)</strong> involves systematic processes and procedures designed to prevent defects from occurring in the first place — it is <em>proactive</em> (1).
+            </div>
+            <div class="exam-tip">💡 Key distinction: QC = reactive (finds defects after). QA = proactive (prevents defects). ISO 9001 is a QA standard. Go/No-Go gauges are a QC tool.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q9</span>
+          <span class="exam-q-marks-badge">2 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">State <strong>two</strong> advantages of using CAD software compared to manual drawing on paper.</div>
+          <div class="exam-answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 2 marks (1 each)</div>
+            <div class="exam-model-answer-text">
+              Any two of:<br>
+              • Designs can be easily edited without redrawing (1)<br>
+              • Designs can be shared electronically worldwide (1)<br>
+              • Automatic checking for errors and clashes in assemblies (1)<br>
+              • Parametric modelling — changing one dimension updates the whole model (1)<br>
+              • Can be directly linked to CAM for CNC manufacturing (1)<br>
+              • 3D visualisation and photorealistic rendering (1)
+            </div>
+            <div class="exam-tip">💡 Don't say "it's faster" without explaining why. Say "designs can be edited without redrawing" — that's the specific advantage that earns the mark.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q10</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">
+            <strong>Diagram Labelling — Pneumatic Circuit</strong><br><br>
+            The diagram below shows a simple pneumatic circuit. Label the four components indicated by arrows A, B, C, and D.
+          </div>
+          <div class="diagram-label-q">
+            <div class="label-instruction">PNEUMATIC CIRCUIT DIAGRAM — Label each component</div>
+            <svg width="100%" height="220" viewBox="0 0 600 220" style="font-family:'Space Mono',monospace;font-size:10px;margin-bottom:12px;">
+              <!-- Compressor (A) -->
+              <circle cx="80" cy="110" r="30" fill="#1a2a3a" stroke="#f0a500" stroke-width="2"/>
+              <text x="80" y="107" text-anchor="middle" fill="#f0a500" font-size="9">AIR</text>
+              <text x="80" y="119" text-anchor="middle" fill="#f0a500" font-size="9">COMP</text>
+              <text x="80" y="155" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">A</text>
+              <!-- Pipe -->
+              <line x1="110" y1="110" x2="160" y2="110" stroke="#7a8099" stroke-width="2"/>
+              <!-- Filter/Regulator (B) -->
+              <rect x="160" y="90" width="60" height="40" rx="3" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+              <text x="190" y="107" text-anchor="middle" fill="#00d4aa" font-size="8">FRL</text>
+              <text x="190" y="119" text-anchor="middle" fill="#00d4aa" font-size="7">UNIT</text>
+              <text x="190" y="155" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">B</text>
+              <!-- Pipe -->
+              <line x1="220" y1="110" x2="280" y2="110" stroke="#7a8099" stroke-width="2"/>
+              <!-- Directional Control Valve (C) -->
+              <rect x="280" y="85" width="80" height="50" rx="3" fill="#1a2a3a" stroke="#7c6fff" stroke-width="2"/>
+              <text x="320" y="107" text-anchor="middle" fill="#7c6fff" font-size="8">5/2</text>
+              <text x="320" y="119" text-anchor="middle" fill="#7c6fff" font-size="7">VALVE</text>
+              <!-- Solenoid symbols -->
+              <rect x="360" y="90" width="15" height="40" rx="1" fill="#7c6fff" opacity="0.5"/>
+              <rect x="265" y="90" width="15" height="40" rx="1" fill="#7c6fff" opacity="0.3"/>
+              <text x="320" y="155" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">C</text>
+              <!-- Pipe -->
+              <line x1="360" y1="110" x2="420" y2="110" stroke="#7a8099" stroke-width="2"/>
+              <!-- Cylinder (D) -->
+              <rect x="420" y="80" width="140" height="60" rx="3" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="2"/>
+              <rect x="420" y="90" width="90" height="40" fill="#252a35"/>
+              <rect x="510" y="95" width="50" height="30" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="1"/>
+              <line x1="560" y1="110" x2="580" y2="110" stroke="#ff4d6d" stroke-width="3"/>
+              <text x="490" y="115" text-anchor="middle" fill="#ff4d6d" font-size="9">PISTON</text>
+              <text x="490" y="155" text-anchor="middle" fill="#e8eaf0" font-size="11" font-weight="bold">D</text>
+              <!-- Exhaust lines from valve -->
+              <line x1="300" y1="135" x2="300" y2="170" stroke="#7a8099" stroke-width="1" stroke-dasharray="3,2"/>
+              <line x1="340" y1="135" x2="340" y2="170" stroke="#7a8099" stroke-width="1" stroke-dasharray="3,2"/>
+              <text x="320" y="185" text-anchor="middle" fill="#4a5068" font-size="8">EXHAUST PORTS</text>
+            </svg>
+            <div class="label-input-group">
+              <label>A =</label>
+              <input type="text" id="label-a" placeholder="Component A..." data-answer="compressor">
+            </div>
+            <div class="label-input-group">
+              <label>B =</label>
+              <input type="text" id="label-b" placeholder="Component B..." data-answer="filter regulator lubricator">
+            </div>
+            <div class="label-input-group">
+              <label>C =</label>
+              <input type="text" id="label-c" placeholder="Component C..." data-answer="directional control valve">
+            </div>
+            <div class="label-input-group">
+              <label>D =</label>
+              <input type="text" id="label-d" placeholder="Component D..." data-answer="pneumatic cylinder">
+            </div>
+            <button class="btn btn-primary" style="margin-top:12px;font-size:12px;" onclick="checkLabels()">✓ Check Labels</button>
+          </div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks (1 each)</div>
+            <div class="exam-model-answer-text">
+              A = <strong>Compressor</strong> (air supply) (1)<br>
+              B = <strong>Filter/Regulator/Lubricator (FRL unit)</strong> — conditions the air supply (1)<br>
+              C = <strong>Directional control valve</strong> (5/2 valve — 5 ports, 2 positions) (1)<br>
+              D = <strong>Pneumatic cylinder</strong> (double-acting actuator) (1)
+            </div>
+            <div class="exam-tip">💡 Know the standard pneumatic circuit: Compressor → FRL unit → Directional control valve → Actuator (cylinder or motor). The FRL unit filters, regulates pressure, and lubricates the air.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION B -->
+      <div class="exam-section-header">
+        <div class="exam-section-num">B</div>
+        <div class="exam-section-info">
+          <h3>Section B — Materials &amp; Manufacturing</h3>
+          <small>Questions 11–15 · 20 marks total · Approximately 30 minutes</small>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q11</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A manufacturer needs to produce 10,000 identical plastic bottle caps. Suggest a <strong>suitable manufacturing process</strong> and explain why it is appropriate for this production volume. Include in your answer: the process name, how it works, and two reasons why it is suitable.</div>
+          <div class="exam-answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              <strong>Injection moulding</strong> (1)<br><br>
+              Molten thermoplastic is injected under high pressure into a closed mould. The plastic cools and solidifies, and the mould opens to eject the finished part (1).<br><br>
+              Suitable because:<br>
+              • High production rate — cycle times of 10–30 seconds, so 10,000 parts can be produced quickly (1)<br>
+              • Consistent quality — every part is identical to the mould shape, tight tolerances maintained (1)<br>
+              • Low cost per part at high volumes — high tooling cost is spread over many parts (1)<br>
+              • Complex shapes with undercuts and internal features can be produced (1)
+            </div>
+            <div class="exam-tip">💡 For "suggest and justify" questions: name the process (1 mark), describe how it works (1 mark), then give specific reasons linked to the context (volume, material, shape). Don't just say "it's fast" — say "cycle time of ~20 seconds allows 10,000 parts to be produced in under 2 days."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q12</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">The table below shows properties of four materials. A bicycle frame designer needs a material that is <strong>lightweight, strong, and corrosion resistant</strong>.<br><br>
+            <div class="table-wrap" style="margin:12px 0;">
+              <table>
+                <thead><tr><th>Material</th><th>Density (g/cm³)</th><th>Tensile Strength (MPa)</th><th>Corrosion Resistance</th><th>Cost</th></tr></thead>
+                <tbody>
+                  <tr><td>Mild Steel</td><td>7.85</td><td>400</td><td>Poor</td><td>Low</td></tr>
+                  <tr><td>Aluminium 6061</td><td>2.70</td><td>310</td><td>Excellent</td><td>Medium</td></tr>
+                  <tr><td>Carbon Fibre (CFRP)</td><td>1.60</td><td>1500</td><td>Excellent</td><td>Very High</td></tr>
+                  <tr><td>Titanium Ti-6Al-4V</td><td>4.43</td><td>950</td><td>Excellent</td><td>High</td></tr>
+                </tbody>
+              </table>
+            </div>
+            (a) Calculate the <strong>specific strength</strong> (strength ÷ density) of aluminium 6061. [1 mark]<br>
+            (b) Recommend the most suitable material for a <strong>high-performance racing bicycle frame</strong> where cost is not a constraint. Justify your answer using data from the table. [3 marks]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show working for (a) and justify your answer for (b)..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              (a) Specific strength = 310 ÷ 2.70 = <strong>114.8 MPa·cm³/g</strong> (or 114.8 MPa/(g/cm³)) (1)<br><br>
+              (b) <strong>Carbon Fibre Reinforced Polymer (CFRP)</strong> (1)<br><br>
+              Justification: CFRP has the highest specific strength of all four materials (1500 ÷ 1.60 = 937.5 MPa·cm³/g), meaning it provides the greatest strength for the least weight (1). It also has excellent corrosion resistance, which is important for outdoor use (1). Although it is the most expensive, the question states cost is not a constraint (1).
+            </div>
+            <div class="exam-tip">💡 For data-based questions, always reference specific numbers from the table. "CFRP has the highest specific strength of 937.5 compared to 114.8 for aluminium" is much better than "CFRP is stronger and lighter."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q13</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">Describe the process of <strong>sand casting</strong> for producing a metal component. Your answer should include: preparation of the mould, pouring of metal, and removal of the casting. [4 marks]</div>
+          <div class="exam-answer-box"><textarea placeholder="Describe the full sand casting process..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              1. A <strong>pattern</strong> (replica of the component, slightly oversized to allow for shrinkage) is placed in a moulding box (flask) and packed with damp sand mixed with a binder (1).<br><br>
+              2. The pattern is removed, leaving a cavity in the sand. A <strong>runner</strong> (channel for molten metal to flow in) and <strong>riser</strong> (overflow channel to indicate when mould is full and to compensate for shrinkage) are formed (1).<br><br>
+              3. The two halves of the mould (cope and drag) are assembled. <strong>Molten metal</strong> is poured into the runner until it appears in the riser (1).<br><br>
+              4. The metal is allowed to cool and solidify. The sand mould is broken apart (destroyed) to remove the casting. The runner and riser are cut off and the casting is cleaned (fettled) (1).
+            </div>
+            <div class="exam-tip">💡 Sand casting key terms: pattern, cope, drag, runner, riser, parting line, core (for internal cavities), fettling. The mould is destroyed each time — one-off process.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q14</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A steel shaft is heat treated by <strong>case hardening</strong>.<br><br>
+            (a) Explain what case hardening achieves and why it is used for a shaft. [2 marks]<br>
+            (b) Describe the process of <strong>carburising</strong> as a method of case hardening. [2 marks]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Write your answer here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              (a) Case hardening produces a <strong>hard outer surface (case)</strong> while maintaining a <strong>tough, ductile core</strong> (1). This is ideal for a shaft because the surface must resist wear (from bearings, gears) while the core must absorb impact loads without fracturing (1).<br><br>
+              (b) Carburising: The low-carbon steel component is heated to approximately 900°C in a carbon-rich atmosphere (e.g., charcoal, gas) (1). Carbon diffuses into the surface layer, increasing the carbon content of the outer case. The component is then quenched (rapidly cooled) to harden the high-carbon case (1).
+            </div>
+            <div class="exam-tip">💡 Case hardening = hard outside, tough inside. Used for gears, shafts, camshafts. Methods: carburising (add carbon), nitriding (add nitrogen), flame/induction hardening (heat and quench surface only).</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q15</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">Compare <strong>MIG welding</strong> and <strong>TIG welding</strong>. In your answer, describe how each process works and state one advantage of each. [4 marks]</div>
+          <div class="exam-answer-box"><textarea placeholder="Compare MIG and TIG welding..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              <strong>MIG Welding (Metal Inert Gas):</strong> A continuously fed consumable wire electrode melts and forms the weld pool. An inert shielding gas (argon or CO₂) protects the weld from atmospheric contamination (1). Advantage: Fast, easy to use, suitable for thick materials and long welds — widely used in automotive manufacturing (1).<br><br>
+              <strong>TIG Welding (Tungsten Inert Gas):</strong> A non-consumable tungsten electrode creates an arc. Filler metal is added separately by hand. Argon shielding gas is used (1). Advantage: Produces very high-quality, precise welds with excellent appearance — suitable for thin materials, stainless steel, and aluminium (aerospace, food industry) (1).
+            </div>
+            <div class="exam-tip">💡 MIG = fast, easy, thick materials, automotive. TIG = slow, skilled, thin materials, high quality, aerospace. Both use inert gas shielding. MIG = consumable electrode. TIG = non-consumable tungsten electrode.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION C -->
+      <div class="exam-section-header">
+        <div class="exam-section-num">C</div>
+        <div class="exam-section-info">
+          <h3>Section C — Systems &amp; Calculations</h3>
+          <small>Questions 16–20 · 20 marks total · Approximately 30 minutes</small>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q16</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A pneumatic cylinder has a bore diameter of 100mm and a rod diameter of 40mm. The supply pressure is 6 bar.<br><br>
+            (a) Calculate the force produced on the <strong>forward (extend) stroke</strong>. [2 marks]<br>
+            (b) Calculate the force produced on the <strong>return (retract) stroke</strong>. [2 marks]<br>
+            <em>Note: 1 bar = 100,000 Pa</em>
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show all working for both strokes..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              P = 6 × 100,000 = 600,000 Pa<br><br>
+              (a) <strong>Forward stroke</strong> — full bore area:<br>
+              r = 100 ÷ 2 = 50mm = 0.05m<br>
+              A_bore = π × 0.05² = π × 0.0025 = 0.007854 m² (1)<br>
+              F = P × A = 600,000 × 0.007854 = <strong>4,712 N ≈ 4.7 kN</strong> (1)<br><br>
+              (b) <strong>Return stroke</strong> — annular area (bore minus rod):<br>
+              r_rod = 40 ÷ 2 = 20mm = 0.02m<br>
+              A_rod = π × 0.02² = 0.001257 m²<br>
+              A_annular = 0.007854 − 0.001257 = 0.006597 m² (1)<br>
+              F = 600,000 × 0.006597 = <strong>3,958 N ≈ 4.0 kN</strong> (1)
+            </div>
+            <div class="exam-tip">💡 Forward stroke = full bore area. Return stroke = bore area MINUS rod area (annular area). The rod takes up space, so less area for pressure to act on = less force on return.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q17</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A transformer has 500 turns on the primary coil and 50 turns on the secondary coil. The primary voltage is 230V.<br><br>
+            (a) Calculate the secondary (output) voltage. [2 marks]<br>
+            (b) If the secondary current is 10A, calculate the primary current (assume 100% efficiency). [2 marks]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show all working..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              (a) V_s/V_p = N_s/N_p (1)<br>
+              V_s = V_p × (N_s/N_p) = 230 × (50/500) = 230 × 0.1 = <strong>23V</strong> (1)<br><br>
+              (b) At 100% efficiency: P_in = P_out, so V_p × I_p = V_s × I_s (1)<br>
+              I_p = (V_s × I_s) / V_p = (23 × 10) / 230 = 230 / 230 = <strong>1 A</strong> (1)
+            </div>
+            <div class="exam-tip">💡 Transformer ratio: V_s/V_p = N_s/N_p = I_p/I_s. Step-down transformer (fewer secondary turns) = lower voltage, higher current. Step-up = higher voltage, lower current.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q18</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A worm gear drive has a worm with 1 start (1 tooth equivalent) and a worm wheel with 40 teeth. The worm rotates at 1,500 rpm with an input torque of 2 Nm.<br><br>
+            (a) Calculate the gear ratio. [1 mark]<br>
+            (b) Calculate the output speed of the worm wheel. [1 mark]<br>
+            (c) Calculate the output torque (assuming 80% efficiency). [2 marks]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show all working..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              (a) GR = teeth on worm wheel ÷ starts on worm = 40 ÷ 1 = <strong>40 : 1</strong> (1)<br><br>
+              (b) Output speed = 1500 ÷ 40 = <strong>37.5 rpm</strong> (1)<br><br>
+              (c) Ideal output torque = Input torque × GR = 2 × 40 = 80 Nm (1)<br>
+              Actual output torque = 80 × (80/100) = 80 × 0.8 = <strong>64 Nm</strong> (1)
+            </div>
+            <div class="exam-tip">💡 Worm gears: GR = worm wheel teeth ÷ worm starts. Very high gear ratios in compact space. Self-locking (cannot be back-driven). Used in lifts, conveyor drives. Always apply efficiency to get actual output.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q19</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A logic gate circuit uses an AND gate and a NOT gate (inverter). Input A = 1, Input B = 0.<br><br>
+            (a) Complete the truth table for a 2-input AND gate. [2 marks]<br>
+            (b) If the output of the AND gate is fed into a NOT gate, what is the final output when A=1 and B=1? [1 mark]<br>
+            (c) What is the name of the combined AND + NOT gate? [1 mark]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Complete truth table and answer questions..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              (a) AND gate truth table (1 mark for all 4 rows correct):<br>
+              A=0, B=0 → Output=0<br>
+              A=0, B=1 → Output=0<br>
+              A=1, B=0 → Output=0<br>
+              A=1, B=1 → Output=1 (1)<br>
+              (AND only outputs 1 when BOTH inputs are 1) (1)<br><br>
+              (b) When A=1, B=1: AND output = 1. NOT gate inverts: final output = <strong>0</strong> (1)<br><br>
+              (c) AND + NOT = <strong>NAND gate</strong> (1)
+            </div>
+            <div class="exam-tip">💡 Logic gate mnemonics: AND = ALL inputs must be 1. OR = ANY input can be 1. NOT = inverts. NAND = AND then NOT. NOR = OR then NOT. XOR = inputs must be DIFFERENT.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q20</span>
+          <span class="exam-q-marks-badge">4 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A block and tackle pulley system has 4 rope sections supporting the load.<br><br>
+            (a) State the Velocity Ratio of this system. [1 mark]<br>
+            (b) A load of 800N is lifted using an effort of 240N. Calculate the Mechanical Advantage. [1 mark]<br>
+            (c) Calculate the efficiency of the system. [2 marks]
+          </div>
+          <div class="exam-answer-box"><textarea placeholder="Show all working..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 4 marks</div>
+            <div class="exam-model-answer-text">
+              (a) VR = number of rope sections supporting the load = <strong>4</strong> (1)<br><br>
+              (b) MA = Load ÷ Effort = 800 ÷ 240 = <strong>3.33</strong> (1)<br><br>
+              (c) Efficiency = (MA ÷ VR) × 100 (1)<br>
+              Efficiency = (3.33 ÷ 4) × 100 = <strong>83.3%</strong> (1)
+            </div>
+            <div class="exam-tip">💡 For pulleys: VR = number of rope sections supporting the load. Efficiency < 100% due to friction in the pulley bearings and weight of the pulleys themselves.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION D -->
+      <div class="exam-section-header">
+        <div class="exam-section-num">D</div>
+        <div class="exam-section-info">
+          <h3>Section D — Extended Response</h3>
+          <small>Questions 21–23 · 20 marks total · Approximately 30 minutes</small>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q21</span>
+          <span class="exam-q-marks-badge">6 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text"><strong>Evaluate</strong> the use of composite materials compared to metals in the manufacture of sports equipment such as bicycle frames and tennis rackets. In your answer, consider: properties, manufacturing, cost, and sustainability. [6 marks]</div>
+          <div class="exam-answer-box"><textarea style="min-height:150px;" placeholder="Write your extended response here. Aim for 6 distinct points with justification..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — Level Marked (6 marks)</div>
+            <div class="exam-model-answer-text">
+              <strong>Properties:</strong><br>
+              • CFRP has an exceptional strength-to-weight ratio — stronger than steel at a fraction of the weight, critical for sports equipment where weight reduction improves performance (1)<br>
+              • Composites can be engineered to be stiff in one direction and flexible in another (anisotropic), allowing designers to optimise performance (1)<br>
+              • Metals (aluminium alloys) are isotropic — same properties in all directions — simpler to design with but less optimisable (1)<br><br>
+              <strong>Manufacturing:</strong><br>
+              • Composites require skilled hand lay-up or autoclave processing — slow and expensive for complex shapes (1)<br>
+              • Metals can be formed by extrusion, hydroforming, and welding — faster and more established processes (1)<br><br>
+              <strong>Cost:</strong><br>
+              • CFRP is significantly more expensive than aluminium alloys — a CFRP bike frame costs 5–10× more than aluminium (1)<br><br>
+              <strong>Sustainability:</strong><br>
+              • Aluminium is highly recyclable (95% energy saving vs. primary production) — better end-of-life sustainability (1)<br>
+              • CFRP is difficult to recycle — fibres can be recovered but properties are degraded; most CFRP waste goes to landfill (1)<br><br>
+              <strong>Conclusion:</strong> Composites offer superior performance properties but at higher cost and with poorer sustainability. For elite sports equipment, composites are preferred; for mass-market products, aluminium alloys offer a better balance of performance, cost, and sustainability. (1)
+            </div>
+            <div class="exam-tip">💡 Level 3 (5–6 marks): Detailed, balanced evaluation with specific data and a justified conclusion. Level 2 (3–4 marks): Some comparison with limited justification. Level 1 (1–2 marks): Basic statements about one material only.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q22</span>
+          <span class="exam-q-marks-badge">6 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text">A car manufacturer is designing a new production line for assembling car bodies. <strong>Evaluate</strong> the use of industrial robots compared to human workers for the following tasks: spot welding, paint spraying, and final assembly (fitting interior components). Consider: quality, safety, flexibility, and cost. [6 marks]</div>
+          <div class="exam-answer-box"><textarea style="min-height:150px;" placeholder="Write your extended response here..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — Level Marked (6 marks)</div>
+            <div class="exam-model-answer-text">
+              <strong>Spot Welding — Robots preferred:</strong><br>
+              • Robots produce consistent, high-quality welds at every joint — no fatigue-related quality variation (1)<br>
+              • Robots can work in confined spaces and at high temperatures without safety concerns (1)<br>
+              • Cycle time is faster and robots can operate 24/7 (1)<br><br>
+              <strong>Paint Spraying — Robots preferred:</strong><br>
+              • Robots apply paint with consistent thickness and coverage — no runs or misses (1)<br>
+              • Paint spraying involves toxic fumes and flammable materials — robots eliminate human health and safety risks (1)<br><br>
+              <strong>Final Assembly — Humans preferred:</strong><br>
+              • Fitting interior components requires dexterity, judgement, and adaptability — humans excel at handling varied components (1)<br>
+              • Robots struggle with flexible materials (wiring looms, carpets) and non-repeatable tasks (1)<br>
+              • Programming robots for every interior variant is complex and expensive (1)<br><br>
+              <strong>Cost:</strong><br>
+              • High capital cost of robots (£100,000–£500,000 each) but lower ongoing labour costs (1)<br>
+              • Human workers are more flexible and can be retrained for different tasks (1)<br><br>
+              <strong>Conclusion:</strong> Robots are most appropriate for repetitive, hazardous tasks (welding, painting) where consistency is critical. Humans remain better for complex, variable assembly tasks requiring judgement and dexterity. Modern car plants use a combination of both. (1)
+            </div>
+            <div class="exam-tip">💡 Always address ALL the criteria mentioned in the question (quality, safety, flexibility, cost). Missing one criterion means you can't achieve the highest level. Structure your answer by task or by criterion — either approach works.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exam-q">
+        <div class="exam-q-header">
+          <span class="exam-q-num">Q23</span>
+          <span class="exam-q-marks-badge">8 marks</span>
+        </div>
+        <div class="exam-q-body">
+          <div class="exam-q-text"><strong>Design question:</strong> A small engineering company needs to produce 50 aluminium brackets per week. Each bracket requires: 3 drilled holes, 2 milled slots, and a bent flange. The company has a limited budget.<br><br>
+            (a) Suggest a suitable production method for each operation (drilling, milling, bending). [3 marks]<br>
+            (b) Describe how the company could use CAD/CAM to improve efficiency. [3 marks]<br>
+            (c) Suggest two quality control methods the company should use and explain why each is appropriate. [2 marks]
+          </div>
+          <div class="exam-answer-box"><textarea style="min-height:180px;" placeholder="Answer all three parts..."></textarea></div>
+          <button class="exam-reveal-btn" onclick="toggleAnswer(this)">▼ Reveal Model Answer</button>
+          <div class="exam-model-answer">
+            <div class="exam-model-answer-title">Model Answer — 8 marks</div>
+            <div class="exam-model-answer-text">
+              (a) Suitable methods (1 each):<br>
+              • <strong>Drilling:</strong> Pillar drill or CNC drilling — pillar drill is low cost for small batches; CNC ensures consistent hole positions (1)<br>
+              • <strong>Milling:</strong> CNC milling machine — ensures consistent slot dimensions across all 50 brackets (1)<br>
+              • <strong>Bending:</strong> Press brake / folder — applies a controlled bending force to create the flange at a consistent angle (1)<br><br>
+              (b) CAD/CAM benefits (1 each):<br>
+              • CAD software (e.g., Fusion 360) is used to create a precise 3D model of the bracket with all dimensions and tolerances (1)<br>
+              • CAM software generates toolpaths and G-code for the CNC milling machine automatically, reducing programming time (1)<br>
+              • The same CAD model can be used to generate inspection drawings for quality control, ensuring all features are checked against the original design (1)<br><br>
+              (c) QC methods (1 each):<br>
+              • <strong>Go/No-Go gauge</strong> for the drilled holes — quickly checks if hole diameters are within tolerance without measuring each one; fast and suitable for batch production (1)<br>
+              • <strong>Vernier caliper / micrometer</strong> for slot dimensions — provides precise measurements to verify slot width and depth against the drawing specification (1)
+            </div>
+            <div class="exam-tip">💡 For design questions, always link your choice to the specific context. 50 brackets/week = small batch production. Limited budget = avoid expensive high-volume tooling. CNC is appropriate because it offers consistency without the high tooling cost of injection moulding.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marks-total-bar">
+        <div>
+          <div class="total-label">TOTAL MARKS AVAILABLE</div>
+          <div class="total-value">80</div>
+        </div>
+        <div class="marks-breakdown">
+          <div class="marks-breakdown-item"><div class="mb-val">20</div><div class="mb-label">Section A</div></div>
+          <div class="marks-breakdown-item"><div class="mb-val">20</div><div class="mb-label">Section B</div></div>
+          <div class="marks-breakdown-item"><div class="mb-val">20</div><div class="mb-label">Section C</div></div>
+          <div class="marks-breakdown-item"><div class="mb-val">20</div><div class="mb-label">Section D</div></div>
+        </div>
+        <div>
+          <div class="total-label">GRADE BOUNDARIES (approx.)</div>
+          <div style="font-family:'Space Mono',monospace;font-size:12px;color:#c8cad8;margin-top:4px;">
+            9: 72+ · 8: 64+ · 7: 56+ · 6: 48+ · 5: 40+ · 4: 32+
+          </div>
+        </div>
+      </div>
+
+      <div class="lesson-nav">
+        <a href="../lessons/6-practical-maths.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div><span class="nav-label">Back to Lessons</span><span class="nav-title">Practical Skills & Maths</span></div>
+        </a>
+        <a href="../index.html" class="lesson-nav-btn">
+          <div style="text-align:right"><span class="nav-label">Return to</span><span class="nav-title">Dashboard</span></div>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+    <footer><strong>AQA GCSE Engineering 8852</strong> · Full Mock Exam Paper · Revision Site</footer>
+  </div>
+</div>
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+<script>
+function toggleAnswer(btn) {
+  const answer = btn.nextElementSibling;
+  if (answer.classList.contains('visible')) {
+    answer.classList.remove('visible');
+    btn.textContent = '▼ Reveal Model Answer';
+  } else {
+    answer.classList.add('visible');
+    btn.textContent = '▲ Hide Model Answer';
+  }
+}
+
+function checkLabels() {
+  const fields = [
+    { id: 'label-a', answers: ['compressor', 'air compressor'] },
+    { id: 'label-b', answers: ['filter', 'frl', 'regulator', 'filter regulator', 'filter/regulator', 'frl unit'] },
+    { id: 'label-c', answers: ['directional control valve', 'dcv', '5/2 valve', 'solenoid valve', 'control valve'] },
+    { id: 'label-d', answers: ['pneumatic cylinder', 'cylinder', 'actuator', 'double acting cylinder'] }
+  ];
+  fields.forEach(f => {
+    const input = document.getElementById(f.id);
+    const val = input.value.trim().toLowerCase();
+    const correct = f.answers.some(a => val.includes(a) || a.includes(val.split(' ')[0]));
+    input.classList.remove('correct', 'wrong');
+    if (val) input.classList.add(correct ? 'correct' : 'wrong');
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Technologies — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Section 3.5 — Modern Technologies</span></div>
+      <div class="topbar-progress">
+        <span class="topbar-progress-label">Progress</span>
+        <div class="topbar-progress-bar"><div class="topbar-progress-fill" style="width:83%"></div></div>
+      </div>
+    </div>
+    <div class="content-inner">
+
+      <div class="lesson-hero">
+        <div class="lesson-hero-tag">Section 3.5</div>
+        <h1>Modern <span>Technologies</span></h1>
+        <p class="lesson-hero-desc">From CAD/CAM to robotics, from the circular economy to smart materials — this lesson covers the cutting-edge technologies shaping modern engineering and their environmental implications.</p>
+        <div class="lesson-hero-objectives">
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Describe CAD and its advantages over manual drawing</li>
+            <li>Explain CAM and how it links to CNC manufacturing</li>
+            <li>Describe the role of automation and robotics in manufacturing</li>
+            <li>Evaluate the environmental impact of engineering and the circular economy</li>
+            <li>Describe smart materials and their engineering applications</li>
+            <li>Explain the role of sensors and microcontrollers in modern systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CAD -->
+      <div class="lesson-section" id="cad">
+        <div class="lesson-section-header">
+          <div class="section-number">1</div>
+          <div class="section-title-block">
+            <h2>CAD — Computer Aided Design</h2>
+            <small>3.5.1 — Digital design tools and their advantages</small>
+          </div>
+        </div>
+        <p>CAD software allows engineers to create precise 2D drawings and 3D models of components and assemblies on a computer. It has largely replaced manual drawing on paper in professional engineering.</p>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">💻 What CAD Can Do</div>
+            <ul>
+              <li><strong>2D drawing:</strong> Orthographic projections, detail drawings with dimensions and tolerances</li>
+              <li><strong>3D modelling:</strong> Solid models, surface models, assemblies</li>
+              <li><strong>Simulation:</strong> FEA (Finite Element Analysis) — stress analysis, thermal analysis</li>
+              <li><strong>Rendering:</strong> Photorealistic images for presentations and marketing</li>
+              <li><strong>Animation:</strong> Mechanism simulation, assembly sequences</li>
+              <li><strong>Drawing generation:</strong> Automatic 2D drawings from 3D models</li>
+            </ul>
+          </div>
+          <div class="card green">
+            <div class="card-title">✅ Advantages of CAD over Manual Drawing</div>
+            <ul>
+              <li>Designs can be easily edited without redrawing from scratch</li>
+              <li>Designs can be shared electronically worldwide instantly</li>
+              <li>Automatic checking for errors and interferences in assemblies</li>
+              <li>Precise dimensions — no measurement errors from drawing</li>
+              <li>Design history (parametric modelling) — changing one dimension updates the whole model</li>
+              <li>Can be directly linked to CAM for manufacturing (CAD/CAM workflow)</li>
+              <li>Multiple design variations can be tested without physical prototypes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>CAD Software</th><th>Type</th><th>Industry Use</th></tr></thead>
+            <tbody>
+              <tr><td><strong>AutoCAD</strong></td><td>2D/3D general purpose</td><td>Architecture, engineering, general design</td></tr>
+              <tr><td><strong>SolidWorks</strong></td><td>3D parametric solid modelling</td><td>Mechanical engineering, product design</td></tr>
+              <tr><td><strong>CATIA</strong></td><td>Advanced 3D surface/solid modelling</td><td>Aerospace, automotive (Airbus, Boeing, BMW)</td></tr>
+              <tr><td><strong>Fusion 360</strong></td><td>3D modelling + CAM integration</td><td>Product design, small manufacturers, education</td></tr>
+              <tr><td><strong>Siemens NX</strong></td><td>Full PLM suite</td><td>Aerospace, defence, automotive</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CAM & CNC -->
+      <div class="lesson-section" id="cam">
+        <div class="lesson-section-header">
+          <div class="section-number">2</div>
+          <div class="section-title-block">
+            <h2>CAM & CNC Manufacturing</h2>
+            <small>3.5.2 — Computer Aided Manufacture and CNC machines</small>
+          </div>
+        </div>
+        <p><strong>CAM</strong> (Computer Aided Manufacture) software takes a CAD model and generates the <strong>toolpaths</strong> and <strong>G-code</strong> (machine instructions) needed to manufacture the part on a CNC machine.</p>
+
+        <div class="flow-diagram">
+          <div class="flow-box">CAD Model<br><small>3D/2D design</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box green">CAM Software<br><small>Toolpath generation</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box red">G-Code<br><small>Machine instructions</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box blue">CNC Machine<br><small>Manufactures part</small></div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box purple">Finished Part<br><small>Inspected & used</small></div>
+        </div>
+
+        <h3>CNC (Computer Numerical Control) Machines</h3>
+        <p>CNC machines are controlled by a computer program (G-code) rather than a human operator. They can produce complex parts with high accuracy and repeatability.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>CNC Machine</th><th>Process</th><th>Materials</th><th>Products</th></tr></thead>
+            <tbody>
+              <tr><td><strong>CNC Milling Machine</strong></td><td>Rotating cutter removes material from workpiece on XYZ table</td><td>Metals, polymers, composites</td><td>Engine blocks, moulds, aerospace components</td></tr>
+              <tr><td><strong>CNC Lathe</strong></td><td>Workpiece rotates, tool moves to create cylindrical shapes</td><td>Metals, polymers</td><td>Shafts, bolts, hydraulic cylinders</td></tr>
+              <tr><td><strong>CNC Router</strong></td><td>Similar to milling but for softer materials and larger workpieces</td><td>Wood, MDF, acrylic, foam</td><td>Furniture, signs, PCB drilling</td></tr>
+              <tr><td><strong>CNC Laser Cutter</strong></td><td>Focused laser beam cuts or engraves material</td><td>Thin metals, acrylic, wood, card</td><td>Sheet metal parts, signs, prototypes</td></tr>
+              <tr><td><strong>CNC Plasma Cutter</strong></td><td>Ionised gas jet cuts through conductive materials</td><td>Thick steel and aluminium</td><td>Structural steel, heavy fabrication</td></tr>
+              <tr><td><strong>CNC Wire EDM</strong></td><td>Electrical discharge erodes material along wire path</td><td>Hardened metals</td><td>Precision dies, moulds, aerospace parts</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">✅ Advantages of CNC</div>
+            <ul>
+              <li>High accuracy and repeatability — every part identical</li>
+              <li>Can run 24/7 without breaks (lights-out manufacturing)</li>
+              <li>Complex 3D shapes impossible to produce manually</li>
+              <li>Reduced labour costs for high-volume production</li>
+              <li>Quick changeover — just change the program</li>
+              <li>Consistent quality — no human error</li>
+            </ul>
+          </div>
+          <div class="card red">
+            <div class="card-title">❌ Disadvantages of CNC</div>
+            <ul>
+              <li>High initial cost of machines</li>
+              <li>Skilled programmers required to write G-code / set up CAM</li>
+              <li>Not cost-effective for one-off or very small batches</li>
+              <li>Machine downtime for maintenance or tool changes</li>
+              <li>Job displacement — fewer manual machining jobs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AUTOMATION & ROBOTICS -->
+      <div class="lesson-section" id="robotics">
+        <div class="lesson-section-header">
+          <div class="section-number">3</div>
+          <div class="section-title-block">
+            <h2>Automation & Robotics</h2>
+            <small>3.5.3 — Industrial robots and automated systems</small>
+          </div>
+        </div>
+        <p>Automation involves using machines and control systems to perform tasks with minimal human intervention. <strong>Industrial robots</strong> are programmable machines that can perform a variety of tasks in manufacturing.</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">🤖 Industrial Robots</div>
+            <p>Industrial robots typically have 6 <strong>degrees of freedom</strong> (axes of movement), allowing them to reach any position and orientation within their work envelope.</p>
+            <p><strong>Common applications:</strong></p>
+            <ul>
+              <li>Spot welding (car body assembly)</li>
+              <li>Paint spraying (consistent, no overspray)</li>
+              <li>Pick and place (assembly, packaging)</li>
+              <li>Material handling (loading/unloading CNC machines)</li>
+              <li>Inspection (vision systems)</li>
+            </ul>
+          </div>
+          <div class="card green">
+            <div class="card-title">🏭 Flexible Manufacturing Systems (FMS)</div>
+            <p>An FMS is a group of CNC machines connected by automated material handling (conveyors, AGVs) and controlled by a central computer.</p>
+            <p><strong>Advantages:</strong> Can produce a variety of parts without manual changeover; highly efficient; minimal work-in-progress; responds quickly to demand changes.</p>
+            <p><strong>Example:</strong> A car manufacturer can switch between producing different car models on the same production line by changing the robot programs.</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">🔄 Just-In-Time (JIT) Manufacturing</div>
+            <p>JIT is a production strategy where materials and components arrive <strong>exactly when needed</strong>, minimising inventory and storage costs.</p>
+            <p><strong>Advantages:</strong> Reduced storage costs, less waste, faster response to demand changes.</p>
+            <p><strong>Disadvantages:</strong> Vulnerable to supply chain disruptions (e.g., COVID-19 showed the fragility of JIT).</p>
+          </div>
+          <div class="card purple">
+            <div class="card-title">🧠 Industry 4.0</div>
+            <p>The <strong>Fourth Industrial Revolution</strong> involves the integration of digital technologies into manufacturing:</p>
+            <ul>
+              <li><strong>IoT:</strong> Machines communicate with each other and with management systems</li>
+              <li><strong>Big Data:</strong> Analysing production data to optimise processes</li>
+              <li><strong>AI/Machine Learning:</strong> Predictive maintenance, quality control</li>
+              <li><strong>Digital Twin:</strong> Virtual replica of a physical system for simulation and monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Fill in the Gaps - Modern Tech -->
+        <div class="fitg-container">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — CAD/CAM & CNC</div>
+              <div class="fitg-subtitle">Complete the sentences about modern manufacturing technologies</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="CAD">CAD</span>
+            <span class="word-chip" data-word="CAM">CAM</span>
+            <span class="word-chip" data-word="CNC">CNC</span>
+            <span class="word-chip" data-word="G-code">G-code</span>
+            <span class="word-chip" data-word="toolpaths">toolpaths</span>
+            <span class="word-chip" data-word="repeatability">repeatability</span>
+            <span class="word-chip" data-word="robots">robots</span>
+            <span class="word-chip" data-word="parametric">parametric</span>
+          </div>
+          <div class="fitg-text">
+            <p><input class="fitg-input" data-answer="CAD" style="width:60px"> (Computer Aided Design) software is used to create precise 2D and 3D models. In <input class="fitg-input" data-answer="parametric" style="width:110px"> modelling, changing one dimension automatically updates the entire model.</p>
+            <p><input class="fitg-input" data-answer="CAM" style="width:60px"> (Computer Aided Manufacture) software takes a CAD model and generates <input class="fitg-input" data-answer="toolpaths" style="width:100px"> and <input class="fitg-input" data-answer="G-code" style="width:80px"> — the machine instructions for a CNC machine.</p>
+            <p><input class="fitg-input" data-answer="CNC" style="width:60px"> (Computer Numerical Control) machines offer high accuracy and excellent <input class="fitg-input" data-answer="repeatability" style="width:120px"> — every part produced is identical.</p>
+            <p>Industrial <input class="fitg-input" data-answer="robots" style="width:70px"> are used for tasks such as spot welding, paint spraying, and pick-and-place operations in automated factories.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- ENVIRONMENT & SUSTAINABILITY -->
+      <div class="lesson-section" id="environment">
+        <div class="lesson-section-header">
+          <div class="section-number">4</div>
+          <div class="section-title-block">
+            <h2>Environmental Impact & Sustainability</h2>
+            <small>3.5.4 — The circular economy and responsible engineering</small>
+          </div>
+        </div>
+        <p>Modern engineers must consider the environmental impact of their products throughout the entire <strong>product lifecycle</strong> — from raw material extraction to end-of-life disposal.</p>
+
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — The Circular Economy vs. Linear Economy</span>
+          <svg width="100%" height="200" viewBox="0 0 750 200" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Linear Economy -->
+            <text x="180" y="20" text-anchor="middle" fill="#ff4d6d" font-size="12" font-weight="bold">LINEAR ECONOMY (Take-Make-Dispose)</text>
+            <rect x="20" y="35" width="80" height="30" rx="3" fill="#1f2430" stroke="#ff4d6d" stroke-width="1.5"/>
+            <text x="60" y="55" text-anchor="middle" fill="#ff4d6d" font-size="9">EXTRACT</text>
+            <line x1="100" y1="50" x2="130" y2="50" stroke="#ff4d6d" stroke-width="1.5" marker-end="url(#ra)"/>
+            <rect x="130" y="35" width="80" height="30" rx="3" fill="#1f2430" stroke="#ff4d6d" stroke-width="1.5"/>
+            <text x="170" y="55" text-anchor="middle" fill="#ff4d6d" font-size="9">MANUFACTURE</text>
+            <line x1="210" y1="50" x2="240" y2="50" stroke="#ff4d6d" stroke-width="1.5" marker-end="url(#ra)"/>
+            <rect x="240" y="35" width="80" height="30" rx="3" fill="#1f2430" stroke="#ff4d6d" stroke-width="1.5"/>
+            <text x="280" y="55" text-anchor="middle" fill="#ff4d6d" font-size="9">USE</text>
+            <line x1="320" y1="50" x2="350" y2="50" stroke="#ff4d6d" stroke-width="1.5" marker-end="url(#ra)"/>
+            <rect x="350" y="35" width="80" height="30" rx="3" fill="#1f2430" stroke="#ff4d6d" stroke-width="1.5"/>
+            <text x="390" y="55" text-anchor="middle" fill="#ff4d6d" font-size="9">DISPOSE</text>
+            <text x="450" y="55" fill="#7a8099" font-size="9">→ LANDFILL / WASTE</text>
+
+            <!-- Circular Economy -->
+            <text x="180" y="110" text-anchor="middle" fill="#00d4aa" font-size="12" font-weight="bold">CIRCULAR ECONOMY (Reduce-Reuse-Recycle)</text>
+            <ellipse cx="180" cy="165" rx="150" ry="25" fill="none" stroke="#00d4aa" stroke-width="2" stroke-dasharray="none"/>
+            <text x="60" y="155" text-anchor="middle" fill="#00d4aa" font-size="9">DESIGN</text>
+            <text x="180" y="145" text-anchor="middle" fill="#00d4aa" font-size="9">MANUFACTURE</text>
+            <text x="300" y="155" text-anchor="middle" fill="#00d4aa" font-size="9">USE</text>
+            <text x="180" y="190" text-anchor="middle" fill="#00d4aa" font-size="9">RECYCLE / REUSE / REPAIR</text>
+            <!-- Circular arrows -->
+            <path d="M 110,155 Q 60,130 60,165 Q 60,190 110,185" fill="none" stroke="#00d4aa" stroke-width="2" marker-end="url(#ga)"/>
+            <path d="M 250,155 Q 300,130 300,165 Q 300,190 250,185" fill="none" stroke="#00d4aa" stroke-width="2" marker-end="url(#ga)"/>
+
+            <!-- 6Rs box -->
+            <rect x="500" y="100" width="230" height="90" rx="4" fill="#111318" stroke="#00d4aa" stroke-width="1.5"/>
+            <text x="615" y="120" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="bold">The 6Rs</text>
+            <text x="515" y="135" fill="#e8eaf0" font-size="9">Reduce · Reuse · Recycle</text>
+            <text x="515" y="148" fill="#e8eaf0" font-size="9">Rethink · Repair · Refuse</text>
+            <text x="515" y="161" fill="#7a8099" font-size="9">Design for disassembly</text>
+            <text x="515" y="174" fill="#7a8099" font-size="9">Planned obsolescence avoidance</text>
+            <text x="515" y="187" fill="#7a8099" font-size="9">Life Cycle Assessment (LCA)</text>
+
+            <defs>
+              <marker id="ra" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#ff4d6d"/></marker>
+              <marker id="ga" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L6,3 z" fill="#00d4aa"/></marker>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Concept</th><th>Description</th><th>Engineering Example</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Life Cycle Assessment (LCA)</strong></td><td>Evaluates environmental impact at every stage: raw material extraction, manufacturing, use, and end-of-life</td><td>Comparing the LCA of an electric car vs. petrol car (manufacturing vs. use phase emissions)</td></tr>
+              <tr><td><strong>Planned Obsolescence</strong></td><td>Deliberately designing products to fail or become obsolete after a set period to drive new sales</td><td>Smartphones with non-replaceable batteries; software updates that slow old devices</td></tr>
+              <tr><td><strong>Design for Disassembly</strong></td><td>Designing products so they can be easily taken apart for repair, reuse, or recycling</td><td>Modular phone designs; snap-fit joints instead of glue</td></tr>
+              <tr><td><strong>Carbon Footprint</strong></td><td>Total greenhouse gas emissions associated with a product or process, expressed as CO₂ equivalent</td><td>Aluminium has a high carbon footprint to produce from ore but is highly recyclable</td></tr>
+              <tr><td><strong>Renewable Energy</strong></td><td>Energy from sources that are naturally replenished: solar, wind, tidal, hydroelectric, biomass</td><td>Wind turbines made from GFRP blades; solar panels on factory roofs</td></tr>
+              <tr><td><strong>Sustainable Materials</strong></td><td>Materials sourced and processed in ways that minimise environmental impact</td><td>FSC-certified timber; recycled aluminium; bio-based polymers</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SMART MATERIALS -->
+      <div class="lesson-section" id="smart">
+        <div class="lesson-section-header">
+          <div class="section-number">5</div>
+          <div class="section-title-block">
+            <h2>Smart Materials & New Technologies</h2>
+            <small>3.5.5 — Materials and technologies that respond to their environment</small>
+          </div>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">🧠 Shape Memory Alloys (SMA)</div>
+            <p>SMAs (e.g., Nitinol — nickel-titanium) can be deformed at low temperature and then return to their original shape when heated above a critical temperature.</p>
+            <p><strong>Uses:</strong> Medical stents, spectacle frames, actuators, orthodontic wires, pipe couplings.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">🌡️ Thermochromic Materials</div>
+            <p>Change colour in response to temperature changes. The colour change is reversible.</p>
+            <p><strong>Uses:</strong> Baby food spoons (indicate if food is too hot), mood rings, temperature-sensitive labels on packaging, forehead thermometers.</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">💡 Photochromic Materials</div>
+            <p>Change colour/opacity in response to light intensity (UV radiation). Reversible.</p>
+            <p><strong>Uses:</strong> Photochromic lenses (transition glasses — darken in sunlight), UV-sensitive inks for security printing.</p>
+          </div>
+          <div class="card red">
+            <div class="card-title">⚡ Piezoelectric Materials</div>
+            <p>Generate an electrical voltage when mechanically stressed (direct effect), or deform when a voltage is applied (converse effect).</p>
+            <p><strong>Uses:</strong> Pressure sensors, ultrasonic transducers, energy harvesting from vibrations, inkjet printer heads, gas lighters.</p>
+          </div>
+          <div class="card purple">
+            <div class="card-title">🔋 Graphene</div>
+            <p>A single layer of carbon atoms arranged in a hexagonal lattice. Strongest material ever tested, excellent electrical conductor, transparent, and flexible.</p>
+            <p><strong>Potential uses:</strong> Ultra-strong composites, flexible electronics, super-capacitors, water filtration membranes, next-generation batteries.</p>
+          </div>
+          <div class="card">
+            <div class="card-title">🏗️ Self-Healing Materials</div>
+            <p>Materials that can automatically repair damage (cracks, scratches) without human intervention.</p>
+            <p><strong>Examples:</strong> Self-healing concrete (contains bacteria that produce limestone to fill cracks); self-healing polymers (contain microcapsules of healing agent).</p>
+            <p><strong>Uses:</strong> Infrastructure, aerospace, automotive coatings.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM PRACTICE -->
+      <div class="lesson-section">
+        <div class="lesson-section-header">
+          <div class="section-number">📝</div>
+          <div class="section-title-block">
+            <h2>Exam Practice — Modern Technologies</h2>
+            <small>Past paper style questions with model answers</small>
+          </div>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-icon">🎯</div>
+            <div>
+              <div class="quiz-title">Multiple Choice — Modern Technologies</div>
+              <div class="quiz-meta">5 questions · Select the best answer</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 1 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">What does CAM software produce that is used by a CNC machine?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> A 3D CAD model</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> G-code (machine instructions / toolpaths)</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> A physical prototype</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> A quality control report</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! CAM software takes a CAD model and generates G-code — the set of machine instructions (toolpaths, speeds, feeds) that the CNC machine follows.</div>
+              <div class="examiner-tip">💡 Examiner tip: CAD = Design. CAM = Manufacturing instructions. CNC = Machine that follows those instructions.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 2 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which smart material changes colour in response to temperature?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Photochromic material</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Thermochromic material</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Piezoelectric material</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Shape memory alloy</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Thermochromic materials change colour with temperature (thermo = heat). Photochromic = light. Piezoelectric = pressure/electricity. SMA = shape change with temperature.</div>
+              <div class="examiner-tip">💡 Examiner tip: Thermo = temperature, Photo = light, Piezo = pressure/electricity. Learn the prefix to remember the property.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 3 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which of the following best describes the circular economy?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> A system where products are made, used, and then sent to landfill</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> A system designed to eliminate waste by keeping materials in use for as long as possible through reuse, repair, and recycling</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> A system where all products are made from circular cross-sections</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> A system where factories operate 24 hours a day in a cycle</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! The circular economy aims to keep materials in use for as long as possible through reuse, repair, remanufacturing, and recycling — contrasting with the linear "take-make-dispose" model.</div>
+              <div class="examiner-tip">💡 Examiner tip: Remember the 6Rs: Reduce, Reuse, Recycle, Rethink, Repair, Refuse. The circular economy encompasses all of these.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 4 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">What is the main advantage of using industrial robots for car body spot welding?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Robots are cheaper to buy than human workers</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Robots can work in any environment without any programming</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Robots provide consistent quality, high speed, and can work continuously without fatigue</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Robots produce stronger welds than human welders</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Robots provide consistent quality (every weld identical), high speed, and can operate 24/7 without fatigue. They are NOT necessarily cheaper to buy — they have high capital costs.</div>
+              <div class="examiner-tip">💡 Examiner tip: Robot advantages = consistency, speed, 24/7 operation, hazardous environments, precision. Disadvantages = high capital cost, programming required, inflexible for small batches.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 5 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A company designs a phone with a glued-in battery that cannot be replaced. This is an example of:</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Design for disassembly</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Circular economy design</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Planned obsolescence</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Life cycle assessment</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Planned obsolescence is designing products so they cannot be repaired or upgraded, forcing consumers to buy new products. A non-replaceable battery means the whole phone must be replaced when the battery degrades.</div>
+              <div class="examiner-tip">💡 Examiner tip: Planned obsolescence is a negative practice from a sustainability perspective. Design for disassembly is the opposite — making products easy to repair and recycle.</div>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary quiz-submit-btn">Submit Answers</button>
+            <button class="btn btn-secondary quiz-reset-btn">↺ Reset Quiz</button>
+          </div>
+          <div class="quiz-score-display">
+            <div class="quiz-score-num">0/5</div>
+            <div class="quiz-score-label">Complete the quiz to see your score</div>
+          </div>
+        </div>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty hard">★★★ Hard</span>
+            <span class="ppq-source">Style: AQA 8852 Extended Response</span>
+            <span class="ppq-marks">6 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">Evaluate the advantages and disadvantages of using <strong>CNC machining</strong> compared to <strong>manual machining</strong> for producing 500 identical aluminium brackets. Consider: quality, cost, time, and skill requirements.</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer — Level Marked (6 marks)</div>
+              <div class="ppq-model-answer-text">
+                <strong>CNC Advantages:</strong><br>
+                • Consistent quality — every bracket identical, tight tolerances maintained throughout all 500 parts (1)<br>
+                • Faster production — CNC can run continuously without breaks (1)<br>
+                • No skilled machinist needed during production — just setup (1)<br>
+                • Complex features can be machined automatically (1)<br><br>
+                <strong>CNC Disadvantages:</strong><br>
+                • High initial cost of CNC machine and CAM software (1)<br>
+                • Programming time required before production can start (1)<br>
+                • Machine maintenance and tooling costs (1)<br><br>
+                <strong>Manual Machining Advantages:</strong><br>
+                • Lower initial capital cost (1)<br>
+                • Flexible — skilled machinist can adapt to variations (1)<br>
+                • No programming required (1)<br><br>
+                <strong>Manual Disadvantages:</strong><br>
+                • Inconsistent quality — human error, fatigue (1)<br>
+                • Slower — cannot run unattended (1)<br>
+                • Requires highly skilled machinist (1)<br><br>
+                <strong>Conclusion:</strong> For 500 identical parts, CNC is more appropriate despite higher setup costs, as the cost per part is lower, quality is consistent, and production is faster. (1)
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: For evaluate questions, always discuss BOTH sides and reach a justified conclusion. The conclusion should reference the specific context (500 identical parts = high enough volume to justify CNC setup cost).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lesson-nav">
+        <a href="4-testing.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div><span class="nav-label">Previous Lesson</span><span class="nav-title">Testing & Investigation</span></div>
+        </a>
+        <a href="6-practical-maths.html" class="lesson-nav-btn">
+          <div style="text-align:right"><span class="nav-label">Next Lesson</span><span class="nav-title">Practical Skills & Maths</span></div>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+    <footer><strong>AQA GCSE Engineering 8852</strong> · Section 3.5 Modern Technologies · Revision Site</footer>
+  </div>
+</div>
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

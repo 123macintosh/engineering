@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing & Investigation — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Section 3.4 — Testing & Investigation</span></div>
+      <div class="topbar-progress">
+        <span class="topbar-progress-label">Progress</span>
+        <div class="topbar-progress-bar"><div class="topbar-progress-fill" style="width:66%"></div></div>
+      </div>
+    </div>
+    <div class="content-inner">
+
+      <div class="lesson-hero">
+        <div class="lesson-hero-tag">Section 3.4</div>
+        <h1>Testing &amp; <span>Investigation</span></h1>
+        <p class="lesson-hero-desc">Engineers must test materials and products to ensure they meet specifications. This lesson covers destructive and non-destructive testing methods, quality control, aerodynamics, and how to plan and carry out investigations.</p>
+        <div class="lesson-hero-objectives">
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Distinguish between destructive and non-destructive testing (NDT)</li>
+            <li>Describe hardness, tensile, impact, and fatigue testing methods</li>
+            <li>Explain NDT methods: visual, dye penetrant, magnetic particle, ultrasonic, X-ray</li>
+            <li>Understand quality control, tolerances, and inspection methods</li>
+            <li>Describe aerodynamic principles and how they affect engineering design</li>
+            <li>Plan and evaluate engineering investigations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- DESTRUCTIVE TESTING -->
+      <div class="lesson-section" id="destructive">
+        <div class="lesson-section-header">
+          <div class="section-number">1</div>
+          <div class="section-title-block">
+            <h2>Destructive Testing</h2>
+            <small>3.4.1 — Tests that damage or destroy the sample</small>
+          </div>
+        </div>
+        <p>Destructive testing involves applying forces or conditions to a sample until it fails. The sample is destroyed in the process. These tests provide precise data about material properties but cannot be used on finished products.</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">💪 Tensile Testing</div>
+            <p><strong>Purpose:</strong> Measures tensile strength, yield strength, Young's modulus, ductility, and elongation at fracture.</p>
+            <p><strong>Method:</strong> A standardised test piece (dog-bone shape) is gripped in a tensile testing machine. Load is applied at a controlled rate until fracture. A stress-strain graph is plotted.</p>
+            <p><strong>Key measurements:</strong></p>
+            <ul>
+              <li><strong>Yield point:</strong> Stress at which permanent deformation begins</li>
+              <li><strong>Ultimate Tensile Strength (UTS):</strong> Maximum stress before fracture</li>
+              <li><strong>% Elongation:</strong> Measure of ductility</li>
+            </ul>
+          </div>
+          <div class="card green">
+            <div class="card-title">💎 Hardness Testing</div>
+            <p><strong>Vickers Hardness Test:</strong> A diamond pyramid indenter is pressed into the surface under a known load. The diagonal of the indentation is measured. HV = load ÷ area of indentation.</p>
+            <p><strong>Brinell Hardness Test:</strong> A hardened steel ball is pressed into the surface. BHN = load ÷ area of indentation.</p>
+            <p><strong>Rockwell Hardness Test:</strong> Measures depth of penetration. Faster than Vickers/Brinell.</p>
+            <p><strong>Note:</strong> Hardness tests are considered <em>semi-destructive</em> — they leave a small indentation but don't destroy the part.</p>
+          </div>
+          <div class="card red">
+            <div class="card-title">⚡ Charpy Impact Test</div>
+            <p><strong>Purpose:</strong> Measures the <strong>toughness</strong> (energy absorbed before fracture) of a material, especially at different temperatures.</p>
+            <p><strong>Method:</strong> A notched test piece is placed horizontally in a vice. A heavy pendulum swings and strikes the specimen. The energy absorbed = difference between initial and final height of pendulum.</p>
+            <p><strong>Result:</strong> Energy in Joules. Higher value = tougher material.</p>
+            <p><strong>Application:</strong> Critical for materials used in cold environments (e.g., ship hulls, pipelines in Arctic conditions).</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">🔄 Fatigue Testing</div>
+            <p><strong>Purpose:</strong> Determines how many cycles of repeated loading a material can withstand before failure. Most engineering failures are due to fatigue, not static overload.</p>
+            <p><strong>Method:</strong> A rotating beam test applies alternating bending stress. The number of cycles to failure is recorded at different stress levels.</p>
+            <p><strong>S-N Curve:</strong> Plots stress amplitude vs. number of cycles to failure. The <strong>endurance limit</strong> is the stress below which the material will not fail regardless of cycles.</p>
+            <p><strong>Examples:</strong> Aircraft wings, bridges, rotating shafts, springs.</p>
+          </div>
+        </div>
+
+        <!-- Stress-Strain Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Stress-Strain Curve for Mild Steel</span>
+          <svg width="100%" height="250" viewBox="0 0 700 250" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Axes -->
+            <line x1="60" y1="20" x2="60" y2="210" stroke="#4a5068" stroke-width="2"/>
+            <line x1="60" y1="210" x2="660" y2="210" stroke="#4a5068" stroke-width="2"/>
+            <text x="30" y="120" text-anchor="middle" fill="#7a8099" transform="rotate(-90,30,120)">Stress (MPa)</text>
+            <text x="360" y="235" text-anchor="middle" fill="#7a8099">Strain (mm/mm)</text>
+            <!-- Curve -->
+            <polyline points="60,210 200,80 220,75 240,78 280,70 320,60 380,45 440,35 500,30 540,28 580,32 620,50 650,90" fill="none" stroke="#f0a500" stroke-width="3"/>
+            <!-- Key points -->
+            <!-- Proportional limit -->
+            <circle cx="200" cy="80" r="5" fill="#00d4aa"/>
+            <text x="205" y="75" fill="#00d4aa" font-size="9">Proportional limit</text>
+            <!-- Yield point -->
+            <circle cx="220" cy="75" r="5" fill="#ff4d6d"/>
+            <text x="225" y="70" fill="#ff4d6d" font-size="9">Yield point</text>
+            <line x1="220" y1="75" x2="220" y2="210" stroke="#ff4d6d" stroke-width="1" stroke-dasharray="4,3"/>
+            <!-- UTS -->
+            <circle cx="540" cy="28" r="5" fill="#f0a500"/>
+            <text x="545" y="23" fill="#f0a500" font-size="9">UTS (max stress)</text>
+            <line x1="540" y1="28" x2="540" y2="210" stroke="#f0a500" stroke-width="1" stroke-dasharray="4,3"/>
+            <!-- Fracture -->
+            <circle cx="650" cy="90" r="5" fill="#7c6fff"/>
+            <text x="620" y="85" fill="#7c6fff" font-size="9">Fracture</text>
+            <!-- Elastic region label -->
+            <text x="130" y="160" text-anchor="middle" fill="#00d4aa" font-size="9">ELASTIC</text>
+            <text x="130" y="172" text-anchor="middle" fill="#00d4aa" font-size="9">REGION</text>
+            <!-- Plastic region label -->
+            <text x="420" y="160" text-anchor="middle" fill="#f97316" font-size="9">PLASTIC REGION</text>
+            <text x="420" y="172" text-anchor="middle" fill="#f97316" font-size="9">(permanent deformation)</text>
+            <!-- Necking label -->
+            <text x="610" y="140" text-anchor="middle" fill="#7c6fff" font-size="9">NECKING</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- NON-DESTRUCTIVE TESTING -->
+      <div class="lesson-section" id="ndt">
+        <div class="lesson-section-header">
+          <div class="section-number">2</div>
+          <div class="section-title-block">
+            <h2>Non-Destructive Testing (NDT)</h2>
+            <small>3.4.2 — Testing without damaging the component</small>
+          </div>
+        </div>
+        <p>Non-destructive testing allows engineers to inspect components for defects <strong>without destroying them</strong>. This is essential for safety-critical components (aircraft, bridges, pressure vessels) that must be inspected while remaining in service.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>Principle</th><th>Detects</th><th>Limitations</th><th>Uses</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Visual Inspection</strong></td>
+                <td>Direct observation with naked eye or magnification (borescope, endoscope)</td>
+                <td>Surface cracks, corrosion, misalignment, visible damage</td>
+                <td>Only detects surface defects; subjective</td>
+                <td>All industries — first step in any inspection</td>
+              </tr>
+              <tr>
+                <td><strong>Dye Penetrant Testing</strong></td>
+                <td>Coloured or fluorescent dye applied to surface, penetrates cracks. Excess removed. Developer draws dye out of cracks.</td>
+                <td>Surface-breaking cracks and porosity in non-porous materials</td>
+                <td>Surface defects only; surface must be clean; not for porous materials</td>
+                <td>Welds, castings, forgings, aerospace components</td>
+              </tr>
+              <tr>
+                <td><strong>Magnetic Particle Inspection (MPI)</strong></td>
+                <td>Component magnetised. Iron particles applied. Particles cluster at magnetic flux leakage around defects.</td>
+                <td>Surface and near-surface defects in ferromagnetic materials</td>
+                <td>Only works on ferromagnetic materials (iron, steel); not aluminium or copper</td>
+                <td>Steel welds, crankshafts, gear teeth</td>
+              </tr>
+              <tr>
+                <td><strong>Ultrasonic Testing (UT)</strong></td>
+                <td>High-frequency sound waves transmitted into material. Reflected waves from defects detected and displayed on screen (A-scan).</td>
+                <td>Internal defects (cracks, voids, inclusions) and thickness measurement</td>
+                <td>Requires skilled operator; coupling medium needed; complex geometries difficult</td>
+                <td>Weld inspection, aircraft fuselage, pressure vessels, rail tracks</td>
+              </tr>
+              <tr>
+                <td><strong>Radiographic Testing (X-ray/Gamma)</strong></td>
+                <td>X-rays or gamma rays pass through component onto film or digital detector. Dense areas absorb more radiation.</td>
+                <td>Internal defects (voids, cracks, inclusions), weld quality</td>
+                <td>Radiation hazard; expensive equipment; slow; cannot detect planar defects parallel to beam</td>
+                <td>Welds in pipelines, aircraft structures, castings</td>
+              </tr>
+              <tr>
+                <td><strong>Eddy Current Testing</strong></td>
+                <td>Alternating magnetic field induces eddy currents in conductive material. Defects disturb eddy current pattern.</td>
+                <td>Surface and near-surface cracks in conductive materials; coating thickness</td>
+                <td>Only for conductive materials; limited depth penetration</td>
+                <td>Aircraft skin, heat exchanger tubes, rail inspection</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Fill in the Gaps - NDT -->
+        <div class="fitg-container">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — NDT Methods</div>
+              <div class="fitg-subtitle">Complete the descriptions of non-destructive testing methods</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="ultrasonic">ultrasonic</span>
+            <span class="word-chip" data-word="dye penetrant">dye penetrant</span>
+            <span class="word-chip" data-word="magnetic particle">magnetic particle</span>
+            <span class="word-chip" data-word="X-ray">X-ray</span>
+            <span class="word-chip" data-word="visual">visual</span>
+            <span class="word-chip" data-word="ferromagnetic">ferromagnetic</span>
+            <span class="word-chip" data-word="internal">internal</span>
+            <span class="word-chip" data-word="surface">surface</span>
+          </div>
+          <div class="fitg-text">
+            <p>The simplest form of NDT is <input class="fitg-input" data-answer="visual" style="width:80px"> inspection, which can only detect <input class="fitg-input" data-answer="surface" style="width:80px"> defects.</p>
+            <p><input class="fitg-input" data-answer="dye penetrant" style="width:130px"> testing uses a coloured liquid that seeps into surface cracks. It is suitable for non-porous materials but cannot detect <input class="fitg-input" data-answer="internal" style="width:80px"> defects.</p>
+            <p><input class="fitg-input" data-answer="magnetic particle" style="width:150px"> inspection can only be used on <input class="fitg-input" data-answer="ferromagnetic" style="width:130px"> materials such as steel and iron.</p>
+            <p><input class="fitg-input" data-answer="ultrasonic" style="width:100px"> testing uses high-frequency sound waves to detect internal defects and measure material thickness.</p>
+            <p><input class="fitg-input" data-answer="X-ray" style="width:70px"> radiography can detect internal voids and cracks in welds and castings, but requires radiation safety precautions.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- QUALITY CONTROL -->
+      <div class="lesson-section" id="quality">
+        <div class="lesson-section-header">
+          <div class="section-number">3</div>
+          <div class="section-title-block">
+            <h2>Quality Control & Tolerances</h2>
+            <small>3.4.3 — Ensuring parts meet specifications</small>
+          </div>
+        </div>
+        <p>Quality control (QC) ensures that manufactured parts meet the required specification. A key concept is <strong>tolerance</strong> — the acceptable range of variation in a dimension.</p>
+
+        <div class="highlight-box yellow">
+          <div class="highlight-title">📐 Tolerances — Key Concepts</div>
+          <p>A shaft might be specified as <strong>Ø25 ±0.05 mm</strong>. This means:</p>
+          <ul>
+            <li><strong>Nominal size:</strong> 25 mm (the target dimension)</li>
+            <li><strong>Upper limit:</strong> 25.05 mm (maximum acceptable)</li>
+            <li><strong>Lower limit:</strong> 24.95 mm (minimum acceptable)</li>
+            <li><strong>Tolerance:</strong> 0.10 mm (total range = upper – lower)</li>
+          </ul>
+          <p>Parts outside the tolerance are <strong>rejected</strong>. Tighter tolerances cost more to achieve.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Inspection Tool</th><th>What it measures</th><th>Accuracy</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Vernier Caliper</strong></td><td>External/internal dimensions, depth</td><td>0.02 mm or 0.05 mm</td></tr>
+              <tr><td><strong>Micrometer</strong></td><td>External dimensions (diameter, thickness)</td><td>0.01 mm or 0.001 mm</td></tr>
+              <tr><td><strong>Go/No-Go Gauge</strong></td><td>Checks if a dimension is within tolerance (pass/fail — no measurement)</td><td>Depends on gauge tolerance</td></tr>
+              <tr><td><strong>Dial Test Indicator (DTI)</strong></td><td>Surface flatness, runout, alignment</td><td>0.01 mm</td></tr>
+              <tr><td><strong>CMM (Coordinate Measuring Machine)</strong></td><td>3D dimensions of complex parts</td><td>0.001 mm (1 micron)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Statistical Process Control (SPC)</h3>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">📊 Control Charts</div>
+            <p>In mass production, it is impossible to inspect every part. Instead, <strong>samples</strong> are taken at regular intervals and measured. The results are plotted on a <strong>control chart</strong>.</p>
+            <p>Control charts have <strong>Upper Control Limits (UCL)</strong> and <strong>Lower Control Limits (LCL)</strong>. If sample measurements fall outside these limits, the process is stopped and investigated.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">✅ Quality Assurance vs. Quality Control</div>
+            <p><strong>Quality Control (QC):</strong> Inspection and testing of finished products to find defects. Reactive — finds problems after they occur.</p>
+            <p><strong>Quality Assurance (QA):</strong> Systematic processes to prevent defects from occurring in the first place. Proactive — prevents problems.</p>
+            <p><strong>ISO 9001:</strong> International quality management standard. Companies certified to ISO 9001 have demonstrated systematic quality management.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AERODYNAMICS -->
+      <div class="lesson-section" id="aerodynamics">
+        <div class="lesson-section-header">
+          <div class="section-number">4</div>
+          <div class="section-title-block">
+            <h2>Aerodynamics & Fluid Mechanics</h2>
+            <small>3.4.4 — How shape affects forces in fluids</small>
+          </div>
+        </div>
+        <p>Aerodynamics is the study of how air (and other fluids) flows around objects. Understanding aerodynamics is crucial for designing cars, aircraft, bridges, and buildings.</p>
+
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Aerodynamic Forces on an Aircraft</span>
+          <svg width="100%" height="200" viewBox="0 0 700 200" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Aircraft body -->
+            <ellipse cx="350" cy="100" rx="180" ry="30" fill="#1a2a3a" stroke="#f0a500" stroke-width="2"/>
+            <!-- Wings -->
+            <polygon points="250,100 350,80 450,100 350,120" fill="#252a35" stroke="#00d4aa" stroke-width="1.5"/>
+            <!-- Nose -->
+            <polygon points="530,100 500,90 500,110" fill="#f0a500"/>
+            <!-- Tail -->
+            <polygon points="170,100 200,80 200,100" fill="#f0a500"/>
+            <!-- Forces -->
+            <!-- Lift (up) -->
+            <line x1="350" y1="80" x2="350" y2="20" stroke="#00d4aa" stroke-width="3" marker-end="url(#arru)"/>
+            <text x="360" y="40" fill="#00d4aa" font-size="11" font-weight="bold">LIFT ↑</text>
+            <!-- Weight (down) -->
+            <line x1="350" y1="120" x2="350" y2="180" stroke="#ff4d6d" stroke-width="3" marker-end="url(#arrd)"/>
+            <text x="360" y="170" fill="#ff4d6d" font-size="11" font-weight="bold">WEIGHT ↓</text>
+            <!-- Thrust (forward) -->
+            <line x1="530" y1="100" x2="620" y2="100" stroke="#f0a500" stroke-width="3" marker-end="url(#arrf)"/>
+            <text x="625" y="104" fill="#f0a500" font-size="11" font-weight="bold">THRUST →</text>
+            <!-- Drag (backward) -->
+            <line x1="170" y1="100" x2="80" y2="100" stroke="#7c6fff" stroke-width="3" marker-end="url(#arrb)"/>
+            <text x="10" y="104" fill="#7c6fff" font-size="11" font-weight="bold">← DRAG</text>
+            <defs>
+              <marker id="arru" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,8 L4,0 L8,8 z" fill="#00d4aa"/></marker>
+              <marker id="arrd" markerWidth="8" markerHeight="8" refX="4" refY="0" orient="auto"><path d="M0,0 L4,8 L8,0 z" fill="#ff4d6d"/></marker>
+              <marker id="arrf" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#f0a500"/></marker>
+              <marker id="arrb" markerWidth="8" markerHeight="8" refX="0" refY="4" orient="auto"><path d="M8,0 L0,4 L8,8 z" fill="#7c6fff"/></marker>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">💨 Drag</div>
+            <p><strong>Drag</strong> is the aerodynamic force that opposes motion through a fluid. It acts parallel to the direction of motion (backwards).</p>
+            <p><strong>Types:</strong></p>
+            <ul>
+              <li><strong>Form drag:</strong> Due to the shape of the object. Streamlined shapes have low form drag.</li>
+              <li><strong>Skin friction drag:</strong> Due to friction between fluid and surface. Smooth surfaces reduce this.</li>
+              <li><strong>Induced drag:</strong> Created as a by-product of generating lift.</li>
+            </ul>
+            <p><strong>Drag ∝ v²</strong> — doubling speed quadruples drag force.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">🚀 Lift</div>
+            <p><strong>Lift</strong> is the aerodynamic force perpendicular to the direction of motion. It is generated by the aerofoil (wing) shape.</p>
+            <p><strong>Bernoulli's Principle:</strong> Air flowing over the curved upper surface of a wing travels faster than air below. Faster flow = lower pressure. The pressure difference creates lift.</p>
+            <p><strong>Angle of attack:</strong> Increasing the angle of attack increases lift (up to the stall angle).</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">🏎️ Streamlining</div>
+            <p>A <strong>streamlined</strong> shape allows fluid to flow smoothly around it with minimal turbulence, reducing drag.</p>
+            <p><strong>Drag coefficient (Cd):</strong> A dimensionless measure of aerodynamic efficiency. Lower Cd = less drag.</p>
+            <ul>
+              <li>Flat plate (face-on): Cd ≈ 1.2</li>
+              <li>Sphere: Cd ≈ 0.47</li>
+              <li>Teardrop/aerofoil: Cd ≈ 0.04</li>
+              <li>Modern car: Cd ≈ 0.25–0.35</li>
+            </ul>
+          </div>
+          <div class="card purple">
+            <div class="card-title">🌊 Bernoulli's Equation</div>
+            <div class="formula-box" style="margin:8px 0;">
+              <div class="formula-name">Bernoulli's Principle</div>
+              <div class="formula-eq">P + ½ρv² = constant</div>
+              <div class="formula-units">P=pressure · ρ=density · v=velocity</div>
+            </div>
+            <p>As fluid velocity increases, pressure decreases (and vice versa). This explains lift, carburettors, and venturi meters.</p>
+          </div>
+        </div>
+
+        <h3>Wind Tunnels & Testing</h3>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">🌬️ Wind Tunnel Testing</div>
+            <p>A <strong>wind tunnel</strong> is used to test the aerodynamic properties of models or full-size objects. Air is blown over a stationary model (equivalent to the model moving through still air).</p>
+            <p><strong>What is measured:</strong> Drag force, lift force, pressure distribution, flow visualisation (using smoke or tufts).</p>
+            <p><strong>Uses:</strong> Car design, aircraft design, bridge design, building design, sports equipment.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">💻 CFD (Computational Fluid Dynamics)</div>
+            <p>Modern engineering uses <strong>CFD software</strong> to simulate fluid flow around objects using mathematical models. This is faster and cheaper than physical wind tunnel testing.</p>
+            <p><strong>Advantages:</strong> No physical model needed, can test many variations quickly, detailed flow visualisation.</p>
+            <p><strong>Disadvantages:</strong> Results must be validated against physical tests; complex geometries require powerful computers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM PRACTICE -->
+      <div class="lesson-section">
+        <div class="lesson-section-header">
+          <div class="section-number">📝</div>
+          <div class="section-title-block">
+            <h2>Exam Practice — Testing</h2>
+            <small>Past paper style questions with model answers</small>
+          </div>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-icon">🎯</div>
+            <div>
+              <div class="quiz-title">Multiple Choice — Testing & Investigation</div>
+              <div class="quiz-meta">5 questions · Select the best answer</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 1 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which NDT method can ONLY be used on ferromagnetic materials?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Dye penetrant testing</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Ultrasonic testing</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Magnetic particle inspection</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> X-ray radiography</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Magnetic particle inspection requires the material to be magnetised, which is only possible with ferromagnetic materials (iron, steel, nickel).</div>
+              <div class="examiner-tip">💡 Examiner tip: MPI = ferromagnetic only. Dye penetrant = non-porous surface defects. UT = internal defects in any material. X-ray = internal defects, radiation hazard.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 2 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A shaft is specified as Ø30 ±0.1 mm. What is the tolerance?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> 0.1 mm</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> 0.2 mm</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> 30 mm</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> 30.1 mm</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Tolerance = Upper limit − Lower limit = 30.1 − 29.9 = 0.2 mm. The ±0.1 means 0.1 above AND 0.1 below the nominal size.</div>
+              <div class="examiner-tip">💡 Examiner tip: Tolerance = total range = (nominal + upper deviation) − (nominal − lower deviation) = 2 × deviation for symmetric tolerances.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 3 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">The Charpy impact test measures which material property?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Hardness</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Tensile strength</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Toughness (impact energy)</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Fatigue life</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! The Charpy test measures toughness — the energy absorbed before fracture. The result is given in Joules.</div>
+              <div class="examiner-tip">💡 Examiner tip: Charpy = toughness. Vickers/Brinell = hardness. Tensile test = tensile strength, ductility, Young's modulus. Rotating beam = fatigue.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 4 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">According to Bernoulli's principle, what happens to the pressure of a fluid as its velocity increases?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Pressure increases</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Pressure decreases</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Pressure stays the same</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Pressure doubles</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Bernoulli's principle states that as fluid velocity increases, pressure decreases. This is the basis for how aircraft wings generate lift.</div>
+              <div class="examiner-tip">💡 Examiner tip: Higher speed = lower pressure. This is why air flowing faster over the top of a wing creates lower pressure above, and the pressure difference generates lift.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 5 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which inspection tool would be most appropriate for checking if a shaft diameter of 25mm is within a tolerance of ±0.02mm?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Steel rule</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> Vernier caliper</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Micrometer</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Dial test indicator</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! A micrometer reads to 0.01mm (or 0.001mm for a digital micrometer), which is accurate enough for a ±0.02mm tolerance. A vernier caliper reads to 0.02mm — borderline, but a micrometer is more appropriate.</div>
+              <div class="examiner-tip">💡 Examiner tip: Match the measuring tool accuracy to the tolerance. Rule of thumb: measuring tool should be at least 10× more accurate than the tolerance.</div>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary quiz-submit-btn">Submit Answers</button>
+            <button class="btn btn-secondary quiz-reset-btn">↺ Reset Quiz</button>
+          </div>
+          <div class="quiz-score-display">
+            <div class="quiz-score-num">0/5</div>
+            <div class="quiz-score-label">Complete the quiz to see your score</div>
+          </div>
+        </div>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty medium">★★ Medium</span>
+            <span class="ppq-source">Style: AQA 8852 Short Answer</span>
+            <span class="ppq-marks">4 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">A manufacturer of aircraft landing gear needs to inspect welds for internal defects. The landing gear is made from high-strength steel.<br><br>(a) State <strong>two</strong> suitable NDT methods for detecting internal weld defects. [2 marks]<br>(b) Explain why dye penetrant testing would NOT be suitable for detecting internal defects. [2 marks]</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer (4 marks)</div>
+              <div class="ppq-model-answer-text">
+                (a) Any two of: <strong>Ultrasonic testing</strong> (1) / <strong>X-ray/Gamma radiography</strong> (1) / <strong>Magnetic particle inspection</strong> (for near-surface defects in steel) (1)<br><br>
+                (b) Dye penetrant testing only detects <strong>surface-breaking defects</strong> (1). Internal defects are not connected to the surface, so the dye cannot penetrate into them (1). Therefore it would not reveal cracks or voids that are entirely within the weld metal (1).
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: For "explain why NOT" questions, you must state what the method CAN do and then explain why that is insufficient for the requirement. One mark for stating it only detects surface defects, one mark for explaining why this means internal defects are missed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lesson-nav">
+        <a href="3-systems.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div><span class="nav-label">Previous Lesson</span><span class="nav-title">Systems</span></div>
+        </a>
+        <a href="5-modern-tech.html" class="lesson-nav-btn">
+          <div style="text-align:right"><span class="nav-label">Next Lesson</span><span class="nav-title">Modern Technologies</span></div>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+    <footer><strong>AQA GCSE Engineering 8852</strong> · Section 3.4 Testing & Investigation · Revision Site</footer>
+  </div>
+</div>
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

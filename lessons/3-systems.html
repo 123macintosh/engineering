@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systems — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Section 3.3 — Systems</span></div>
+      <div class="topbar-progress">
+        <span class="topbar-progress-label">Progress</span>
+        <div class="topbar-progress-bar"><div class="topbar-progress-fill" style="width:50%"></div></div>
+      </div>
+    </div>
+    <div class="content-inner">
+
+      <div class="lesson-hero">
+        <div class="lesson-hero-tag">Section 3.3</div>
+        <h1>Engineering <span>Systems</span></h1>
+        <p class="lesson-hero-desc">Systems thinking is at the heart of engineering. This lesson covers mechanical systems (gears, levers, cams, pulleys), electrical and electronic systems (circuits, logic gates, sensors), structural systems, and pneumatics — all with interactive exercises and real exam questions.</p>
+        <div class="lesson-hero-objectives">
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Describe the Input-Process-Output (IPO) model and apply it to engineering systems</li>
+            <li>Calculate gear ratios, velocity ratios, and mechanical advantage</li>
+            <li>Identify and describe different types of levers, cams, and linkages</li>
+            <li>Apply Ohm's Law and calculate resistance in series and parallel circuits</li>
+            <li>Construct and evaluate truth tables for logic gates (AND, OR, NOT, NAND, NOR)</li>
+            <li>Describe pneumatic components and circuits</li>
+          </ul>
+        </div>
+        <div class="lesson-hero-stats">
+          <div class="lesson-stat"><div class="lesson-stat-num">3.3</div><div class="lesson-stat-label">Spec Section</div></div>
+          <div class="lesson-stat"><div class="lesson-stat-num">~30%</div><div class="lesson-stat-label">Of Paper</div></div>
+          <div class="lesson-stat"><div class="lesson-stat-num">6</div><div class="lesson-stat-label">Activities</div></div>
+        </div>
+      </div>
+
+      <!-- IPO MODEL -->
+      <div class="lesson-section" id="ipo">
+        <div class="lesson-section-header">
+          <div class="section-number">1</div>
+          <div class="section-title-block">
+            <h2>Input–Process–Output (IPO) Model</h2>
+            <small>3.3.1 — The foundation of systems thinking</small>
+          </div>
+        </div>
+        <p>Every engineering system can be described using the <strong>Input–Process–Output</strong> model. Some systems also include <strong>feedback</strong> — where the output is monitored and used to adjust the input to maintain a desired state.</p>
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — IPO Model with Feedback</span>
+          <svg width="100%" height="130" viewBox="0 0 750 130" style="font-family:'Barlow',sans-serif;font-size:12px;">
+            <!-- Input box -->
+            <rect x="30" y="40" width="140" height="50" rx="4" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <text x="100" y="62" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="bold">INPUT</text>
+            <text x="100" y="78" text-anchor="middle" fill="#7a8099" font-size="9">Sensor / switch / signal</text>
+            <!-- Arrow 1 -->
+            <line x1="170" y1="65" x2="270" y2="65" stroke="#f0a500" stroke-width="2" marker-end="url(#arr)"/>
+            <!-- Process box -->
+            <rect x="270" y="40" width="210" height="50" rx="4" fill="#1a2a3a" stroke="#f0a500" stroke-width="2"/>
+            <text x="375" y="62" text-anchor="middle" fill="#f0a500" font-size="11" font-weight="bold">PROCESS</text>
+            <text x="375" y="78" text-anchor="middle" fill="#7a8099" font-size="9">Controller / mechanism / circuit</text>
+            <!-- Arrow 2 -->
+            <line x1="480" y1="65" x2="580" y2="65" stroke="#f0a500" stroke-width="2" marker-end="url(#arr)"/>
+            <!-- Output box -->
+            <rect x="580" y="40" width="140" height="50" rx="4" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="2"/>
+            <text x="650" y="62" text-anchor="middle" fill="#ff4d6d" font-size="11" font-weight="bold">OUTPUT</text>
+            <text x="650" y="78" text-anchor="middle" fill="#7a8099" font-size="9">Motor / light / movement</text>
+            <!-- Feedback arrow -->
+            <path d="M 650 90 L 650 115 L 100 115 L 100 90" fill="none" stroke="#7c6fff" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <text x="375" y="128" text-anchor="middle" fill="#7c6fff" font-size="9">FEEDBACK (monitors output, adjusts input)</text>
+            <defs>
+              <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#f0a500"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>System</th><th>Input</th><th>Process</th><th>Output</th><th>Feedback?</th></tr></thead>
+            <tbody>
+              <tr><td>Central Heating</td><td>Temperature sensor (thermistor)</td><td>Thermostat compares to set point</td><td>Boiler on/off</td><td>Yes — temperature feeds back to thermostat</td></tr>
+              <tr><td>Car Braking</td><td>Driver presses pedal</td><td>Hydraulic system amplifies force</td><td>Brake pads clamp disc</td><td>No (open loop)</td></tr>
+              <tr><td>Traffic Lights</td><td>Timer or sensor</td><td>Controller changes sequence</td><td>Lights change colour</td><td>Yes (if sensor-based)</td></tr>
+              <tr><td>Cruise Control</td><td>Speed sensor</td><td>ECU compares to set speed</td><td>Throttle adjusted</td><td>Yes — closed loop</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MECHANICAL SYSTEMS -->
+      <div class="lesson-section" id="mechanical">
+        <div class="lesson-section-header">
+          <div class="section-number">2</div>
+          <div class="section-title-block">
+            <h2>Mechanical Systems</h2>
+            <small>3.3.2 — Gears, levers, cams, pulleys, linkages</small>
+          </div>
+        </div>
+
+        <h3>Gears</h3>
+        <p>Gears are toothed wheels that mesh together to transmit rotational motion and torque. They can change <strong>speed</strong>, <strong>torque</strong>, and <strong>direction</strong> of rotation.</p>
+
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Gear Train (Label the parts)</span>
+          <svg width="100%" height="200" viewBox="0 0 700 200" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Driver gear (small) -->
+            <circle cx="200" cy="100" r="50" fill="#1a2a3a" stroke="#f0a500" stroke-width="2"/>
+            <circle cx="200" cy="100" r="8" fill="#f0a500"/>
+            <!-- Gear teeth driver -->
+            <g stroke="#f0a500" stroke-width="3" fill="none">
+              <line x1="200" y1="45" x2="200" y2="35"/>
+              <line x1="200" y1="155" x2="200" y2="165"/>
+              <line x1="145" y1="100" x2="135" y2="100"/>
+              <line x1="255" y1="100" x2="265" y2="100"/>
+              <line x1="161" y1="61" x2="154" y2="54"/>
+              <line x1="239" y1="61" x2="246" y2="54"/>
+              <line x1="161" y1="139" x2="154" y2="146"/>
+              <line x1="239" y1="139" x2="246" y2="146"/>
+            </g>
+            <text x="200" y="104" text-anchor="middle" fill="#f0a500" font-size="10" font-weight="bold">DRIVER</text>
+            <text x="200" y="180" text-anchor="middle" fill="#7a8099" font-size="9">20 teeth (small = fast)</text>
+            <text x="200" y="20" text-anchor="middle" fill="#f0a500" font-size="10">↻ Input rotation</text>
+            <!-- Driven gear (large) -->
+            <circle cx="430" cy="100" r="80" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <circle cx="430" cy="100" r="10" fill="#00d4aa"/>
+            <g stroke="#00d4aa" stroke-width="3" fill="none">
+              <line x1="430" y1="15" x2="430" y2="5"/>
+              <line x1="430" y1="185" x2="430" y2="195"/>
+              <line x1="345" y1="100" x2="335" y2="100"/>
+              <line x1="515" y1="100" x2="525" y2="100"/>
+              <line x1="370" y1="40" x2="363" y2="33"/>
+              <line x1="490" y1="40" x2="497" y2="33"/>
+              <line x1="370" y1="160" x2="363" y2="167"/>
+              <line x1="490" y1="160" x2="497" y2="167"/>
+            </g>
+            <text x="430" y="104" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="bold">DRIVEN</text>
+            <text x="430" y="190" text-anchor="middle" fill="#7a8099" font-size="9">40 teeth (large = slow, more torque)</text>
+            <!-- Mesh point -->
+            <text x="315" y="95" text-anchor="middle" fill="#ff4d6d" font-size="9">MESH</text>
+            <!-- Gear ratio label -->
+            <text x="550" y="80" fill="#f0a500" font-size="11" font-weight="bold">Gear Ratio</text>
+            <text x="550" y="95" fill="#f0a500" font-size="11">= 40 ÷ 20 = 2:1</text>
+            <text x="550" y="112" fill="#7a8099" font-size="9">Driven rotates at</text>
+            <text x="550" y="125" fill="#7a8099" font-size="9">HALF the speed</text>
+            <text x="550" y="138" fill="#7a8099" font-size="9">but DOUBLE torque</text>
+          </svg>
+        </div>
+
+        <div class="highlight-box yellow">
+          <div class="highlight-title">📐 Gear Ratio Formulae — MUST KNOW</div>
+          <div class="three-col">
+            <div class="formula-box">
+              <div class="formula-name">Gear Ratio</div>
+              <div class="formula-eq">GR = T<sub>driven</sub> ÷ T<sub>driver</sub></div>
+              <div class="formula-units">T = number of teeth</div>
+            </div>
+            <div class="formula-box green">
+              <div class="formula-name">Output Speed</div>
+              <div class="formula-eq">N<sub>out</sub> = N<sub>in</sub> ÷ GR</div>
+              <div class="formula-units">N = speed in rpm</div>
+            </div>
+            <div class="formula-box blue">
+              <div class="formula-name">Output Torque</div>
+              <div class="formula-eq">T<sub>out</sub> = T<sub>in</sub> × GR</div>
+              <div class="formula-units">T = torque in Nm</div>
+            </div>
+          </div>
+          <p style="margin-top:8px;"><strong>Worked Example:</strong> Driver gear has 15 teeth, driven gear has 45 teeth. Input speed = 900 rpm.<br>
+          GR = 45 ÷ 15 = 3:1. Output speed = 900 ÷ 3 = <strong>300 rpm</strong>. Torque is multiplied by 3.</p>
+        </div>
+
+        <h3>Levers</h3>
+        <p>A lever is a rigid bar that pivots about a <strong>fulcrum</strong>. Levers are classified into three <strong>orders (classes)</strong> based on the position of the fulcrum, effort, and load.</p>
+
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Three Classes of Lever</span>
+          <svg width="100%" height="280" viewBox="0 0 750 280" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Class 1 -->
+            <text x="10" y="20" fill="#f0a500" font-size="11" font-weight="bold">CLASS 1 — Fulcrum between Load and Effort</text>
+            <line x1="50" y1="50" x2="650" y2="50" stroke="#e8eaf0" stroke-width="3"/>
+            <polygon points="350,50 330,80 370,80" fill="#f0a500"/>
+            <text x="350" y="95" text-anchor="middle" fill="#f0a500" font-size="9">FULCRUM</text>
+            <text x="100" y="40" text-anchor="middle" fill="#ff4d6d" font-size="10">LOAD ↓</text>
+            <text x="600" y="40" text-anchor="middle" fill="#00d4aa" font-size="10">EFFORT ↓</text>
+            <text x="375" y="110" text-anchor="middle" fill="#7a8099" font-size="9">Examples: see-saw, scissors, crowbar, pliers</text>
+
+            <!-- Class 2 -->
+            <text x="10" y="140" fill="#00d4aa" font-size="11" font-weight="bold">CLASS 2 — Load between Fulcrum and Effort</text>
+            <line x1="50" y1="165" x2="650" y2="165" stroke="#e8eaf0" stroke-width="3"/>
+            <polygon points="50,165 30,195 70,195" fill="#f0a500"/>
+            <text x="50" y="210" text-anchor="middle" fill="#f0a500" font-size="9">FULCRUM</text>
+            <text x="300" y="155" text-anchor="middle" fill="#ff4d6d" font-size="10">LOAD ↓</text>
+            <text x="600" y="155" text-anchor="middle" fill="#00d4aa" font-size="10">EFFORT ↓</text>
+            <text x="375" y="225" text-anchor="middle" fill="#7a8099" font-size="9">Examples: wheelbarrow, nutcracker, bottle opener</text>
+
+            <!-- Class 3 -->
+            <text x="10" y="248" fill="#7c6fff" font-size="11" font-weight="bold">CLASS 3 — Effort between Fulcrum and Load</text>
+            <line x1="50" y1="265" x2="650" y2="265" stroke="#e8eaf0" stroke-width="3"/>
+            <polygon points="50,265 30,278 70,278" fill="#f0a500"/>
+            <text x="300" y="255" text-anchor="middle" fill="#00d4aa" font-size="10">EFFORT ↓</text>
+            <text x="600" y="255" text-anchor="middle" fill="#ff4d6d" font-size="10">LOAD ↓</text>
+          </svg>
+        </div>
+
+        <div class="highlight-box green">
+          <div class="highlight-title">📐 Mechanical Advantage & Velocity Ratio</div>
+          <div class="two-col">
+            <div class="formula-box">
+              <div class="formula-name">Mechanical Advantage</div>
+              <div class="formula-eq">MA = Load ÷ Effort</div>
+              <div class="formula-units">MA > 1 = force multiplied</div>
+            </div>
+            <div class="formula-box green">
+              <div class="formula-name">Velocity Ratio (Lever)</div>
+              <div class="formula-eq">VR = Effort Arm ÷ Load Arm</div>
+              <div class="formula-units">Distances from fulcrum</div>
+            </div>
+          </div>
+          <p style="margin-top:8px;"><strong>Efficiency:</strong> η = (MA ÷ VR) × 100%. A perfect lever has η = 100% (no friction losses). Real levers are always &lt;100%.</p>
+        </div>
+
+        <h3>Cams & Followers</h3>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">🔄 Cams</div>
+            <p>A <strong>cam</strong> is an irregularly shaped rotating disc that converts <strong>rotary motion → reciprocating (up-down) motion</strong>. The shape of the cam determines the motion of the follower.</p>
+            <ul>
+              <li><strong>Pear-shaped cam:</strong> Follower has a period of dwell (rest) at top and bottom</li>
+              <li><strong>Eccentric cam:</strong> Follower has smooth, continuous up-down motion (like a sine wave)</li>
+              <li><strong>Snail/drop cam:</strong> Follower rises slowly then drops suddenly</li>
+            </ul>
+            <p><strong>Uses:</strong> Car engine valves, sewing machines, printing presses, automatic machinery</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">📊 Cam Displacement Diagram</div>
+            <svg width="100%" height="130" viewBox="0 0 300 130" style="font-family:'Barlow',sans-serif;font-size:9px;">
+              <text x="150" y="12" text-anchor="middle" fill="#f0a500" font-size="10">Pear-Shaped Cam Displacement</text>
+              <line x1="20" y1="110" x2="280" y2="110" stroke="#4a5068" stroke-width="1"/>
+              <line x1="20" y1="20" x2="20" y2="110" stroke="#4a5068" stroke-width="1"/>
+              <text x="150" y="122" text-anchor="middle" fill="#7a8099">Rotation (degrees)</text>
+              <text x="10" y="65" text-anchor="middle" fill="#7a8099" transform="rotate(-90,10,65)">Rise</text>
+              <!-- Cam profile -->
+              <polyline points="20,110 60,110 80,30 120,30 140,110 280,110" fill="none" stroke="#00d4aa" stroke-width="2"/>
+              <text x="90" y="25" text-anchor="middle" fill="#00d4aa" font-size="8">RISE</text>
+              <text x="100" y="105" text-anchor="middle" fill="#f0a500" font-size="8">DWELL</text>
+              <text x="210" y="105" text-anchor="middle" fill="#f0a500" font-size="8">DWELL</text>
+            </svg>
+          </div>
+        </div>
+
+        <h3>Pulleys</h3>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">⚙️ Pulley Systems</div>
+            <p>A <strong>single fixed pulley</strong> changes the direction of force but provides no mechanical advantage (MA = 1).</p>
+            <p>A <strong>block and tackle</strong> (multiple pulleys) provides mechanical advantage. The MA equals the number of rope sections supporting the load.</p>
+            <p><strong>VR = number of rope sections supporting the load</strong></p>
+            <p><strong>Belt and pulley</strong> systems transmit motion between shafts. The velocity ratio = diameter of driven ÷ diameter of driver.</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">📐 Belt Drive Calculations</div>
+            <div class="formula-box">
+              <div class="formula-name">Velocity Ratio (Belt Drive)</div>
+              <div class="formula-eq">VR = D<sub>driven</sub> ÷ D<sub>driver</sub></div>
+              <div class="formula-units">D = pulley diameter (mm)</div>
+            </div>
+            <p style="margin-top:8px;"><strong>Example:</strong> Driver pulley = 50mm, driven = 200mm. VR = 200 ÷ 50 = 4. Output speed is ¼ of input speed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ELECTRICAL SYSTEMS -->
+      <div class="lesson-section" id="electrical">
+        <div class="lesson-section-header">
+          <div class="section-number">3</div>
+          <div class="section-title-block">
+            <h2>Electrical & Electronic Systems</h2>
+            <small>3.3.3 — Circuits, Ohm's Law, components, logic gates</small>
+          </div>
+        </div>
+
+        <h3>Circuit Fundamentals</h3>
+        <div class="highlight-box yellow">
+          <div class="highlight-title">📐 Key Electrical Formulae — MUST KNOW</div>
+          <div class="three-col">
+            <div class="formula-box">
+              <div class="formula-name">Ohm's Law</div>
+              <div class="formula-eq">V = I × R</div>
+              <div class="formula-units">V=Volts · I=Amps · R=Ohms(Ω)</div>
+            </div>
+            <div class="formula-box green">
+              <div class="formula-name">Power</div>
+              <div class="formula-eq">P = V × I</div>
+              <div class="formula-units">P=Watts · V=Volts · I=Amps</div>
+            </div>
+            <div class="formula-box blue">
+              <div class="formula-name">Charge</div>
+              <div class="formula-eq">Q = I × t</div>
+              <div class="formula-units">Q=Coulombs · t=seconds</div>
+            </div>
+          </div>
+          <div class="two-col" style="margin-top:12px;">
+            <div class="formula-box">
+              <div class="formula-name">Series Resistance</div>
+              <div class="formula-eq">R<sub>total</sub> = R₁ + R₂ + R₃</div>
+              <div class="formula-units">Same current through all</div>
+            </div>
+            <div class="formula-box green">
+              <div class="formula-name">Parallel Resistance</div>
+              <div class="formula-eq">1/R<sub>T</sub> = 1/R₁ + 1/R₂</div>
+              <div class="formula-units">Same voltage across all</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Common Electronic Components</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Component</th><th>Symbol</th><th>Function</th><th>Use in Circuit</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Resistor</strong></td><td>—[R]—</td><td>Limits current flow</td><td>Protecting LEDs, potential dividers</td></tr>
+              <tr><td><strong>Capacitor</strong></td><td>—||—</td><td>Stores electrical charge; blocks DC, passes AC</td><td>Timing circuits, smoothing power supplies</td></tr>
+              <tr><td><strong>Diode</strong></td><td>—▷|—</td><td>Allows current in one direction only</td><td>Rectifiers, protecting circuits from reverse polarity</td></tr>
+              <tr><td><strong>LED</strong></td><td>—▷|→</td><td>Emits light when current flows in forward direction</td><td>Indicator lights, displays, lighting</td></tr>
+              <tr><td><strong>Transistor (NPN)</strong></td><td>3-terminal device</td><td>Acts as a switch or amplifier; small base current controls large collector current</td><td>Switching motors, amplifying signals</td></tr>
+              <tr><td><strong>LDR</strong></td><td>—[LDR]—</td><td>Resistance decreases as light intensity increases</td><td>Automatic lighting, burglar alarms</td></tr>
+              <tr><td><strong>Thermistor (NTC)</strong></td><td>—[θ]—</td><td>Resistance decreases as temperature increases</td><td>Temperature sensors, thermostats</td></tr>
+              <tr><td><strong>Relay</strong></td><td>Coil + switch</td><td>Electromagnetically operated switch; low-voltage circuit controls high-voltage circuit</td><td>Switching motors/heaters from microcontroller</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Logic Gates</h3>
+        <p>Logic gates are electronic components that perform Boolean logic operations. They are the building blocks of all digital electronics and computers. Each gate has one or more <strong>inputs</strong> and one <strong>output</strong>. Inputs and outputs are either <strong>HIGH (1)</strong> or <strong>LOW (0)</strong>.</p>
+
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Logic Gate Symbols and Truth Tables</span>
+          <svg width="100%" height="380" viewBox="0 0 750 380" style="font-family:'Space Mono',monospace;font-size:10px;">
+            <!-- AND Gate -->
+            <text x="80" y="20" text-anchor="middle" fill="#f0a500" font-size="11" font-weight="bold">AND Gate</text>
+            <line x1="30" y1="40" x2="60" y2="40" stroke="#e8eaf0" stroke-width="1.5"/>
+            <line x1="30" y1="55" x2="60" y2="55" stroke="#e8eaf0" stroke-width="1.5"/>
+            <path d="M60,30 L60,65 Q95,65 95,47.5 Q95,30 60,30" fill="#1a2a3a" stroke="#f0a500" stroke-width="2"/>
+            <line x1="95" y1="47.5" x2="125" y2="47.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <text x="20" y="43" fill="#00d4aa" font-size="9">A</text>
+            <text x="20" y="58" fill="#00d4aa" font-size="9">B</text>
+            <text x="128" y="51" fill="#ff4d6d" font-size="9">Q</text>
+            <!-- AND truth table -->
+            <rect x="30" y="80" width="100" height="75" rx="2" fill="#111318" stroke="#252a35"/>
+            <text x="45" y="95" fill="#7a8099">A  B  Q</text>
+            <text x="45" y="110" fill="#e8eaf0">0  0  0</text>
+            <text x="45" y="123" fill="#e8eaf0">0  1  0</text>
+            <text x="45" y="136" fill="#e8eaf0">1  0  0</text>
+            <text x="45" y="149" fill="#00d4aa">1  1  1</text>
+            <text x="80" y="170" text-anchor="middle" fill="#7a8099" font-size="9">Q=1 only if A AND B = 1</text>
+
+            <!-- OR Gate -->
+            <text x="250" y="20" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="bold">OR Gate</text>
+            <line x1="195" y1="40" x2="225" y2="40" stroke="#e8eaf0" stroke-width="1.5"/>
+            <line x1="195" y1="55" x2="225" y2="55" stroke="#e8eaf0" stroke-width="1.5"/>
+            <path d="M225,30 Q235,47.5 225,65 Q255,65 275,47.5 Q255,30 225,30" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <line x1="275" y1="47.5" x2="305" y2="47.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <text x="185" y="43" fill="#00d4aa" font-size="9">A</text>
+            <text x="185" y="58" fill="#00d4aa" font-size="9">B</text>
+            <text x="308" y="51" fill="#ff4d6d" font-size="9">Q</text>
+            <rect x="200" y="80" width="100" height="75" rx="2" fill="#111318" stroke="#252a35"/>
+            <text x="215" y="95" fill="#7a8099">A  B  Q</text>
+            <text x="215" y="110" fill="#e8eaf0">0  0  0</text>
+            <text x="215" y="123" fill="#00d4aa">0  1  1</text>
+            <text x="215" y="136" fill="#00d4aa">1  0  1</text>
+            <text x="215" y="149" fill="#00d4aa">1  1  1</text>
+            <text x="250" y="170" text-anchor="middle" fill="#7a8099" font-size="9">Q=1 if A OR B = 1</text>
+
+            <!-- NOT Gate -->
+            <text x="420" y="20" text-anchor="middle" fill="#7c6fff" font-size="11" font-weight="bold">NOT Gate (Inverter)</text>
+            <line x1="370" y1="47.5" x2="400" y2="47.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <polygon points="400,30 440,47.5 400,65" fill="#1a2a3a" stroke="#7c6fff" stroke-width="2"/>
+            <circle cx="445" cy="47.5" r="5" fill="#1a2a3a" stroke="#7c6fff" stroke-width="2"/>
+            <line x1="450" y1="47.5" x2="480" y2="47.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <text x="360" y="51" fill="#00d4aa" font-size="9">A</text>
+            <text x="483" y="51" fill="#ff4d6d" font-size="9">Q</text>
+            <rect x="375" y="80" width="90" height="60" rx="2" fill="#111318" stroke="#252a35"/>
+            <text x="390" y="95" fill="#7a8099">A  Q</text>
+            <text x="390" y="110" fill="#00d4aa">0  1</text>
+            <text x="390" y="123" fill="#e8eaf0">1  0</text>
+            <text x="420" y="155" text-anchor="middle" fill="#7a8099" font-size="9">Q = NOT A (inverts)</text>
+
+            <!-- NAND Gate -->
+            <text x="80" y="210" text-anchor="middle" fill="#ff4d6d" font-size="11" font-weight="bold">NAND Gate</text>
+            <line x1="30" y1="230" x2="60" y2="230" stroke="#e8eaf0" stroke-width="1.5"/>
+            <line x1="30" y1="245" x2="60" y2="245" stroke="#e8eaf0" stroke-width="1.5"/>
+            <path d="M60,220 L60,255 Q95,255 95,237.5 Q95,220 60,220" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="2"/>
+            <circle cx="100" cy="237.5" r="5" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="2"/>
+            <line x1="105" y1="237.5" x2="130" y2="237.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <rect x="30" y="270" width="100" height="75" rx="2" fill="#111318" stroke="#252a35"/>
+            <text x="45" y="285" fill="#7a8099">A  B  Q</text>
+            <text x="45" y="300" fill="#00d4aa">0  0  1</text>
+            <text x="45" y="313" fill="#00d4aa">0  1  1</text>
+            <text x="45" y="326" fill="#00d4aa">1  0  1</text>
+            <text x="45" y="339" fill="#e8eaf0">1  1  0</text>
+            <text x="80" y="360" text-anchor="middle" fill="#7a8099" font-size="9">NAND = NOT AND</text>
+
+            <!-- NOR Gate -->
+            <text x="250" y="210" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold">NOR Gate</text>
+            <line x1="195" y1="230" x2="225" y2="230" stroke="#e8eaf0" stroke-width="1.5"/>
+            <line x1="195" y1="245" x2="225" y2="245" stroke="#e8eaf0" stroke-width="1.5"/>
+            <path d="M225,220 Q235,237.5 225,255 Q255,255 275,237.5 Q255,220 225,220" fill="#1a2a3a" stroke="#f97316" stroke-width="2"/>
+            <circle cx="280" cy="237.5" r="5" fill="#1a2a3a" stroke="#f97316" stroke-width="2"/>
+            <line x1="285" y1="237.5" x2="310" y2="237.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <rect x="200" y="270" width="100" height="75" rx="2" fill="#111318" stroke="#252a35"/>
+            <text x="215" y="285" fill="#7a8099">A  B  Q</text>
+            <text x="215" y="300" fill="#00d4aa">0  0  1</text>
+            <text x="215" y="313" fill="#e8eaf0">0  1  0</text>
+            <text x="215" y="326" fill="#e8eaf0">1  0  0</text>
+            <text x="215" y="339" fill="#e8eaf0">1  1  0</text>
+            <text x="250" y="360" text-anchor="middle" fill="#7a8099" font-size="9">NOR = NOT OR</text>
+
+            <!-- XOR Gate -->
+            <text x="580" y="210" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">XOR Gate</text>
+            <line x1="520" y1="230" x2="550" y2="230" stroke="#e8eaf0" stroke-width="1.5"/>
+            <line x1="520" y1="245" x2="550" y2="245" stroke="#e8eaf0" stroke-width="1.5"/>
+            <path d="M550,220 Q560,237.5 550,255 Q580,255 600,237.5 Q580,220 550,220" fill="#1a2a3a" stroke="#3b82f6" stroke-width="2"/>
+            <path d="M545,220 Q555,237.5 545,255" fill="none" stroke="#3b82f6" stroke-width="2"/>
+            <line x1="600" y1="237.5" x2="630" y2="237.5" stroke="#e8eaf0" stroke-width="1.5"/>
+            <rect x="525" y="270" width="100" height="75" rx="2" fill="#111318" stroke="#252a35"/>
+            <text x="540" y="285" fill="#7a8099">A  B  Q</text>
+            <text x="540" y="300" fill="#e8eaf0">0  0  0</text>
+            <text x="540" y="313" fill="#00d4aa">0  1  1</text>
+            <text x="540" y="326" fill="#00d4aa">1  0  1</text>
+            <text x="540" y="339" fill="#e8eaf0">1  1  0</text>
+            <text x="580" y="360" text-anchor="middle" fill="#7a8099" font-size="9">Q=1 if inputs DIFFERENT</text>
+          </svg>
+        </div>
+
+        <!-- Fill in the Gaps - Logic Gates -->
+        <div class="fitg-container">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — Logic Gates</div>
+              <div class="fitg-subtitle">Complete the truth table outputs and descriptions</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="AND">AND</span>
+            <span class="word-chip" data-word="OR">OR</span>
+            <span class="word-chip" data-word="NOT">NOT</span>
+            <span class="word-chip" data-word="NAND">NAND</span>
+            <span class="word-chip" data-word="NOR">NOR</span>
+            <span class="word-chip" data-word="1">1</span>
+            <span class="word-chip" data-word="0">0</span>
+            <span class="word-chip" data-word="inverts">inverts</span>
+          </div>
+          <div class="fitg-text">
+            <p>A gate that outputs 1 only when BOTH inputs are 1 is called an <input class="fitg-input" data-answer="AND" style="width:60px"> gate.</p>
+            <p>A gate that outputs 1 when AT LEAST ONE input is 1 is called an <input class="fitg-input" data-answer="OR" style="width:60px"> gate.</p>
+            <p>A gate that <input class="fitg-input" data-answer="inverts" style="width:80px"> its single input (0 becomes 1, 1 becomes 0) is called a <input class="fitg-input" data-answer="NOT" style="width:60px"> gate.</p>
+            <p>A <input class="fitg-input" data-answer="NAND" style="width:70px"> gate is the opposite of an AND gate — it outputs <input class="fitg-input" data-answer="0" style="width:40px"> only when BOTH inputs are 1.</p>
+            <p>A <input class="fitg-input" data-answer="NOR" style="width:60px"> gate outputs 1 only when BOTH inputs are <input class="fitg-input" data-answer="0" style="width:40px">.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- PNEUMATICS -->
+      <div class="lesson-section" id="pneumatics">
+        <div class="lesson-section-header">
+          <div class="section-number">4</div>
+          <div class="section-title-block">
+            <h2>Pneumatic Systems</h2>
+            <small>3.3.4 — Compressed air systems and components</small>
+          </div>
+        </div>
+        <p>Pneumatic systems use <strong>compressed air</strong> to transmit and control force and motion. They are used where clean, fast, and safe actuation is needed.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Component</th><th>Function</th><th>Symbol</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Compressor</strong></td><td>Converts electrical/mechanical energy into compressed air (increases pressure)</td><td>⊙→</td></tr>
+              <tr><td><strong>Reservoir/Air Tank</strong></td><td>Stores compressed air to smooth out pressure fluctuations</td><td>□</td></tr>
+              <tr><td><strong>Filter-Regulator-Lubricator (FRL)</strong></td><td>Cleans air, sets working pressure, adds oil mist for lubrication</td><td>FRL unit</td></tr>
+              <tr><td><strong>Single-Acting Cylinder</strong></td><td>Air pushes piston in one direction; spring returns it. One air port.</td><td>→|spring</td></tr>
+              <tr><td><strong>Double-Acting Cylinder</strong></td><td>Air pushes piston in both directions. Two air ports. More force and control.</td><td>→|←</td></tr>
+              <tr><td><strong>5/2 Directional Control Valve</strong></td><td>5 ports, 2 positions. Controls direction of cylinder movement.</td><td>5/2 valve symbol</td></tr>
+              <tr><td><strong>Flow Control Valve</strong></td><td>Restricts air flow to control speed of cylinder movement</td><td>→⊗</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box blue">
+          <div class="highlight-title">📐 Pneumatic Force Calculation</div>
+          <div class="formula-box">
+            <div class="formula-name">Force from Cylinder</div>
+            <div class="formula-eq">F = P × A</div>
+            <div class="formula-units">F=Force(N) · P=Pressure(Pa) · A=Area(m²)</div>
+          </div>
+          <p style="margin-top:8px;"><strong>Example:</strong> A cylinder with bore diameter 50mm (radius 0.025m) at 6 bar (600,000 Pa).<br>
+          A = π × r² = π × 0.025² = 0.00196 m². F = 600,000 × 0.00196 = <strong>1,178 N</strong></p>
+        </div>
+      </div>
+
+      <!-- EXAM PRACTICE -->
+      <div class="lesson-section">
+        <div class="lesson-section-header">
+          <div class="section-number">📝</div>
+          <div class="section-title-block">
+            <h2>Exam Practice — Systems</h2>
+            <small>Past paper style questions with model answers</small>
+          </div>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-icon">🎯</div>
+            <div>
+              <div class="quiz-title">Multiple Choice — Systems</div>
+              <div class="quiz-meta">5 questions · Select the best answer</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 1 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A driver gear has 12 teeth and a driven gear has 48 teeth. What is the gear ratio?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> 1:4</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> 4:1</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> 12:48</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> 2:1</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! GR = T_driven ÷ T_driver = 48 ÷ 12 = 4. The gear ratio is 4:1, meaning the driven gear rotates at ¼ the speed but with 4× the torque.</div>
+              <div class="examiner-tip">💡 Examiner tip: Always express gear ratio as driven:driver or as a single number (4). Show your working for calculation questions.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 2 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">An AND gate has inputs A=1 and B=0. What is the output Q?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">A</span> 0</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> 1</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Depends on previous state</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Cannot be determined</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! An AND gate outputs 1 ONLY when BOTH inputs are 1. Since B=0, the output is 0.</div>
+              <div class="examiner-tip">💡 Examiner tip: AND = "all inputs must be 1". OR = "at least one input must be 1". NOT = "opposite of input".</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 3 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A wheelbarrow is an example of which class of lever?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Class 1 — fulcrum between load and effort</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Class 2 — load between fulcrum and effort</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Class 3 — effort between fulcrum and load</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Class 4 — load at the fulcrum</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! In a wheelbarrow: the wheel is the fulcrum, the load is in the tray (between fulcrum and effort), and the effort is applied at the handles. This is Class 2.</div>
+              <div class="examiner-tip">💡 Examiner tip: Class 1 = scissors, crowbar, see-saw. Class 2 = wheelbarrow, nutcracker. Class 3 = tweezers, fishing rod, forearm.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 4 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A circuit has a 12V battery and a 6Ω resistor. What current flows?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> 0.5 A</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> 2 A</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> 72 A</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> 18 A</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Using Ohm's Law: I = V ÷ R = 12 ÷ 6 = 2 A.</div>
+              <div class="examiner-tip">💡 Examiner tip: Rearrange V = IR as needed: I = V/R, R = V/I. Always show the formula, substitution, and answer with units.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 5 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which component has a resistance that DECREASES as temperature INCREASES?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> LDR (Light Dependent Resistor)</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> NTC Thermistor</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Fixed resistor</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Diode</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! An NTC (Negative Temperature Coefficient) thermistor has resistance that decreases as temperature increases. An LDR decreases with light, not temperature.</div>
+              <div class="examiner-tip">💡 Examiner tip: NTC = Negative Temperature Coefficient = resistance falls with temperature. LDR = resistance falls with light. Both are used as sensors in potential divider circuits.</div>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary quiz-submit-btn">Submit Answers</button>
+            <button class="btn btn-secondary quiz-reset-btn">↺ Reset Quiz</button>
+          </div>
+          <div class="quiz-score-display">
+            <div class="quiz-score-num">0/5</div>
+            <div class="quiz-score-label">Complete the quiz to see your score</div>
+          </div>
+        </div>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty hard">★★★ Hard</span>
+            <span class="ppq-source">Style: AQA 8852 Calculation + Explain</span>
+            <span class="ppq-marks">5 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">A gear train has three gears: Gear A (driver, 10 teeth) meshes with Gear B (30 teeth), which meshes with Gear C (15 teeth). Gear A rotates at 600 rpm.<br><br>(a) Calculate the speed of Gear B. [2 marks]<br>(b) Calculate the speed of Gear C. [2 marks]<br>(c) State the direction of rotation of Gear C relative to Gear A. [1 mark]</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer (5 marks)</div>
+              <div class="ppq-model-answer-text">
+                (a) GR(A→B) = T_B ÷ T_A = 30 ÷ 10 = 3 (1)<br>
+                Speed of B = 600 ÷ 3 = <strong>200 rpm</strong> (1)<br><br>
+                (b) GR(B→C) = T_C ÷ T_B = 15 ÷ 30 = 0.5 (1)<br>
+                Speed of C = 200 ÷ 0.5 = <strong>400 rpm</strong> (1)<br>
+                [OR: Overall GR = 30/10 × 15/30 = 1.5, Speed C = 600/1.5 = 400 rpm]<br><br>
+                (c) Gear C rotates in the <strong>same direction</strong> as Gear A. (1)<br>
+                [Each meshing pair reverses direction. A→B reverses, B→C reverses again = same as A]
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: For gear train direction — each mesh point reverses direction. An even number of meshes = same direction as driver. An odd number = opposite direction. Always show the gear ratio calculation before finding speed.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lesson-nav">
+        <a href="2-manufacturing.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div><span class="nav-label">Previous Lesson</span><span class="nav-title">Manufacturing Processes</span></div>
+        </a>
+        <a href="4-testing.html" class="lesson-nav-btn">
+          <div style="text-align:right"><span class="nav-label">Next Lesson</span><span class="nav-title">Testing & Investigation</span></div>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+    <footer><strong>AQA GCSE Engineering 8852</strong> · Section 3.3 Systems · Revision Site</footer>
+  </div>
+</div>
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

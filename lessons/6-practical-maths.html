@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practical Skills & Maths — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Section 3.6 — Practical Skills & Maths</span></div>
+      <div class="topbar-progress">
+        <span class="topbar-progress-label">Progress</span>
+        <div class="topbar-progress-bar"><div class="topbar-progress-fill" style="width:100%"></div></div>
+      </div>
+    </div>
+    <div class="content-inner">
+
+      <div class="lesson-hero">
+        <div class="lesson-hero-tag">Section 3.6</div>
+        <h1>Practical Skills <span>&amp; Maths</span></h1>
+        <p class="lesson-hero-desc">Engineering drawings, all key formulae, worked calculation examples, and the practical skills assessed in the written paper. Master these and you'll pick up marks across the entire exam.</p>
+        <div class="lesson-hero-objectives">
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Read and interpret first and third angle orthographic projections</li>
+            <li>Understand isometric and oblique drawing conventions</li>
+            <li>Apply all key formulae from the specification with worked examples</li>
+            <li>Interpret and draw engineering graphs and charts</li>
+            <li>Use standard form, significant figures, and unit conversions</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ENGINEERING DRAWINGS -->
+      <div class="lesson-section" id="drawings">
+        <div class="lesson-section-header">
+          <div class="section-number">1</div>
+          <div class="section-title-block">
+            <h2>Engineering Drawings</h2>
+            <small>3.6.1 — Orthographic, isometric, and oblique projection</small>
+          </div>
+        </div>
+
+        <p>Engineering drawings are the universal language of engineering. They communicate the exact shape, size, and specification of a component to manufacturers worldwide.</p>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">📐 First Angle Projection (European)</div>
+            <p>In first angle projection, the object is placed between the viewer and the projection plane. The view you see is projected <strong>through</strong> the object onto the plane behind it.</p>
+            <p><strong>Layout:</strong></p>
+            <ul>
+              <li>Front view: centre</li>
+              <li>Plan (top view): below the front view</li>
+              <li>End view from right: to the left of front view</li>
+              <li>End view from left: to the right of front view</li>
+            </ul>
+            <p><strong>Symbol:</strong> A truncated cone viewed from the narrow end (left of symbol)</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">📐 Third Angle Projection (American)</div>
+            <p>In third angle projection, the projection plane is between the viewer and the object. The view is projected <strong>onto</strong> the plane nearest the viewer.</p>
+            <p><strong>Layout:</strong></p>
+            <ul>
+              <li>Front view: centre</li>
+              <li>Plan (top view): above the front view</li>
+              <li>End view from right: to the right of front view</li>
+              <li>End view from left: to the left of front view</li>
+            </ul>
+            <p><strong>Symbol:</strong> A truncated cone viewed from the wide end (right of symbol)</p>
+          </div>
+        </div>
+
+        <!-- Orthographic Projection Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — First Angle Projection Layout</span>
+          <svg width="100%" height="300" viewBox="0 0 700 300" style="font-family:'Space Mono',monospace;font-size:10px;">
+            <!-- Front view box -->
+            <rect x="250" y="100" width="150" height="100" rx="2" fill="#1a2a3a" stroke="#f0a500" stroke-width="2"/>
+            <text x="325" y="155" text-anchor="middle" fill="#f0a500" font-size="11" font-weight="bold">FRONT VIEW</text>
+            <text x="325" y="170" text-anchor="middle" fill="#7a8099" font-size="9">(Elevation)</text>
+
+            <!-- Plan view (BELOW in 1st angle) -->
+            <rect x="250" y="220" width="150" height="70" rx="2" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <text x="325" y="258" text-anchor="middle" fill="#00d4aa" font-size="11" font-weight="bold">PLAN VIEW</text>
+            <text x="325" y="272" text-anchor="middle" fill="#7a8099" font-size="9">(from above — below front)</text>
+
+            <!-- Right end view (LEFT in 1st angle) -->
+            <rect x="80" y="100" width="120" height="100" rx="2" fill="#1a2a3a" stroke="#7c6fff" stroke-width="2"/>
+            <text x="140" y="148" text-anchor="middle" fill="#7c6fff" font-size="10" font-weight="bold">RIGHT END</text>
+            <text x="140" y="162" text-anchor="middle" fill="#7c6fff" font-size="10" font-weight="bold">VIEW</text>
+            <text x="140" y="178" text-anchor="middle" fill="#7a8099" font-size="8">(goes LEFT in 1st angle)</text>
+
+            <!-- Left end view (RIGHT in 1st angle) -->
+            <rect x="450" y="100" width="120" height="100" rx="2" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="2"/>
+            <text x="510" y="148" text-anchor="middle" fill="#ff4d6d" font-size="10" font-weight="bold">LEFT END</text>
+            <text x="510" y="162" text-anchor="middle" fill="#ff4d6d" font-size="10" font-weight="bold">VIEW</text>
+            <text x="510" y="178" text-anchor="middle" fill="#7a8099" font-size="8">(goes RIGHT in 1st angle)</text>
+
+            <!-- Projection lines -->
+            <line x1="250" y1="150" x2="200" y2="150" stroke="#4a5068" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="400" y1="150" x2="450" y2="150" stroke="#4a5068" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="325" y1="200" x2="325" y2="220" stroke="#4a5068" stroke-width="1" stroke-dasharray="4,3"/>
+
+            <!-- 1st angle symbol -->
+            <text x="580" y="130" fill="#f0a500" font-size="9">1st Angle</text>
+            <text x="580" y="142" fill="#f0a500" font-size="9">Symbol:</text>
+            <circle cx="600" cy="165" r="15" fill="none" stroke="#f0a500" stroke-width="1.5"/>
+            <polygon points="600,158 615,165 600,172" fill="none" stroke="#f0a500" stroke-width="1.5"/>
+            <polygon points="600,158 590,165 600,172" fill="#f0a500"/>
+
+            <!-- Labels -->
+            <text x="325" y="30" text-anchor="middle" fill="#7a8099" font-size="10">In 1st angle: views are placed OPPOSITE to where you look from</text>
+            <text x="325" y="45" text-anchor="middle" fill="#7a8099" font-size="10">Plan goes BELOW · Right end view goes LEFT · Left end view goes RIGHT</text>
+          </svg>
+        </div>
+
+        <h3>Dimensioning & Drawing Conventions</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Convention</th><th>Description</th><th>Standard</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Dimension lines</strong></td><td>Thin lines with arrowheads showing the measured dimension</td><td>BS 8888 / ISO 128</td></tr>
+              <tr><td><strong>Extension lines</strong></td><td>Thin lines extending from the feature to the dimension line</td><td>Should not touch the feature</td></tr>
+              <tr><td><strong>Centre lines</strong></td><td>Chain-dash lines (long-short-long) indicating axes of symmetry and hole centres</td><td>Thin chain line</td></tr>
+              <tr><td><strong>Hidden detail</strong></td><td>Dashed lines showing features not visible in that view</td><td>Short dashes</td></tr>
+              <tr><td><strong>Section lines</strong></td><td>Hatching (thin diagonal lines at 45°) showing cut surfaces in sectional views</td><td>Thin lines at 45°</td></tr>
+              <tr><td><strong>Title block</strong></td><td>Contains: part name, drawing number, scale, material, projection symbol, date, draughtsman</td><td>Bottom right corner</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Fill in the Gaps - Drawings -->
+        <div class="fitg-container">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — Engineering Drawings</div>
+              <div class="fitg-subtitle">Complete the sentences about drawing conventions</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="first angle">first angle</span>
+            <span class="word-chip" data-word="third angle">third angle</span>
+            <span class="word-chip" data-word="below">below</span>
+            <span class="word-chip" data-word="above">above</span>
+            <span class="word-chip" data-word="hidden">hidden</span>
+            <span class="word-chip" data-word="centre">centre</span>
+            <span class="word-chip" data-word="dashed">dashed</span>
+            <span class="word-chip" data-word="chain-dash">chain-dash</span>
+          </div>
+          <div class="fitg-text">
+            <p>In <input class="fitg-input" data-answer="first angle" style="width:100px"> projection (European standard), the plan view is placed <input class="fitg-input" data-answer="below" style="width:70px"> the front view.</p>
+            <p>In <input class="fitg-input" data-answer="third angle" style="width:100px"> projection (American standard), the plan view is placed <input class="fitg-input" data-answer="above" style="width:70px"> the front view.</p>
+            <p><input class="fitg-input" data-answer="hidden" style="width:70px"> detail (features not visible in that view) is shown using <input class="fitg-input" data-answer="dashed" style="width:70px"> lines.</p>
+            <p><input class="fitg-input" data-answer="centre" style="width:70px"> lines are drawn as <input class="fitg-input" data-answer="chain-dash" style="width:100px"> lines and indicate axes of symmetry and hole centres.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- ALL FORMULAE -->
+      <div class="lesson-section" id="formulae">
+        <div class="lesson-section-header">
+          <div class="section-number">2</div>
+          <div class="section-title-block">
+            <h2>Complete Formula Reference</h2>
+            <small>Every formula you need for the AQA 8852 written paper</small>
+          </div>
+        </div>
+
+        <div class="highlight-box yellow">
+          <div class="highlight-title">⚠️ Important Note</div>
+          <p>The AQA GCSE Engineering written paper does NOT provide a formula sheet. You must memorise all formulae. This section covers every formula in the specification with worked examples.</p>
+        </div>
+
+        <h3>Mechanical Systems</h3>
+        <div class="three-col">
+          <div class="formula-box">
+            <div class="formula-name">Gear Ratio</div>
+            <div class="formula-eq">GR = T<sub>driven</sub> ÷ T<sub>driver</sub></div>
+            <div class="formula-units">T = number of teeth</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Output Speed</div>
+            <div class="formula-eq">N<sub>out</sub> = N<sub>in</sub> ÷ GR</div>
+            <div class="formula-units">N = speed (rpm)</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Mechanical Advantage</div>
+            <div class="formula-eq">MA = Load ÷ Effort</div>
+            <div class="formula-units">Both in Newtons (N)</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-name">Velocity Ratio (Lever)</div>
+            <div class="formula-eq">VR = Effort Arm ÷ Load Arm</div>
+            <div class="formula-units">Distances from fulcrum</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Efficiency</div>
+            <div class="formula-eq">η = (MA ÷ VR) × 100%</div>
+            <div class="formula-units">η = efficiency (%)</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Belt Drive VR</div>
+            <div class="formula-eq">VR = D<sub>driven</sub> ÷ D<sub>driver</sub></div>
+            <div class="formula-units">D = pulley diameter (mm)</div>
+          </div>
+        </div>
+
+        <h3>Electrical Systems</h3>
+        <div class="three-col">
+          <div class="formula-box">
+            <div class="formula-name">Ohm's Law</div>
+            <div class="formula-eq">V = I × R</div>
+            <div class="formula-units">V=Volts · I=Amps · R=Ohms</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Power</div>
+            <div class="formula-eq">P = V × I</div>
+            <div class="formula-units">P=Watts · V=Volts · I=Amps</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Power (alt.)</div>
+            <div class="formula-eq">P = I² × R</div>
+            <div class="formula-units">P=Watts · I=Amps · R=Ohms</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-name">Charge</div>
+            <div class="formula-eq">Q = I × t</div>
+            <div class="formula-units">Q=Coulombs · t=seconds</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Series Resistance</div>
+            <div class="formula-eq">R<sub>T</sub> = R₁ + R₂ + R₃</div>
+            <div class="formula-units">Same current through all</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Parallel Resistance</div>
+            <div class="formula-eq">1/R<sub>T</sub> = 1/R₁ + 1/R₂</div>
+            <div class="formula-units">Same voltage across all</div>
+          </div>
+        </div>
+
+        <h3>Forces & Pressure</h3>
+        <div class="three-col">
+          <div class="formula-box">
+            <div class="formula-name">Pressure</div>
+            <div class="formula-eq">P = F ÷ A</div>
+            <div class="formula-units">P=Pa · F=N · A=m²</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Stress</div>
+            <div class="formula-eq">σ = F ÷ A</div>
+            <div class="formula-units">σ=Pa · F=N · A=m²</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Strain</div>
+            <div class="formula-eq">ε = ΔL ÷ L₀</div>
+            <div class="formula-units">ε=dimensionless · ΔL=extension · L₀=original length</div>
+          </div>
+          <div class="formula-box">
+            <div class="formula-name">Young's Modulus</div>
+            <div class="formula-eq">E = σ ÷ ε</div>
+            <div class="formula-units">E=Pa (GPa for metals)</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Moment of Force</div>
+            <div class="formula-eq">M = F × d</div>
+            <div class="formula-units">M=Nm · F=N · d=m</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Pneumatic Force</div>
+            <div class="formula-eq">F = P × A</div>
+            <div class="formula-units">F=N · P=Pa · A=m²</div>
+          </div>
+        </div>
+
+        <h3>Manufacturing Calculations</h3>
+        <div class="three-col">
+          <div class="formula-box">
+            <div class="formula-name">Cutting Speed</div>
+            <div class="formula-eq">v = π × D × N ÷ 1000</div>
+            <div class="formula-units">v=m/min · D=mm · N=rpm</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Spindle Speed</div>
+            <div class="formula-eq">N = (v × 1000) ÷ (π × D)</div>
+            <div class="formula-units">N=rpm · v=m/min · D=mm</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Material Removal Rate</div>
+            <div class="formula-eq">MRR = w × d × f</div>
+            <div class="formula-units">w=width · d=depth · f=feed (mm³/min)</div>
+          </div>
+        </div>
+
+        <h3>Geometry & Areas</h3>
+        <div class="three-col">
+          <div class="formula-box">
+            <div class="formula-name">Area of Circle</div>
+            <div class="formula-eq">A = π × r²</div>
+            <div class="formula-units">r = radius (m or mm)</div>
+          </div>
+          <div class="formula-box green">
+            <div class="formula-name">Circumference</div>
+            <div class="formula-eq">C = π × D = 2πr</div>
+            <div class="formula-units">D = diameter</div>
+          </div>
+          <div class="formula-box blue">
+            <div class="formula-name">Volume of Cylinder</div>
+            <div class="formula-eq">V = π × r² × h</div>
+            <div class="formula-units">h = height/length</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORKED EXAMPLES -->
+      <div class="lesson-section" id="worked">
+        <div class="lesson-section-header">
+          <div class="section-number">3</div>
+          <div class="section-title-block">
+            <h2>Worked Calculation Examples</h2>
+            <small>Step-by-step solutions to typical exam calculations</small>
+          </div>
+        </div>
+
+        <div class="worked-example">
+          <div class="worked-example-header">
+            <span class="worked-example-tag">Worked Example 1</span>
+            <span class="worked-example-topic">Gear Train Calculation</span>
+          </div>
+          <div class="worked-example-body">
+            <div class="worked-q">A gear train consists of: Gear A (driver, 20 teeth) → Gear B (60 teeth) → Gear C (30 teeth). Gear A rotates at 1200 rpm with a torque of 5 Nm. Calculate: (a) the speed of Gear C, and (b) the torque at Gear C (assuming 100% efficiency).</div>
+            <div class="worked-steps">
+              <div class="worked-step">
+                <div class="step-num">Step 1</div>
+                <div class="step-content">Find GR for A→B: GR₁ = T_B ÷ T_A = 60 ÷ 20 = <strong>3</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 2</div>
+                <div class="step-content">Speed of B: N_B = 1200 ÷ 3 = <strong>400 rpm</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 3</div>
+                <div class="step-content">Find GR for B→C: GR₂ = T_C ÷ T_B = 30 ÷ 60 = <strong>0.5</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 4</div>
+                <div class="step-content">Speed of C: N_C = 400 ÷ 0.5 = <strong>800 rpm</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 5</div>
+                <div class="step-content">Overall GR (A→C): GR_total = 3 × 0.5 = 1.5 (or 1200 ÷ 800 = 1.5 ✓)</div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 6</div>
+                <div class="step-content">Torque at C: T_C = T_A × GR_total = 5 × 1.5 = <strong>7.5 Nm</strong></div>
+              </div>
+              <div class="worked-answer">
+                <strong>Answers:</strong> (a) Speed of Gear C = <strong>800 rpm</strong> · (b) Torque at C = <strong>7.5 Nm</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-example">
+          <div class="worked-example-header">
+            <span class="worked-example-tag">Worked Example 2</span>
+            <span class="worked-example-topic">Parallel Circuit Calculation</span>
+          </div>
+          <div class="worked-example-body">
+            <div class="worked-q">A 12V battery is connected to two resistors in parallel: R₁ = 6Ω and R₂ = 12Ω. Calculate: (a) the total resistance, (b) the total current from the battery, (c) the current through each resistor.</div>
+            <div class="worked-steps">
+              <div class="worked-step">
+                <div class="step-num">Step 1</div>
+                <div class="step-content">Total resistance (parallel): 1/R_T = 1/R₁ + 1/R₂ = 1/6 + 1/12 = 2/12 + 1/12 = 3/12 = 1/4</div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 2</div>
+                <div class="step-content">R_T = 4Ω (reciprocal of 1/4)</div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 3</div>
+                <div class="step-content">Total current: I = V ÷ R_T = 12 ÷ 4 = <strong>3 A</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 4</div>
+                <div class="step-content">Current through R₁: I₁ = V ÷ R₁ = 12 ÷ 6 = <strong>2 A</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 5</div>
+                <div class="step-content">Current through R₂: I₂ = V ÷ R₂ = 12 ÷ 12 = <strong>1 A</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 6</div>
+                <div class="step-content">Check: I₁ + I₂ = 2 + 1 = 3 A = total current ✓</div>
+              </div>
+              <div class="worked-answer">
+                <strong>Answers:</strong> (a) R_T = 4Ω · (b) Total current = 3A · (c) I₁ = 2A, I₂ = 1A
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-example">
+          <div class="worked-example-header">
+            <span class="worked-example-tag">Worked Example 3</span>
+            <span class="worked-example-topic">Pneumatic Cylinder Force</span>
+          </div>
+          <div class="worked-example-body">
+            <div class="worked-q">A double-acting pneumatic cylinder has a bore diameter of 80mm. The supply pressure is 5 bar. Calculate the force produced on the forward stroke.</div>
+            <div class="worked-steps">
+              <div class="worked-step">
+                <div class="step-num">Step 1</div>
+                <div class="step-content">Convert pressure: 5 bar = 5 × 100,000 = 500,000 Pa</div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 2</div>
+                <div class="step-content">Convert diameter to radius in metres: r = 80 ÷ 2 = 40mm = 0.04m</div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 3</div>
+                <div class="step-content">Calculate piston area: A = π × r² = π × 0.04² = π × 0.0016 = 0.005027 m²</div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 4</div>
+                <div class="step-content">Calculate force: F = P × A = 500,000 × 0.005027 = <strong>2,513 N ≈ 2.5 kN</strong></div>
+              </div>
+              <div class="worked-answer">
+                <strong>Answer:</strong> Force = 2,513 N (approximately 2.5 kN)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="worked-example">
+          <div class="worked-example-header">
+            <span class="worked-example-tag">Worked Example 4</span>
+            <span class="worked-example-topic">Lever Mechanical Advantage & Efficiency</span>
+          </div>
+          <div class="worked-example-body">
+            <div class="worked-q">A Class 1 lever has an effort arm of 600mm and a load arm of 150mm. An effort of 50N is applied. (a) Calculate the Velocity Ratio. (b) Calculate the load that can be lifted. (c) If the actual load lifted is 180N, calculate the efficiency.</div>
+            <div class="worked-steps">
+              <div class="worked-step">
+                <div class="step-num">Step 1</div>
+                <div class="step-content">Velocity Ratio: VR = Effort Arm ÷ Load Arm = 600 ÷ 150 = <strong>4</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 2</div>
+                <div class="step-content">Ideal load (assuming 100% efficiency): Load = Effort × VR = 50 × 4 = <strong>200 N</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 3</div>
+                <div class="step-content">Actual MA: MA = Actual Load ÷ Effort = 180 ÷ 50 = <strong>3.6</strong></div>
+              </div>
+              <div class="worked-step">
+                <div class="step-num">Step 4</div>
+                <div class="step-content">Efficiency: η = (MA ÷ VR) × 100 = (3.6 ÷ 4) × 100 = <strong>90%</strong></div>
+              </div>
+              <div class="worked-answer">
+                <strong>Answers:</strong> (a) VR = 4 · (b) Ideal load = 200N · (c) Efficiency = 90%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM PRACTICE -->
+      <div class="lesson-section">
+        <div class="lesson-section-header">
+          <div class="section-number">📝</div>
+          <div class="section-title-block">
+            <h2>Exam Practice — Practical Skills & Maths</h2>
+            <small>Calculation questions with full worked answers</small>
+          </div>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-icon">🎯</div>
+            <div>
+              <div class="quiz-title">Multiple Choice — Practical Skills</div>
+              <div class="quiz-meta">5 questions · Select the best answer</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 1 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">In first angle orthographic projection, where is the plan view (view from above) placed?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Above the front view</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Below the front view</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> To the left of the front view</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> To the right of the front view</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! In first angle projection, the plan view goes BELOW the front view. Remember: in 1st angle, views go OPPOSITE to where you look from.</div>
+              <div class="examiner-tip">💡 Examiner tip: 1st angle = European = plan BELOW. 3rd angle = American = plan ABOVE. The projection symbol on the drawing tells you which system is used.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 2 <span class="quiz-q-marks">2 marks</span></div>
+            <div class="quiz-q-text">A lever has an effort arm of 400mm and a load arm of 100mm. An effort of 25N is applied. What load can be lifted (assuming 100% efficiency)?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> 6.25 N</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> 100 N</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> 400 N</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> 25 N</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! VR = 400 ÷ 100 = 4. At 100% efficiency, MA = VR = 4. Load = Effort × MA = 25 × 4 = 100 N.</div>
+              <div class="examiner-tip">💡 Examiner tip: Always show: (1) VR formula and calculation, (2) MA = VR at 100% efficiency, (3) Load = Effort × MA. Show all working for full marks.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 3 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which type of line is used to show hidden detail in an engineering drawing?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Continuous thin line</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Short dashed line</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Chain-dash line</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Continuous thick line</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Hidden detail (features not visible in that view) is shown using short dashed lines. Chain-dash lines are used for centre lines.</div>
+              <div class="examiner-tip">💡 Examiner tip: Thick continuous = visible outlines. Thin continuous = dimension/extension lines, hatching. Dashed = hidden detail. Chain-dash = centre lines.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 4 <span class="quiz-q-marks">2 marks</span></div>
+            <div class="quiz-q-text">Two resistors, 4Ω and 12Ω, are connected in series to a 16V battery. What is the current flowing through the circuit?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> 4 A</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> 1 A</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> 0.25 A</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> 2 A</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! R_total = 4 + 12 = 16Ω. I = V ÷ R = 16 ÷ 16 = 1 A.</div>
+              <div class="examiner-tip">💡 Examiner tip: Series: R_total = R₁ + R₂. Parallel: 1/R_T = 1/R₁ + 1/R₂. Always find total resistance first, then use Ohm's Law.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 5 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">What does the tolerance of a dimension tell you?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> The exact size the part must be</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> The acceptable range of variation in a dimension</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> The material the part is made from</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> The maximum size the part can be</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Tolerance is the total acceptable range of variation: tolerance = upper limit − lower limit. For Ø25 ±0.05mm, tolerance = 25.05 − 24.95 = 0.10mm.</div>
+              <div class="examiner-tip">💡 Examiner tip: Tolerance = upper limit − lower limit. Tighter tolerances cost more to achieve and require more precise measuring equipment.</div>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary quiz-submit-btn">Submit Answers</button>
+            <button class="btn btn-secondary quiz-reset-btn">↺ Reset Quiz</button>
+          </div>
+          <div class="quiz-score-display">
+            <div class="quiz-score-num">0/5</div>
+            <div class="quiz-score-label">Complete the quiz to see your score</div>
+          </div>
+        </div>
+
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty hard">★★★ Hard</span>
+            <span class="ppq-source">Style: AQA 8852 Multi-part Calculation</span>
+            <span class="ppq-marks">6 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">A CNC milling machine is used to machine an aluminium component. The recommended cutting speed for aluminium is 300 m/min. The milling cutter has a diameter of 25mm.<br><br>(a) Calculate the required spindle speed in rpm. Give your answer to the nearest whole number. [2 marks]<br>(b) The cutter has 4 teeth and the feed per tooth is 0.1mm. Calculate the feed rate in mm/min. [2 marks]<br>(c) State TWO advantages of using CNC milling over manual milling for producing 200 identical components. [2 marks]</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer (6 marks)</div>
+              <div class="ppq-model-answer-text">
+                (a) N = (v × 1000) ÷ (π × D) (1)<br>
+                N = (300 × 1000) ÷ (π × 25) = 300,000 ÷ 78.54 = <strong>3,820 rpm</strong> (1)<br><br>
+                (b) Feed rate = feed per tooth × number of teeth × spindle speed (1)<br>
+                Feed rate = 0.1 × 4 × 3820 = <strong>1,528 mm/min</strong> (1)<br><br>
+                (c) Any two of (1 mark each):<br>
+                • Consistent quality — every component identical (1)<br>
+                • Can run unattended / 24 hours (1)<br>
+                • Higher accuracy / tighter tolerances maintained (1)<br>
+                • Faster production rate (1)<br>
+                • Reduced skill requirement during production (1)
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: Always write the formula before substituting values. Show all working — even if your final answer is wrong, you may get method marks. Round only at the final step.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lesson-nav">
+        <a href="5-modern-tech.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div><span class="nav-label">Previous Lesson</span><span class="nav-title">Modern Technologies</span></div>
+        </a>
+        <a href="../exams/exam-practice.html" class="lesson-nav-btn">
+          <div style="text-align:right"><span class="nav-label">Final Step</span><span class="nav-title">Exam Practice</span></div>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+    <footer><strong>AQA GCSE Engineering 8852</strong> · Section 3.6 Practical Skills & Maths · Revision Site</footer>
+  </div>
+</div>
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

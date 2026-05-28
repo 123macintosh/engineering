@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manufacturing Processes — AQA GCSE Engineering 8852</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<button class="hamburger" onclick="toggleSidebar()">☰</button>
+<div class="page-wrapper">
+  <aside class="sidebar"></aside>
+
+  <div class="main-content">
+    <div class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()" style="display:block;position:static;margin:0;">☰</button>
+      <div class="topbar-breadcrumb">AQA 8852 › <span>Section 3.2 — Manufacturing Processes</span></div>
+      <div class="topbar-progress">
+        <span class="topbar-progress-label">Progress</span>
+        <div class="topbar-progress-bar"><div class="topbar-progress-fill" style="width:33%"></div></div>
+      </div>
+    </div>
+
+    <div class="content-inner">
+
+      <!-- HERO -->
+      <div class="lesson-hero">
+        <div class="lesson-hero-tag">Section 3.2</div>
+        <h1>Manufacturing <span>Processes</span></h1>
+        <p class="lesson-hero-desc">From 3D printing to sand casting, from CNC milling to injection moulding — this lesson covers every manufacturing process in the AQA specification with detailed explanations, diagrams, and exam questions.</p>
+        <div class="lesson-hero-objectives">
+          <h4>Learning Objectives</h4>
+          <ul>
+            <li>Describe additive manufacturing processes (FDM, sintering, rapid prototyping)</li>
+            <li>Explain material removal processes: turning, milling, drilling, chemical etching</li>
+            <li>Describe shaping processes: bending, casting, moulding, composite lay-up</li>
+            <li>Compare sand casting, pressure die casting, and injection moulding</li>
+            <li>Describe joining methods: rivets, welding, soldering, brazing</li>
+            <li>Explain heat treatment and surface finishing processes</li>
+          </ul>
+        </div>
+        <div class="lesson-hero-stats">
+          <div class="lesson-stat"><div class="lesson-stat-num">3.2</div><div class="lesson-stat-label">Spec Section</div></div>
+          <div class="lesson-stat"><div class="lesson-stat-num">7</div><div class="lesson-stat-label">Sub-Topics</div></div>
+          <div class="lesson-stat"><div class="lesson-stat-num">~25%</div><div class="lesson-stat-label">Of Paper</div></div>
+        </div>
+      </div>
+
+      <!-- OVERVIEW TABLE -->
+      <div class="lesson-section">
+        <div class="lesson-section-header">
+          <div class="section-number">0</div>
+          <div class="section-title-block">
+            <h2>Manufacturing Process Overview</h2>
+            <small>The big picture — how to categorise processes</small>
+          </div>
+        </div>
+        <div class="flow-diagram">
+          <div class="flow-box">ADDITIVE<br><small>Add material</small></div>
+          <div class="flow-arrow">|</div>
+          <div class="flow-box green">SUBTRACTIVE<br><small>Remove material</small></div>
+          <div class="flow-arrow">|</div>
+          <div class="flow-box red">FORMING<br><small>Shape material</small></div>
+          <div class="flow-arrow">|</div>
+          <div class="flow-box blue">JOINING<br><small>Assemble parts</small></div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Category</th><th>Processes</th><th>Materials</th><th>Key Feature</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Additive</strong></td><td>FDM 3D printing, SLS sintering, SLA</td><td>Polymers, metals, ceramics</td><td>Builds layer by layer — near-zero waste</td></tr>
+              <tr><td><strong>Material Removal</strong></td><td>Turning, milling, drilling, chemical etching</td><td>Metals, polymers, composites</td><td>Removes material from a workpiece</td></tr>
+              <tr><td><strong>Shaping</strong></td><td>Bending, press forming, composite lay-up, stamping</td><td>Metals, polymers, composites</td><td>Changes shape without removing material</td></tr>
+              <tr><td><strong>Casting/Moulding</strong></td><td>Sand casting, die casting, injection moulding</td><td>Metals, polymers</td><td>Liquid material poured/injected into a mould</td></tr>
+              <tr><td><strong>Joining</strong></td><td>Welding, soldering, brazing, riveting, bolting</td><td>Metals, polymers</td><td>Permanent or temporary assembly</td></tr>
+              <tr><td><strong>Heat Treatment</strong></td><td>Annealing, hardening, quenching, tempering</td><td>Metals (mainly steel)</td><td>Changes microstructure and properties</td></tr>
+              <tr><td><strong>Surface Finishing</strong></td><td>Painting, galvanising, electroplating, polishing</td><td>Metals, polymers</td><td>Protects surface or improves appearance</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SECTION 1: ADDITIVE MANUFACTURING -->
+      <div class="lesson-section" id="additive">
+        <div class="lesson-section-header">
+          <div class="section-number">1</div>
+          <div class="section-title-block">
+            <h2>Additive Manufacturing</h2>
+            <small>3.2.1 — Building objects layer by layer</small>
+          </div>
+        </div>
+
+        <p>Additive manufacturing (AM) builds objects by adding material layer by layer, guided by a digital 3D model (CAD file). Unlike subtractive processes, it produces very little waste material.</p>
+
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-title">🖨️ FDM — Fused Deposition Modelling</div>
+            <p><strong>Material:</strong> Thermoplastic filament (ABS, PLA, Nylon)</p>
+            <p><strong>Process:</strong> Filament is fed through a heated nozzle, melted, and deposited in layers on a build platform. Each layer fuses to the previous one as it cools.</p>
+            <p><strong>Uses:</strong> Prototyping, consumer products, medical models, educational models.</p>
+            <p><strong>Advantages:</strong> Cheap, easy to use, wide material choice.</p>
+            <p><strong>Disadvantages:</strong> Visible layer lines, lower strength than injection moulding, slow for large parts.</p>
+          </div>
+          <div class="card green">
+            <div class="card-title">⚡ SLS — Selective Laser Sintering</div>
+            <p><strong>Material:</strong> Metal or polymer powder (steel, titanium, nylon)</p>
+            <p><strong>Process:</strong> A laser sinters (fuses) powder particles together layer by layer. Unsintered powder supports the part during building (no support structures needed).</p>
+            <p><strong>Uses:</strong> Metal parts for aerospace, medical implants, complex geometries impossible to machine.</p>
+            <p><strong>Advantages:</strong> Can produce complex internal features, strong metal parts.</p>
+            <p><strong>Disadvantages:</strong> Very expensive machines, requires post-processing.</p>
+          </div>
+          <div class="card blue">
+            <div class="card-title">💧 SLA — Stereolithography</div>
+            <p><strong>Material:</strong> Photopolymer resin</p>
+            <p><strong>Process:</strong> UV laser cures (hardens) liquid resin layer by layer. Produces very high surface finish and accuracy.</p>
+            <p><strong>Uses:</strong> Dental models, jewellery prototypes, highly detailed models.</p>
+            <p><strong>Advantages:</strong> Excellent surface finish, high accuracy.</p>
+            <p><strong>Disadvantages:</strong> Resins can be brittle, expensive materials, requires UV post-curing.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box green">
+          <div class="highlight-title">📌 Key Exam Points — Additive Manufacturing</div>
+          <p><strong>Advantages of AM over traditional manufacturing:</strong> Can produce complex geometries impossible to machine; near-zero material waste; no tooling costs; rapid prototyping (from CAD to part in hours); easy customisation (each part can be different).</p>
+          <p style="margin-top:8px;"><strong>Disadvantages:</strong> Slower than injection moulding for high volumes; surface finish often requires post-processing; material properties may be anisotropic (weaker in Z-direction for FDM); high machine costs for metal AM.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 2: MATERIAL REMOVAL -->
+      <div class="lesson-section" id="removal">
+        <div class="lesson-section-header">
+          <div class="section-number">2</div>
+          <div class="section-title-block">
+            <h2>Material Removal (Subtractive Manufacturing)</h2>
+            <small>3.2.2 — Turning, milling, drilling, chemical etching</small>
+          </div>
+        </div>
+
+        <p>Material removal processes start with a solid workpiece and remove material to achieve the desired shape. These are often called <strong>subtractive manufacturing</strong> processes.</p>
+
+        <!-- Lathe Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Centre Lathe (Label the Parts)</span>
+          <svg width="100%" height="240" viewBox="0 0 750 240" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Lathe bed -->
+            <rect x="30" y="160" width="680" height="30" rx="3" fill="#1f2430" stroke="#f0a500" stroke-width="1.5"/>
+            <text x="370" y="180" text-anchor="middle" fill="#f0a500" font-size="10">LATHE BED (provides rigid support)</text>
+            <!-- Headstock -->
+            <rect x="30" y="80" width="120" height="80" rx="4" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <text x="90" y="125" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="bold">HEADSTOCK</text>
+            <text x="90" y="140" text-anchor="middle" fill="#7a8099" font-size="9">Motor + gearbox</text>
+            <!-- Chuck -->
+            <circle cx="150" cy="120" r="25" fill="#252a35" stroke="#f0a500" stroke-width="2"/>
+            <text x="150" y="124" text-anchor="middle" fill="#f0a500" font-size="9" font-weight="bold">CHUCK</text>
+            <!-- Workpiece -->
+            <rect x="175" y="108" width="220" height="24" rx="3" fill="#f0a500" opacity="0.7"/>
+            <text x="285" y="124" text-anchor="middle" fill="#000" font-size="10" font-weight="bold">WORKPIECE (rotating)</text>
+            <!-- Tailstock -->
+            <rect x="580" y="90" width="100" height="70" rx="4" fill="#1a2a3a" stroke="#7c6fff" stroke-width="2"/>
+            <text x="630" y="128" text-anchor="middle" fill="#7c6fff" font-size="10" font-weight="bold">TAILSTOCK</text>
+            <!-- Tool post -->
+            <rect x="390" y="100" width="60" height="60" rx="3" fill="#1a2a3a" stroke="#ff4d6d" stroke-width="2"/>
+            <text x="420" y="128" text-anchor="middle" fill="#ff4d6d" font-size="9" font-weight="bold">TOOL</text>
+            <text x="420" y="140" text-anchor="middle" fill="#ff4d6d" font-size="9">POST</text>
+            <!-- Carriage -->
+            <rect x="370" y="145" width="100" height="15" rx="2" fill="#252a35" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="420" y="157" text-anchor="middle" fill="#3b82f6" font-size="9">CARRIAGE</text>
+            <!-- Arrows for motion -->
+            <text x="285" y="95" text-anchor="middle" fill="#f0a500" font-size="10">↻ Rotation</text>
+            <text x="420" y="80" text-anchor="middle" fill="#ff4d6d" font-size="10">← Feed →</text>
+            <!-- Labels -->
+            <text x="90" y="200" text-anchor="middle" fill="#7a8099" font-size="9">1. Headstock</text>
+            <text x="150" y="215" text-anchor="middle" fill="#7a8099" font-size="9">2. Chuck</text>
+            <text x="285" y="200" text-anchor="middle" fill="#7a8099" font-size="9">3. Workpiece</text>
+            <text x="420" y="200" text-anchor="middle" fill="#7a8099" font-size="9">4. Tool Post</text>
+            <text x="630" y="200" text-anchor="middle" fill="#7a8099" font-size="9">5. Tailstock</text>
+          </svg>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Process</th><th>Machine</th><th>Motion</th><th>What it does</th><th>Products</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Turning</strong></td><td>Centre Lathe</td><td>Workpiece rotates, tool moves linearly</td><td>Produces cylindrical shapes, tapers, bores (internal holes)</td><td>Shafts, bolts, pistons</td></tr>
+              <tr><td><strong>Milling</strong></td><td>Milling Machine</td><td>Rotating multi-tooth cutter, workpiece moves on XYZ table</td><td>Produces flat surfaces, slots, complex 3D profiles</td><td>Engine blocks, gears, moulds</td></tr>
+              <tr><td><strong>Drilling</strong></td><td>Pillar Drill / Lathe</td><td>Rotating drill bit moves axially into workpiece</td><td>Produces circular holes</td><td>All engineering products</td></tr>
+              <tr><td><strong>Chemical Etching</strong></td><td>Etching tank</td><td>Chemical reaction removes material</td><td>Removes copper from PCB to leave conductive tracks</td><td>Printed Circuit Boards (PCBs)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Milling Machine Parts</h3>
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Vertical Milling Machine</span>
+          <svg width="100%" height="260" viewBox="0 0 700 260" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Column -->
+            <rect x="280" y="20" width="80" height="200" rx="4" fill="#1f2430" stroke="#f0a500" stroke-width="1.5"/>
+            <text x="320" y="120" text-anchor="middle" fill="#f0a500" font-size="10">COLUMN</text>
+            <!-- Spindle head -->
+            <rect x="250" y="20" width="140" height="50" rx="4" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <text x="320" y="50" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="bold">SPINDLE HEAD</text>
+            <!-- Spindle -->
+            <rect x="305" y="70" width="30" height="40" rx="2" fill="#252a35" stroke="#ff4d6d" stroke-width="2"/>
+            <text x="320" y="95" text-anchor="middle" fill="#ff4d6d" font-size="9">SPINDLE</text>
+            <!-- Cutter -->
+            <polygon points="305,110 335,110 330,130 310,130" fill="#f0a500" opacity="0.8"/>
+            <text x="370" y="125" fill="#f0a500" font-size="9">← CUTTER</text>
+            <!-- Table -->
+            <rect x="100" y="170" width="440" height="30" rx="3" fill="#1a2a3a" stroke="#7c6fff" stroke-width="2"/>
+            <text x="320" y="190" text-anchor="middle" fill="#7c6fff" font-size="10" font-weight="bold">WORKTABLE (moves X, Y)</text>
+            <!-- Knee -->
+            <rect x="150" y="200" width="340" height="30" rx="3" fill="#252a35" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="320" y="220" text-anchor="middle" fill="#3b82f6" font-size="10">KNEE (moves Z — up/down)</text>
+            <!-- Base -->
+            <rect x="80" y="230" width="480" height="20" rx="3" fill="#1f2430" stroke="#4a5068" stroke-width="1"/>
+            <text x="320" y="245" text-anchor="middle" fill="#7a8099" font-size="9">BASE</text>
+            <!-- Workpiece on table -->
+            <rect x="200" y="155" width="160" height="15" rx="2" fill="#f97316" opacity="0.7"/>
+            <text x="280" y="167" text-anchor="middle" fill="#fff" font-size="9">WORKPIECE</text>
+            <!-- Arrows -->
+            <text x="100" y="185" fill="#7c6fff" font-size="10">← X →</text>
+            <text x="570" y="185" fill="#7c6fff" font-size="10">↑ Y ↓</text>
+          </svg>
+        </div>
+
+        <div class="highlight-box yellow">
+          <div class="highlight-title">📐 Cutting Speed Formula</div>
+          <p>The AQA specification requires you to calculate cutting speeds and spindle speeds.</p>
+          <div class="formula-box" style="margin:8px 0;">
+            <div class="formula-name">Cutting Speed</div>
+            <div class="formula-eq">v = π × D × N ÷ 1000</div>
+            <div class="formula-units">v = cutting speed (m/min) · D = diameter (mm) · N = spindle speed (rpm)</div>
+          </div>
+          <p><strong>Rearranged for spindle speed:</strong> N = (v × 1000) ÷ (π × D)</p>
+          <p><strong>Example:</strong> A 20mm diameter milling cutter cuts aluminium at 200 m/min. N = (200 × 1000) ÷ (π × 20) = 3183 rpm.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 3: CASTING & MOULDING -->
+      <div class="lesson-section" id="casting">
+        <div class="lesson-section-header">
+          <div class="section-number">3</div>
+          <div class="section-title-block">
+            <h2>Casting & Moulding</h2>
+            <small>3.2.4 — Sand casting, die casting, injection moulding</small>
+          </div>
+        </div>
+
+        <p>Casting and moulding processes involve pouring or injecting a liquid material into a mould, where it solidifies to form the desired shape. These are ideal for producing complex shapes in large quantities.</p>
+
+        <!-- Sand Casting Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Sand Casting Process</span>
+          <svg width="100%" height="220" viewBox="0 0 750 220" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Flask/Mould box -->
+            <rect x="100" y="60" width="550" height="120" rx="4" fill="#2a1a0a" stroke="#f0a500" stroke-width="1.5"/>
+            <!-- Cope (top half) -->
+            <rect x="100" y="60" width="550" height="55" rx="4" fill="#3a2010" stroke="#f97316" stroke-width="1.5"/>
+            <text x="375" y="90" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold">COPE (Top Half of Flask)</text>
+            <!-- Drag (bottom half) -->
+            <rect x="100" y="125" width="550" height="55" rx="4" fill="#2a1a0a" stroke="#f97316" stroke-width="1.5"/>
+            <text x="375" y="155" text-anchor="middle" fill="#f97316" font-size="11" font-weight="bold">DRAG (Bottom Half of Flask)</text>
+            <!-- Cavity -->
+            <ellipse cx="375" cy="115" rx="120" ry="30" fill="#0a0c10" stroke="#00d4aa" stroke-width="2"/>
+            <text x="375" y="119" text-anchor="middle" fill="#00d4aa" font-size="10">MOULD CAVITY (shape of part)</text>
+            <!-- Sprue -->
+            <rect x="180" y="60" width="25" height="55" rx="2" fill="#f0a500" opacity="0.7"/>
+            <text x="192" y="50" text-anchor="middle" fill="#f0a500" font-size="9">SPRUE</text>
+            <text x="192" y="40" text-anchor="middle" fill="#f0a500" font-size="9">(pour hole)</text>
+            <!-- Riser -->
+            <rect x="540" y="60" width="25" height="55" rx="2" fill="#ff4d6d" opacity="0.7"/>
+            <text x="552" y="50" text-anchor="middle" fill="#ff4d6d" font-size="9">RISER</text>
+            <text x="552" y="40" text-anchor="middle" fill="#ff4d6d" font-size="9">(vent/feed)</text>
+            <!-- Runner -->
+            <rect x="205" y="108" width="150" height="12" rx="2" fill="#f0a500" opacity="0.5"/>
+            <text x="280" y="120" text-anchor="middle" fill="#f0a500" font-size="9">RUNNER</text>
+            <!-- Parting line -->
+            <line x1="100" y1="123" x2="650" y2="123" stroke="#fff" stroke-width="1" stroke-dasharray="5,3"/>
+            <text x="660" y="127" fill="#fff" font-size="9">Parting line</text>
+            <!-- Labels -->
+            <text x="375" y="200" text-anchor="middle" fill="#7a8099" font-size="10">Sand is packed around a pattern. Pattern removed. Molten metal poured in. Mould destroyed to remove casting.</text>
+          </svg>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Process</th><th>Material</th><th>Mould</th><th>Quantity</th><th>Advantages</th><th>Disadvantages</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Sand Casting</strong></td>
+                <td>Metals (iron, aluminium, bronze)</td>
+                <td>Sand (destroyed each time)</td>
+                <td>One-off to small batch</td>
+                <td>Low tooling cost, large parts possible, complex shapes</td>
+                <td>Poor surface finish, slow, mould destroyed each time, dimensional accuracy limited</td>
+              </tr>
+              <tr>
+                <td><strong>Pressure Die Casting</strong></td>
+                <td>Non-ferrous metals (aluminium, zinc, brass)</td>
+                <td>Permanent steel die</td>
+                <td>High volume (millions)</td>
+                <td>Excellent surface finish, high accuracy, fast cycle time, thin walls possible</td>
+                <td>High tooling cost, limited to non-ferrous metals, die wears over time</td>
+              </tr>
+              <tr>
+                <td><strong>Injection Moulding</strong></td>
+                <td>Thermoplastics (ABS, nylon, polypropylene)</td>
+                <td>Permanent steel mould</td>
+                <td>High volume (millions)</td>
+                <td>Complex shapes, excellent surface finish, fast, consistent quality, automated</td>
+                <td>Very high tooling cost, not suitable for thermosets (usually), design must allow ejection</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Injection Moulding Diagram -->
+        <div class="diagram-box">
+          <span class="diagram-label">DIAGRAM — Injection Moulding Machine</span>
+          <svg width="100%" height="200" viewBox="0 0 750 200" style="font-family:'Barlow',sans-serif;font-size:11px;">
+            <!-- Hopper -->
+            <polygon points="120,20 200,20 180,70 140,70" fill="#1f2430" stroke="#f0a500" stroke-width="1.5"/>
+            <text x="160" y="50" text-anchor="middle" fill="#f0a500" font-size="9">HOPPER</text>
+            <text x="160" y="15" text-anchor="middle" fill="#7a8099" font-size="9">(polymer granules)</text>
+            <!-- Barrel -->
+            <rect x="140" y="70" width="300" height="50" rx="4" fill="#1a2a3a" stroke="#00d4aa" stroke-width="2"/>
+            <text x="290" y="100" text-anchor="middle" fill="#00d4aa" font-size="10" font-weight="bold">HEATED BARREL</text>
+            <!-- Screw -->
+            <line x1="150" y1="95" x2="430" y2="95" stroke="#f97316" stroke-width="4"/>
+            <text x="290" y="115" text-anchor="middle" fill="#f97316" font-size="9">RECIPROCATING SCREW</text>
+            <!-- Nozzle -->
+            <polygon points="440,75 460,85 460,105 440,115" fill="#252a35" stroke="#ff4d6d" stroke-width="1.5"/>
+            <text x="450" y="130" text-anchor="middle" fill="#ff4d6d" font-size="9">NOZZLE</text>
+            <!-- Mould -->
+            <rect x="460" y="60" width="80" height="60" rx="3" fill="#1f2430" stroke="#7c6fff" stroke-width="2"/>
+            <rect x="540" y="60" width="80" height="60" rx="3" fill="#1f2430" stroke="#7c6fff" stroke-width="2"/>
+            <text x="500" y="95" text-anchor="middle" fill="#7c6fff" font-size="9">MOULD</text>
+            <text x="580" y="95" text-anchor="middle" fill="#7c6fff" font-size="9">HALF</text>
+            <!-- Clamping unit -->
+            <rect x="620" y="50" width="80" height="80" rx="4" fill="#252a35" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="660" y="95" text-anchor="middle" fill="#3b82f6" font-size="10">CLAMP</text>
+            <!-- Process steps -->
+            <text x="375" y="165" text-anchor="middle" fill="#7a8099" font-size="10">1. Granules fed → 2. Melted by screw/heaters → 3. Injected into mould under pressure → 4. Cooled → 5. Ejected</text>
+          </svg>
+        </div>
+
+        <!-- Fill in the Gaps - Manufacturing -->
+        <div class="fitg-container">
+          <div class="fitg-header">
+            <div class="fitg-icon">✏️</div>
+            <div>
+              <div class="fitg-title">Fill in the Gaps — Casting & Moulding</div>
+              <div class="fitg-subtitle">Complete the sentences about manufacturing processes</div>
+            </div>
+          </div>
+          <div class="fitg-word-bank">
+            <div class="fitg-word-bank-label">Word Bank</div>
+            <span class="word-chip" data-word="sand casting">sand casting</span>
+            <span class="word-chip" data-word="injection moulding">injection moulding</span>
+            <span class="word-chip" data-word="die casting">die casting</span>
+            <span class="word-chip" data-word="thermoplastic">thermoplastic</span>
+            <span class="word-chip" data-word="non-ferrous">non-ferrous</span>
+            <span class="word-chip" data-word="destroyed">destroyed</span>
+            <span class="word-chip" data-word="permanent">permanent</span>
+            <span class="word-chip" data-word="high">high</span>
+          </div>
+          <div class="fitg-text">
+            <p>In <input class="fitg-input" data-answer="sand casting" style="width:120px">, the mould is made from compacted sand and is <input class="fitg-input" data-answer="destroyed" style="width:90px"> after each casting. This makes it suitable for one-off or small batch production.</p>
+            <p>Pressure <input class="fitg-input" data-answer="die casting" style="width:100px"> uses a <input class="fitg-input" data-answer="permanent" style="width:100px"> steel mould and is used for <input class="fitg-input" data-answer="non-ferrous" style="width:100px"> metals such as aluminium and zinc. It produces a high-quality surface finish.</p>
+            <p><input class="fitg-input" data-answer="injection moulding" style="width:150px"> is used for <input class="fitg-input" data-answer="thermoplastic" style="width:120px"> polymers. It has a <input class="fitg-input" data-answer="high" style="width:60px"> initial tooling cost but is very cost-effective for mass production.</p>
+          </div>
+          <div class="fitg-actions">
+            <button class="btn btn-primary fitg-check-btn">✓ Check Answers</button>
+            <button class="btn btn-secondary fitg-reveal-btn">👁 Reveal All</button>
+            <button class="btn btn-secondary fitg-reset-btn">↺ Reset</button>
+          </div>
+          <div class="fitg-result"></div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: JOINING -->
+      <div class="lesson-section" id="joining">
+        <div class="lesson-section-header">
+          <div class="section-number">4</div>
+          <div class="section-title-block">
+            <h2>Joining & Assembly</h2>
+            <small>3.2.5 — Permanent and temporary fastening methods</small>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Method</th><th>Type</th><th>Process</th><th>Materials</th><th>Uses</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Riveting</strong></td>
+                <td><span class="badge badge-r">Permanent</span></td>
+                <td>A rivet (soft metal pin) is inserted through holes and the tail is deformed (bucked) to clamp the joint.</td>
+                <td>Aluminium, steel</td>
+                <td>Aircraft fuselage, bridges, structural steelwork</td>
+              </tr>
+              <tr>
+                <td><strong>Threaded Fastenings</strong></td>
+                <td><span class="badge badge-g">Temporary</span></td>
+                <td>Bolts, screws, and nuts. Can be assembled and disassembled.</td>
+                <td>Metals, polymers</td>
+                <td>Machine assembly, car engines, furniture</td>
+              </tr>
+              <tr>
+                <td><strong>Soft Soldering</strong></td>
+                <td><span class="badge badge-r">Permanent</span></td>
+                <td>Filler metal (tin-lead or tin-silver alloy) melted at &lt;450°C flows into joint by capillary action. Flux prevents oxidation.</td>
+                <td>Copper, brass, PCBs</td>
+                <td>Electronic circuit boards, plumbing joints</td>
+              </tr>
+              <tr>
+                <td><strong>Hard Soldering (Brazing)</strong></td>
+                <td><span class="badge badge-r">Permanent</span></td>
+                <td>Brass filler rod melted at 450–900°C. Stronger than soft soldering. Uses flux.</td>
+                <td>Steel, copper, brass</td>
+                <td>Bicycle frames, copper pipe fittings, jewellery</td>
+              </tr>
+              <tr>
+                <td><strong>MIG/TIG Welding</strong></td>
+                <td><span class="badge badge-r">Permanent</span></td>
+                <td>Electric arc melts base metal and filler wire. Shielding gas (argon/CO₂) prevents oxidation. Very strong joint — can be stronger than parent metal.</td>
+                <td>Steel, aluminium, stainless steel</td>
+                <td>Car bodies, structural steelwork, pipelines</td>
+              </tr>
+              <tr>
+                <td><strong>Spot Welding</strong></td>
+                <td><span class="badge badge-r">Permanent</span></td>
+                <td>Electrical resistance heating at electrode contact points fuses thin metal sheets together. Fast and automated.</td>
+                <td>Thin steel sheet</td>
+                <td>Car body panels, white goods (washing machines)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight-box yellow">
+          <div class="highlight-title">⚠️ Soldering vs Brazing vs Welding</div>
+          <p><strong>Soldering</strong> (&lt;450°C) — weakest, used for electronics. <strong>Brazing</strong> (450–900°C) — stronger, used for structural joints without melting base metal. <strong>Welding</strong> (&gt;1000°C) — strongest, melts base metal, used for structural applications. The key difference: welding melts the parent metal; soldering and brazing do not.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 5: HEAT TREATMENT & FINISHING -->
+      <div class="lesson-section" id="finishing">
+        <div class="lesson-section-header">
+          <div class="section-number">5</div>
+          <div class="section-title-block">
+            <h2>Heat Treatment & Surface Finishing</h2>
+            <small>3.2.6 & 3.2.7 — Changing properties and protecting surfaces</small>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h3>Heat Treatment Processes</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Process</th><th>Temperature</th><th>Cooling</th><th>Result</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Hardening</strong></td><td>~800°C</td><td>Rapid (water/oil)</td><td>Very hard, brittle</td></tr>
+                  <tr><td><strong>Quenching</strong></td><td>—</td><td>Rapid (water/oil)</td><td>Part of hardening</td></tr>
+                  <tr><td><strong>Tempering</strong></td><td>150–650°C</td><td>Slow (air)</td><td>Reduces brittleness, retains hardness</td></tr>
+                  <tr><td><strong>Annealing</strong></td><td>~800°C</td><td>Very slow (furnace)</td><td>Soft, ductile, stress-free</td></tr>
+                  <tr><td><strong>Normalising</strong></td><td>~900°C</td><td>Air cooling</td><td>Uniform grain, tough</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h3>Surface Finishing</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Process</th><th>Method</th><th>Purpose</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Painting</strong></td><td>Spray, brush, dip</td><td>Corrosion protection, aesthetics</td></tr>
+                  <tr><td><strong>Galvanising</strong></td><td>Hot-dip in molten zinc</td><td>Zinc coating prevents rust on steel</td></tr>
+                  <tr><td><strong>Electroplating</strong></td><td>Electrolysis deposits metal</td><td>Decorative (chrome), corrosion resistance (nickel)</td></tr>
+                  <tr><td><strong>Dip Coating</strong></td><td>Heat part, dip in polymer powder</td><td>Plastic coating (tool handles, dishwasher racks)</td></tr>
+                  <tr><td><strong>Polishing</strong></td><td>Abrasive/buffing</td><td>Smooth surface, aesthetic finish</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM PRACTICE -->
+      <div class="lesson-section">
+        <div class="lesson-section-header">
+          <div class="section-number">📝</div>
+          <div class="section-title-block">
+            <h2>Exam Practice Questions</h2>
+            <small>Manufacturing Processes — Past paper style questions</small>
+          </div>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <div class="quiz-icon">🎯</div>
+            <div>
+              <div class="quiz-title">Multiple Choice — Manufacturing</div>
+              <div class="quiz-meta">5 questions · Select the best answer</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 1 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which manufacturing process is most suitable for producing <strong>one million identical plastic bottle caps</strong>?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Sand casting</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> FDM 3D printing</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> Injection moulding</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Pressure die casting</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Injection moulding is ideal for high-volume thermoplastic parts. Once the mould is made, each part costs very little to produce.</div>
+              <div class="examiner-tip">💡 Examiner tip: Die casting is for metals, not plastics. Sand casting is for one-off/small batch. 3D printing is too slow for millions of parts.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 2 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">A student wants to join two pieces of copper pipe. Which joining method is most appropriate?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> MIG welding</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Soft soldering</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Riveting</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Spot welding</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Soft soldering is the standard method for joining copper water pipes. It uses a tin-based solder at low temperature.</div>
+              <div class="examiner-tip">💡 Examiner tip: Welding copper is difficult and unnecessary for pipes. Riveting is for sheet metal. Spot welding is for thin steel sheets.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 3 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">What is the main advantage of additive manufacturing (3D printing) over traditional subtractive manufacturing?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> It produces parts faster than injection moulding</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> It is cheaper for mass production</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> It produces near-zero material waste and can create complex internal geometries</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> It produces stronger parts than casting</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! AM produces near-zero waste (only builds what is needed) and can create internal features (hollow structures, lattices) impossible to machine.</div>
+              <div class="examiner-tip">💡 Examiner tip: AM is NOT faster than injection moulding for high volumes. Its advantages are: no tooling cost, complex geometries, customisation, and low waste.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 4 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">Which surface finishing process involves coating steel with a layer of zinc to prevent corrosion?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> Electroplating</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">B</span> Galvanising</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">C</span> Dip coating</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> Anodising</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! Galvanising involves dipping steel into molten zinc. The zinc coating provides sacrificial protection — it corrodes before the steel does.</div>
+              <div class="examiner-tip">💡 Examiner tip: Galvanising = zinc on steel. Electroplating = any metal deposited by electrolysis. Dip coating = plastic powder on metal.</div>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <div class="quiz-q-number">QUESTION 5 <span class="quiz-q-marks">1 mark</span></div>
+            <div class="quiz-q-text">In sand casting, what is the purpose of the <strong>riser</strong>?</div>
+            <div class="quiz-options">
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">A</span> To hold the two halves of the mould together</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">B</span> To provide the channel through which molten metal is poured</div>
+              <div class="quiz-option" data-correct="true"><span class="quiz-option-letter">C</span> To allow gases to escape and provide a reservoir of molten metal to compensate for shrinkage</div>
+              <div class="quiz-option" data-correct="false"><span class="quiz-option-letter">D</span> To create a hollow section in the casting</div>
+            </div>
+            <div class="quiz-feedback">
+              <div>✓ Correct! The riser serves two purposes: it allows trapped gases to escape, and it provides a reservoir of molten metal to feed the casting as it shrinks during solidification.</div>
+              <div class="examiner-tip">💡 Examiner tip: The SPRUE is the pour hole. The RUNNER connects the sprue to the cavity. The RISER is the vent/feed reservoir. The CORE creates hollow sections.</div>
+            </div>
+          </div>
+
+          <div class="quiz-actions">
+            <button class="btn btn-primary quiz-submit-btn">Submit Answers</button>
+            <button class="btn btn-secondary quiz-reset-btn">↺ Reset Quiz</button>
+          </div>
+          <div class="quiz-score-display">
+            <div class="quiz-score-num">0/5</div>
+            <div class="quiz-score-label">Complete the quiz to see your score</div>
+          </div>
+        </div>
+
+        <!-- Past paper questions -->
+        <div class="past-paper-q">
+          <div class="ppq-header">
+            <span class="difficulty medium">★★ Medium</span>
+            <span class="ppq-source">Style: AQA 8852 Short Answer</span>
+            <span class="ppq-marks">4 marks</span>
+          </div>
+          <div class="ppq-body">
+            <div class="ppq-question">Describe the process of <strong>pressure die casting</strong>. Include in your answer: the mould used, the material, and two advantages over sand casting.</div>
+            <button class="ppq-reveal-btn">▼ REVEAL MODEL ANSWER & EXAMINER TIPS</button>
+            <div class="ppq-model-answer">
+              <div class="ppq-model-answer-title">Model Answer (4 marks)</div>
+              <div class="ppq-model-answer-text">
+                Pressure die casting uses a <strong>permanent steel die/mould</strong> (1) into which molten <strong>non-ferrous metal</strong> (e.g., aluminium or zinc) is injected under <strong>high pressure</strong> (1).<br><br>
+                <strong>Two advantages over sand casting (1 mark each):</strong><br>
+                • Much better surface finish — parts may not need machining (1)<br>
+                • Higher dimensional accuracy / tighter tolerances (1)<br>
+                • Faster production rate / suitable for mass production (1)<br>
+                • Permanent mould can be used thousands of times (1)
+              </div>
+              <div class="ppq-examiner-tip">💡 Examiner tip: Always state the material type (non-ferrous) and the mould type (permanent steel die) for full marks. For advantages, compare specifically to sand casting.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Lesson Navigation -->
+      <div class="lesson-nav">
+        <a href="1-materials.html" class="lesson-nav-btn">
+          <span>←</span>
+          <div>
+            <span class="nav-label">Previous Lesson</span>
+            <span class="nav-title">Engineering Materials</span>
+          </div>
+        </a>
+        <a href="3-systems.html" class="lesson-nav-btn">
+          <div style="text-align:right">
+            <span class="nav-label">Next Lesson</span>
+            <span class="nav-title">Systems</span>
+          </div>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+    <footer><strong>AQA GCSE Engineering 8852</strong> · Section 3.2 Manufacturing Processes · Revision Site</footer>
+  </div>
+</div>
+
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
